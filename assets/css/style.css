@@ -5,38 +5,38 @@
 
 /* --- Custom Properties / Design Tokens --- */
 :root {
-  /* Core Cyberpunk Dark Tech Palette */
-  --bg-obsidian: #0B0C10;           /* Primary Obsidian Black */
-  --bg-surface: #151922;            /* Dark Tech Surface */
-  --bg-surface-elevated: #202938;   /* Elevated HUD Surface */
-  --bg-glass: rgba(21, 25, 34, 0.85);
-  --bg-glass-card: rgba(32, 41, 56, 0.65);
+  /* Core Modern Premium Dark Palette */
+  --bg-obsidian: #080B14;           /* Primary Slate Black */
+  --bg-surface: #0D1220;            /* Dark Neutral Surface */
+  --bg-surface-elevated: #141B2B;   /* Elevated Card Surface */
+  --bg-glass: rgba(13, 18, 32, 0.85);
+  --bg-glass-card: rgba(20, 27, 43, 0.70);
   
-  --primary-blue: #106EBE;          /* Electric Blue */
-  --primary-blue-hover: #157dd8;
-  --primary-blue-glow: rgba(16, 110, 190, 0.35);
-  --primary-blue-subtle: rgba(16, 110, 190, 0.12);
+  --primary-blue: #4D8DFF;          /* Vibrant Electric Blue */
+  --primary-blue-hover: #3b74df;
+  --primary-blue-glow: rgba(77, 141, 255, 0.25);
+  --primary-blue-subtle: rgba(77, 141, 255, 0.10);
 
-  --accent-mint: #0FFCBE;           /* Cyber Mint */
-  --accent-mint-hover: #34ffd0;
-  --accent-mint-glow: rgba(15, 252, 190, 0.32);
-  --accent-mint-subtle: rgba(15, 252, 190, 0.1);
+  --accent-mint: #10B981;           /* Emerald / Modern Mint */
+  --accent-mint-hover: #059669;
+  --accent-mint-glow: rgba(16, 185, 129, 0.25);
+  --accent-mint-subtle: rgba(16, 185, 129, 0.10);
 
-  --highlight-cyan: #00FFFF;        /* Electric Cyan */
-  --highlight-cyan-glow: rgba(0, 255, 255, 0.28);
-  --highlight-cyan-subtle: rgba(0, 255, 255, 0.08);
+  --highlight-cyan: #55D6E8;        /* Soft Cyan */
+  --highlight-cyan-glow: rgba(85, 214, 232, 0.22);
+  --highlight-cyan-subtle: rgba(85, 214, 232, 0.08);
 
-  --text-primary: #EAF2FF;          /* Primary Light Ice Text */
-  --text-secondary: #8995A8;        /* Slate Muted Text */
-  --text-muted: #5A6678;           /* Subtle Dark Text */
-  --border-color: #283449;          /* Precision Grid Borders */
-  --border-subtle: rgba(40, 52, 73, 0.6);
-  --border-glow: rgba(16, 110, 190, 0.5);
+  --text-primary: #F4F6FC;          /* Clean High-Contrast White */
+  --text-secondary: #A8B1C2;        /* Slate Muted Text */
+  --text-muted: #64748B;           /* Slate 500 */
+  --border-color: rgba(255, 255, 255, 0.08);  /* Subtle Glass Border */
+  --border-subtle: rgba(255, 255, 255, 0.05);
+  --border-glow: rgba(77, 141, 255, 0.35);
 
   /* Status Badges */
-  --badge-avail-bg: rgba(15, 252, 190, 0.12);
-  --badge-avail-text: #0FFCBE;
-  --badge-avail-border: rgba(15, 252, 190, 0.35);
+  --badge-avail-bg: rgba(16, 185, 129, 0.12);
+  --badge-avail-text: #10B981;
+  --badge-avail-border: rgba(16, 185, 129, 0.35);
 
   --badge-dev-bg: rgba(255, 189, 46, 0.12);
   --badge-dev-text: #FFBD2E;
