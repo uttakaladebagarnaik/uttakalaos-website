@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Terms of Service — UTTAKALA OS</title>
+  <meta name="description" content="Official Terms of Service for UTTAKALA OS. Clear guidelines on platform usage, user backup responsibilities, unencrypted JSON formats, and service terms." />
+  
+  <link rel="canonical" href="https://YOUR-GITHUB-USERNAME.github.io/uttakala-os-website/terms.html" />
+    <!-- Favicon & Browser Branding -->
+  <link rel="icon" type="image/svg+xml" href="./assets/images/favicon.svg" />
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="./assets/images/apple-touch-icon.png" />
+  <meta name="theme-color" content="#0B0C10" />
+  <meta name="msapplication-TileColor" content="#0B0C10" />
+
+  <!-- Google Fonts: Plus Jakarta Sans & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="./assets/css/style.css" />
+</head>
+<body>
+
+  <!-- Ambient Light Orbs -->
+  <div class="ambient-bg-glow" aria-hidden="true">
+    <div class="ambient-orb-1"></div>
+    <div class="ambient-orb-2"></div>
+  </div>
+
+  <!-- Reading Progress Bar -->
+  <div class="doc-progress-container" aria-hidden="true">
+    <div class="doc-progress-bar" id="docProgressBar"></div>
+  </div>
+
+  <!-- ================= SITE HEADER ================= -->
+  <header class="site-header">
+    <div class="container nav-container">
+            <a href="./index.html" class="brand-link" aria-label="UTTAKALA OS Home">
+        <img 
+          src="./assets/images/uttakala-os-logo.png" 
+          alt="UTTAKALA OS official logo" 
+          class="brand-logo-img" 
+          width="40" 
+          height="40" 
+          loading="eager" 
+        />
+        <span class="brand-title">
+          <span class="brand-title-main">UTTAKALA</span>
+          <span class="brand-title-sub">OS</span>
+        </span>
+      </a>
+
+      <!-- Desktop Navigation Pill -->
+      <nav aria-label="Main Navigation">
+        <ul class="nav-menu">
+          <li class="nav-item"><a href="./index.html">Home</a></li>
+          <li class="nav-item"><a href="./features.html">Features</a></li>
+          <li class="nav-item"><a href="./experience.html">Experience</a></li>
+          <li class="nav-item"><a href="./download.html">Download</a></li>
+          <li class="nav-item"><a href="./tutorials.html">Tutorials</a></li>
+          <li class="nav-item"><a href="./trust.html">Trust Center</a></li>
+          <li class="nav-item"><a href="./about.html">About</a></li>
+          <li class="nav-item"><a href="./contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Desktop Action -->
+      <div class="nav-actions">
+        <a href="./privacy.html" class="btn btn-secondary btn-sm btn-magnetic">Privacy Policy</a>
+        <button class="mobile-nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+          <svg class="icon-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+          <svg class="icon-close" style="display:none;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation Drawer -->
+  <div class="mobile-drawer" role="dialog" aria-modal="true" aria-label="Mobile Navigation">
+    <ul class="mobile-nav-list">
+      <li><a href="./index.html">Home</a></li>
+      <li><a href="./features.html">Features</a></li>
+      <li><a href="./experience.html">Experience Simulator</a></li>
+      <li><a href="./tutorials.html">Tutorials & Docs</a></li>
+      <li><a href="./trust.html">Trust Center</a></li>
+      <li><a href="./security.html">Data & Security</a></li>
+      <li><a href="./privacy.html">Privacy Policy</a></li>
+      <li><a href="./terms.html" class="active">Terms of Service</a></li>
+      <li><a href="./about.html">About & Vision</a></li>
+      <li><a href="./contact.html">Contact Support</a></li>
+    </ul>
+    <div class="mobile-drawer-cta">
+      <a href="./trust.html" class="btn btn-primary">Trust Center</a>
+      <a href="./privacy.html" class="btn btn-secondary">Privacy Policy</a>
+    </div>
+  </div>
+
+  <main>
+    <!-- Document Header -->
+    <section class="doc-header">
+      <div class="container">
+        <div class="hero-pill reveal">
+          <span class="pulse-beacon"></span>
+          <span class="hero-pill-tag">USER AGREEMENT</span>
+          <span>Version 2.0 Active</span>
+        </div>
+        <h1 class="reveal delay-1" style="font-size: clamp(2rem, 4vw, 3.2rem); margin-top: 1rem; color: var(--text-primary);">
+          Terms of Service
+        </h1>
+        <p class="reveal delay-2" style="color: var(--text-secondary); max-width: 720px; font-size: 1.05rem; margin-top: 0.75rem;">
+          These terms govern your access to and use of the UTTAKALA OS platform, applications, and services. Clear rules, honest parameters, and user rights.
+        </p>
+
+        <div class="doc-meta-bar reveal delay-3">
+          <div class="doc-meta-item">
+            <span class="doc-meta-label">EFFECTIVE DATE</span>
+            <span class="doc-meta-val">March 2026</span>
+          </div>
+          <div class="doc-meta-item">
+            <span class="doc-meta-label">LAST UPDATED</span>
+            <span class="doc-meta-val">March 2026</span>
+          </div>
+          <div class="doc-meta-item">
+            <span class="doc-meta-label">VERSION</span>
+            <span class="doc-meta-val" style="color: var(--accent-mint);">&bull; Release 2.0</span>
+          </div>
+          <div class="doc-meta-item">
+            <span class="doc-meta-label">PLATFORM STATE</span>
+            <span class="doc-meta-val">Production Client</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Document Body with Sticky Table of Contents -->
+    <div class="container doc-body-layout">
+      
+      <!-- Sticky Navigation Sidebar -->
+      <aside class="doc-sidebar">
+        <div class="doc-sidebar-sticky">
+          <div class="doc-toc-title">Terms Sections</div>
+          <ul class="doc-toc-list">
+            <li><a href="#acceptance">1. Acceptance of Terms</a></li>
+            <li><a href="#description">2. Platform Description</a></li>
+            <li><a href="#accounts">3. Account &amp; Credentials</a></li>
+            <li><a href="#acceptable">4. Acceptable Use Policy</a></li>
+            <li><a href="#backups">5. Data &amp; Backup Responsibilities</a></li>
+            <li><a href="#thirdparties">6. Third-Party Integrations</a></li>
+            <li><a href="#warranty">7. As-Is &amp; Warranty Disclaimers</a></li>
+            <li><a href="#liability">8. Limitation of Liability</a></li>
+            <li><a href="#modifications">9. Terms Modifications</a></li>
+            <li><a href="#contact">10. Inquiries &amp; Legal Line</a></li>
+          </ul>
+
+          <div style="margin-top: 2rem; padding: 1rem; background: var(--bg-surface); border: 1px solid var(--border-color); border-radius: var(--radius-sm);">
+            <div style="font-size: 0.75rem; color: var(--text-muted); text-transform: uppercase; font-family: var(--font-mono); margin-bottom: 0.5rem;">Cross References</div>
+            <a href="./trust.html" style="display: block; font-size: 0.82rem; color: var(--highlight-cyan); margin-bottom: 0.35rem;">&larr; Trust Center Hub</a>
+            <a href="./security.html" style="display: block; font-size: 0.82rem; color: var(--accent-mint); margin-bottom: 0.35rem;">&rarr; Data &amp; Security Whitepaper</a>
+            <a href="./privacy.html" style="display: block; font-size: 0.82rem; color: var(--text-secondary);">&rarr; Privacy Policy</a>
+          </div>
+        </div>
+      </aside>
+
+      <!-- Main Terms Content -->
+      <article class="doc-content">
+
+        <!-- 1. Acceptance -->
+        <section id="acceptance" class="doc-section">
+          <h2>1. Acceptance of Terms</h2>
+          <p>
+            By accessing, creating an account on, or otherwise using UTTAKALA OS ("the Platform", "we", "us", or "our"), you agree to be bound by these Terms of Service ("Terms") and our <a href="./privacy.html" style="color: var(--accent-mint);">Privacy Policy</a>. If you do not agree to these Terms, you may not use the Platform.
+          </p>
+        </section>
+
+        <!-- 2. Description -->
+        <section id="description" class="doc-section">
+          <h2>2. Platform Description</h2>
+          <p>
+            UTTAKALA OS is an autonomous personal digital productivity operating system providing tactical modules for habit tracking, academic lecture and syllabus attendance, LeetCode algorithmic catalogs, financial ledger entries, and local-only journal logs.
+          </p>
+          <p>
+            The Platform is continually refined. Features may be introduced, updated, or discontinued as the project evolves. We make no promise that any particular module will indefinitely retain its current functional scope.
+          </p>
+        </section>
+
+        <!-- 3. Accounts -->
+        <section id="accounts" class="doc-section">
+          <h2>3. Account Registration &amp; Security</h2>
+          <p>
+            To utilize multi-device cloud synchronization features, you may register an account using Supabase authentication:
+          </p>
+          <ul style="color: var(--text-secondary); line-height: 1.7; padding-left: 1.5rem;">
+            <li>You agree to provide true, current, and accurate registration information.</li>
+            <li>You are solely responsible for maintaining the confidentiality of your authentication credentials and mobile device security.</li>
+            <li>You are entirely responsible for all activity conducted through your authenticated account.</li>
+            <li>You agree to immediately notify us at <a href="mailto:uttakaladeba.codes@gmail.com" style="color: var(--accent-mint); font-family: var(--font-mono);">uttakaladeba.codes@gmail.com</a> if you suspect unauthorized access or security compromises involving your account.</li>
+          </ul>
+        </section>
+
+        <!-- 4. Acceptable Use -->
+        <section id="acceptable" class="doc-section">
+          <h2>4. Acceptable Use Policy</h2>
+          <p>
+            You agree to use UTTAKALA OS strictly for lawful personal organizational purposes. You agree not to:
+          </p>
+          <ul style="color: var(--text-secondary); line-height: 1.7; padding-left: 1.5rem;">
+            <li>Interfere with, circumvent, reverse engineer, or compromise the integrity of the Platform's authentication or database infrastructure.</li>
+            <li>Use the Platform to store or transmit malicious software, exploits, or illegal material.</li>
+            <li>Attempt to access data, routines, or files belonging to any other user.</li>
+            <li>Perform automated scraping, denial of service (DoS), or stress testing against our backend servers.</li>
+            <li>Misrepresent your identity or affiliation when communicating with support.</li>
+          </ul>
+        </section>
+
+        <!-- 5. Data & Backup Responsibilities -->
+        <section id="backups" class="doc-section">
+          <h2>5. Data &amp; Backup Responsibilities</h2>
+          <p>
+            UTTAKALA OS is architected to grant users maximal data sovereignty, and with that control comes important user responsibilities:
+          </p>
+
+          <div class="hud-panel" style="padding: 1.5rem; margin: 1.5rem 0; border-color: rgba(0, 255, 255, 0.4);">
+            <ul style="color: var(--text-secondary); line-height: 1.7; padding-left: 1.5rem; margin: 0;">
+              <li><strong>User Responsibility for Backups:</strong> While cloud synchronization is supported for tasks, routines, and attendance through Supabase, you are strongly advised to regularly utilize the Google Drive AppData backup feature or keep external records of vital information.</li>
+              <li><strong>Unencrypted JSON Backups:</strong> As explicitly disclosed in our Privacy Policy and Security Whitepaper, backup files exported to your Google Drive AppData folder are stored as raw, unencrypted JSON snapshots. You acknowledge and accept that UTTAKALA OS does not apply additional encryption to these files beyond Google's native cloud storage protections.</li>
+              <li><strong>Secret Diary Preservation:</strong> Secret Diary entries are strictly local to your Android device SQLite storage. If you clear application data, uninstall the app, or wipe your phone without an offline export, your Secret Diary data cannot be restored by us because it was never uploaded to our servers.</li>
+              <li><strong>No Archival Guarantee:</strong> We are not an immutable document archiving or legal compliance service. You should maintain independent copies of legally significant certificates, receipts, or contracts.</li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- 6. Third Parties -->
+        <section id="thirdparties" class="doc-section">
+          <h2>6. Third-Party Services &amp; Integrations</h2>
+          <p>
+            UTTAKALA OS integrates with third-party service providers, specifically Supabase (for database hosting and authentication) and Google (for optional Google Drive AppData backup).
+          </p>
+          <p>
+            Your interactions with these services are subject to their respective terms and policies. We do not control and are not responsible for the availability, maintenance, downtime, or policy changes of third-party platforms.
+          </p>
+        </section>
+
+        <!-- 7. As-Is Disclaimer -->
+        <section id="warranty" class="doc-section">
+          <h2>7. Service Availability &amp; "As-Is" Disclaimer</h2>
+          <p>
+            UTTAKALA OS IS PROVIDED ON AN "AS IS" AND "AS AVAILABLE" BASIS, WITHOUT WARRANTIES OF ANY KIND, EITHER EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, TITLE, OR NON-INFRINGEMENT.
+          </p>
+          <p>
+            We do not warrant that the Platform will be uninterrupted, error-free, timely, or completely secure from data corruption or loss. You use UTTAKALA OS at your own risk.
+          </p>
+        </section>
+
+        <!-- 8. Limitation of Liability -->
+        <section id="liability" class="doc-section">
+          <h2>8. Limitation of Liability</h2>
+          <p>
+            TO THE MAXIMUM EXTENT PERMITTED UNDER APPLICABLE LAW, IN NO EVENT SHALL THE MAINTAINERS OR CREATORS OF UTTAKALA OS BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES, OR FOR ANY LOSS OF PROFITS, DATA, USE, GOODWILL, OR OTHER INTANGIBLE LOSSES RESULTING FROM:
+          </p>
+          <ul style="color: var(--text-secondary); line-height: 1.7; padding-left: 1.5rem;">
+            <li>Your access to, use of, or inability to access or use the Platform.</li>
+            <li>Any unauthorized access to, alteration of, or loss of your transmissions, synchronized data, or local storage.</li>
+            <li>Any interruption, suspension, or discontinuation of service.</li>
+            <li>Any conduct or content of any third party on the Platform.</li>
+          </ul>
+        </section>
+
+        <!-- 9. Modifications -->
+        <section id="modifications" class="doc-section">
+          <h2>9. Modifications to Terms</h2>
+          <p>
+            We reserve the right to revise or replace these Terms at any time. When changes are made, the revised date will be displayed at the top of this document. Continued use of UTTAKALA OS after any modifications constitutes acceptance of the new Terms.
+          </p>
+        </section>
+
+        <!-- 10. Contact -->
+        <section id="contact" class="doc-section">
+          <h2>10. Contact Information &amp; Legal Inquiries</h2>
+          <p>
+            For questions regarding these Terms of Service or the Platform, please reach out via email:
+          </p>
+          <div class="hud-panel" style="margin-top: 1rem; padding: 1.5rem;">
+            <p style="margin-bottom: 0.5rem; color: var(--text-primary);"><strong>Project:</strong> UTTAKALA OS</p>
+            <p style="margin-bottom: 0.5rem; color: var(--text-primary);">
+              <strong>Official Inquiries:</strong>
+              <a href="mailto:uttakaladeba.codes@gmail.com" style="color: var(--accent-mint); font-family: var(--font-mono);">uttakaladeba.codes@gmail.com</a>
+            </p>
+            <p style="margin-bottom: 0; font-size: 0.85rem; color: var(--text-secondary);">
+              <em>All inquiries will receive response within 48 business hours.</em>
+            </p>
+          </div>
+        </section>
+
+      </article>
+
+    </div>
+
+    <!-- CTA Section -->
+    <section class="section" style="padding-top: 0;">
+      <div class="container">
+        <div class="cta-banner reveal">
+          <h2>Explore our Trust Center &amp; Architecture</h2>
+          <p>
+            Learn how UTTAKALA OS isolates private data and guarantees technical transparency.
+          </p>
+          <div style="display: flex; justify-content: center; gap: 1.15rem; flex-wrap: wrap;">
+            <a href="./trust.html" class="btn btn-cta btn-lg btn-magnetic">Visit Trust Center</a>
+            <a href="./security.html" class="btn btn-secondary btn-lg btn-magnetic" style="color: #FFFFFF; border-color: rgba(255,255,255,0.3);">Data &amp; Security Paper</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= SITE FOOTER ================= -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+                <div class="footer-brand">
+          <a href="./index.html" class="footer-brand-link" aria-label="UTTAKALA OS Home">
+            <img 
+              src="./assets/images/uttakala-os-logo.png" 
+              alt="UTTAKALA OS official logo" 
+              class="footer-brand-logo" 
+              width="48" 
+              height="48" 
+              loading="lazy" 
+            />
+            <div class="brand-title">
+              <span class="brand-title-main">UTTAKALA</span>
+              <span class="brand-title-sub">OS</span>
+            </div>
+          </a>
+          <div class="footer-tagline">Your Personal Life OS</div>
+          <p>
+            Autonomous cyberpunk personal productivity and life-management operating system. Precision engineering for focus, habits, academics, and personal sovereignty.
+          </p>
+          <div style="margin-top: 1rem; display: flex; gap: 0.75rem; align-items: center;">
+            <span class="badge badge-available"><span class="badge-dot"></span> System Online v2.4</span>
+            <span style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-muted);">LATENCY: 0.4MS</span>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Platform Hub</h4>
+          <ul class="footer-links">
+            <li><a href="./index.html">Command Center</a></li>
+            <li><a href="./features.html">Feature Matrix</a></li>
+            <li><a href="./experience.html">OS Live Simulator</a></li>
+            <li><a href="./tutorials.html">Operator Tutorials</a></li>
+            <li><a href="./about.html">System Architecture</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Trust & Security</h4>
+          <ul class="footer-links">
+            <li><a href="./trust.html">Trust Center Hub</a></li>
+            <li><a href="./security.html">Data & Security Whitepaper</a></li>
+            <li><a href="./privacy.html">Privacy Policy</a></li>
+            <li><a href="./terms.html">Terms of Service</a></li>
+            <li><a href="./trust.html#compliance">Local vs Cloud Isolation</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Communication</h4>
+          <ul class="footer-links">
+            <li><a href="./contact.html">Dispatch Console</a></li>
+            <li><a href="mailto:uttakaladeba.codes@gmail.com">Direct Developer Line</a></li>
+            <li><a href="./contact.html#security-report">Report Vulnerability</a></li>
+            <li><a href="./about.html#roadmap">Release Roadmap</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          &copy; <span data-year>2026</span> UTTAKALA OS. Precision engineering. Built for individual autonomy.
+        </div>
+        <div class="footer-bottom-links">
+          <a href="./trust.html">Trust Center</a>
+          <a href="./security.html">Security</a>
+          <a href="./privacy.html">Privacy</a>
+          <a href="./terms.html">Terms</a>
+          <a href="./experience.html">Experience</a>
+          <a href="./contact.html">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Main JavaScript -->
+  <script src="./assets/js/main.js"></script>
+</body>
+</html>

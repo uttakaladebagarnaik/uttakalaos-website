@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <!-- Background Gradient -->
+    <radialGradient id="bgGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#106EBE" stop-opacity="0.35"/>
+      <stop offset="85%" stop-color="#0B0C10" stop-opacity="0.95"/>
+      <stop offset="100%" stop-color="#0B0C10" stop-opacity="1"/>
+    </radialGradient>
+    
+    <!-- Shield U Gradient -->
+    <linearGradient id="uGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#106EBE"/>
+      <stop offset="45%" stop-color="#00FFFF"/>
+      <stop offset="100%" stop-color="#0FFCBE"/>
+    </linearGradient>
+
+    <!-- Ring Gradient -->
+    <linearGradient id="ringGrad" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0FFCBE"/>
+      <stop offset="50%" stop-color="#00FFFF"/>
+      <stop offset="100%" stop-color="#106EBE"/>
+    </linearGradient>
+
+    <!-- Glow Filter -->
+    <filter id="neonGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="1.8" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background Base -->
+  <rect width="64" height="64" rx="16" fill="url(#bgGlow)" stroke="#283449" stroke-width="1.5"/>
+
+  <!-- Outer HUD Ring Brackets -->
+  <circle cx="32" cy="32" r="23" stroke="#00FFFF" stroke-width="1.2" stroke-dasharray="14 6 22 8 8 10" fill="none" opacity="0.75" filter="url(#neonGlow)"/>
+  <circle cx="32" cy="32" r="20" stroke="#106EBE" stroke-width="0.8" stroke-dasharray="4 4" fill="none" opacity="0.5"/>
+
+  <!-- Central 3D Shield 'U' -->
+  <path d="M22 17 L28 17 L28 32 C28 35.5 30 38 32 39.5 C34 38 36 35.5 36 32 L36 17 L42 17 L42 32 C42 39 37 44 32 47 C27 44 22 39 22 32 Z" 
+        fill="url(#uGrad)" 
+        filter="url(#neonGlow)" />
+  
+  <!-- Inner Facet Highlight of U -->
+  <path d="M28 17 L30 19 L30 31.5 C30 33.5 31 35 32 36 C33 35 34 33.5 34 31.5 L34 19 L36 17 L36 32 C36 37 32 40 32 40 C32 40 28 37 28 32 Z" 
+        fill="#EAF2FF" 
+        opacity="0.35"/>
+
+  <!-- Orbital Cyber Ring -->
+  <ellipse cx="32" cy="32" rx="21" ry="6.5" 
+           transform="rotate(-22 32 32)" 
+           fill="none" 
+           stroke="url(#ringGrad)" 
+           stroke-width="1.8" 
+           stroke-dasharray="80 15"
+           filter="url(#neonGlow)"/>
+
+  <!-- Star Sparkle Glint -->
+  <path d="M43 14 Q44.5 15.5 46 15.5 Q44.5 15.5 43 17 Q41.5 15.5 40 15.5 Q41.5 15.5 43 14 Z" 
+        fill="#00FFFF" 
+        filter="url(#neonGlow)"/>
+</svg>

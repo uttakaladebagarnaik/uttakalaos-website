@@ -1,0 +1,1018 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>UTTAKALA OS — Your Life. Better Organized.</title>
+  <meta name="description" content="UTTAKALA OS is an Awwwards-caliber luxury personal life operating system. Master your goals, focus, habits, academics, and personal growth in a calm, distraction-free digital sanctuary." />
+  
+  <!-- Canonical Placeholder -->
+  <!-- Note: Replace YOUR-GITHUB-USERNAME with your actual GitHub username upon repository deployment -->
+  <link rel="canonical" href="https://YOUR-GITHUB-USERNAME.github.io/uttakala-os-website/" />
+
+  <!-- Open Graph / Meta -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="UTTAKALA OS — Your Life. Better Organized." />
+  <meta property="og:description" content="One intelligent space to organize your goals, focus, habits, academics, and personal growth." />
+  <meta property="og:url" content="https://YOUR-GITHUB-USERNAME.github.io/uttakala-os-website/" />
+  <meta property="og:site_name" content="UTTAKALA OS" />
+  <meta property="og:image" content="./assets/images/favicon.svg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="UTTAKALA OS — Your Life. Better Organized." />
+  <meta name="twitter:description" content="One intelligent space to organize your goals, focus, habits, academics, and personal growth." />
+
+  <!-- Favicon & Browser Branding -->
+  <link rel="icon" type="image/svg+xml" href="./assets/images/favicon.svg" />
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="./assets/images/apple-touch-icon.png" />
+  <meta name="theme-color" content="#0B0C10" />
+  <meta name="msapplication-TileColor" content="#0B0C10" />
+
+  <!-- Google Fonts: Plus Jakarta Sans, DM Sans, DM Serif Display & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300..800;1,9..40,300..800&family=DM+Serif+Display:ital@0;1&family=JetBrains+Mono:wght@400;500;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="./assets/css/style.css" />
+</head>
+<body>
+
+  <!-- Ambient Light Orbs -->
+  <div class="ambient-bg-glow" aria-hidden="true">
+    <div class="ambient-orb-1"></div>
+    <div class="ambient-orb-2"></div>
+  </div>
+
+  <!-- ================= SITE HEADER ================= -->
+  <header class="site-header">
+    <div class="container nav-container">
+      <a href="./index.html" class="brand-link" aria-label="UTTAKALA OS Home">
+        <img 
+          src="./assets/images/uttakala-os-logo.png" 
+          alt="UTTAKALA OS official logo" 
+          class="brand-logo-img" 
+          width="40" 
+          height="40" 
+          loading="eager"
+        />
+        <span class="brand-title">
+          <span class="brand-title-main">UTTAKALA</span>
+          <span class="brand-title-sub">OS</span>
+        </span>
+      </a>
+
+      <!-- Desktop Navigation Pill -->
+      <nav aria-label="Main Navigation">
+        <ul class="nav-menu">
+          <li class="nav-item"><a href="./index.html" class="active">Home</a></li>
+          <li class="nav-item"><a href="./features.html">Features</a></li>
+          <li class="nav-item"><a href="./experience.html">Experience</a></li>
+          <li class="nav-item"><a href="./download.html">Download</a></li>
+          <li class="nav-item"><a href="./tutorials.html">Tutorials</a></li>
+          <li class="nav-item"><a href="./trust.html">Trust Center</a></li>
+          <li class="nav-item"><a href="./about.html">About</a></li>
+          <li class="nav-item"><a href="./contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Desktop Action -->
+      <div class="nav-actions">
+        <a href="./download.html" class="btn btn-primary btn-sm btn-glow btn-magnetic">Get OS</a>
+        <!-- Mobile Toggle Button -->
+        <button class="mobile-nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+          <svg class="icon-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+          <svg class="icon-close" style="display:none;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation Drawer -->
+  <div class="mobile-drawer" role="dialog" aria-modal="true" aria-label="Mobile Navigation">
+    <ul class="mobile-nav-list">
+      <li><a href="./index.html" class="active">Home</a></li>
+      <li><a href="./download.html">Download Center</a></li>
+      <li><a href="./features.html">Features</a></li>
+      <li><a href="./experience.html">Experience Simulator</a></li>
+      <li><a href="./tutorials.html">Tutorials & Docs</a></li>
+      <li><a href="./trust.html">Trust Center</a></li>
+      <li><a href="./security.html">Data & Security</a></li>
+      <li><a href="./privacy.html">Privacy Policy</a></li>
+      <li><a href="./terms.html">Terms of Service</a></li>
+      <li><a href="./about.html">About & Vision</a></li>
+      <li><a href="./contact.html">Contact Support</a></li>
+    </ul>
+    <div class="mobile-drawer-cta">
+      <a href="./experience.html" class="btn btn-primary">Launch Experience</a>
+      <a href="./features.html" class="btn btn-secondary">Explore Features</a>
+    </div>
+  </div>
+
+  <main>
+    <!-- ================= 1. CINEMATIC HERO SECTION ================= -->
+    <section class="hero-section">
+      <div class="container hero-content">
+        
+        <!-- Official Brand Logo Showcase -->
+        <div class="hero-logo-showcase reveal">
+          <div class="hero-logo-frame">
+            <div class="hero-logo-halo" aria-hidden="true"></div>
+            <img 
+              src="./assets/images/uttakala-os-logo.png" 
+              alt="UTTAKALA OS official logo" 
+              class="hero-brand-logo" 
+              width="150" 
+              height="150" 
+              loading="eager" 
+            />
+          </div>
+        </div>
+
+        <div class="hero-pill reveal delay-1">
+          <span class="pulse-beacon"></span>
+          <span class="hero-pill-tag">CYBER TECH PERSONAL LIFE OS</span>
+          <span>Tactical Personal Command Sanctuary</span>
+        </div>
+
+        <h1 class="hero-title reveal delay-2">
+          YOUR LIFE. YOUR SYSTEM. <span class="text-cyan-glow" style="color: var(--highlight-cyan); text-shadow: 0 0 25px rgba(0, 255, 255, 0.45);">YOUR CONTROL.</span>
+        </h1>
+
+        <p class="hero-lead reveal delay-2">
+          Meet UTTAKALA OS — your personal digital Life OS to organize your goals, productivity, academics, finances, and personal growth.
+        </p>
+
+        <div class="hero-actions reveal delay-3">
+          <a href="./download.html" class="btn btn-primary btn-lg btn-glow btn-magnetic">Get UTTAKALA OS</a>
+          <a href="./features.html" class="btn btn-secondary btn-lg btn-magnetic">Explore Features</a>
+          <a href="./experience.html" class="btn btn-ghost btn-lg btn-magnetic" style="border-color: var(--accent-mint); color: var(--accent-mint);">Test-Drive Simulator</a>
+        </div>
+
+        <!-- 3D Perspective Stage with Authentic App Dashboard Screenshot -->
+        <div class="hero-stage-perspective reveal delay-4">
+          
+          <!-- Floating Parallax Badges -->
+          <div class="hero-floating-badge badge-left">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            <div>
+              <div style="font-size: 0.72rem; color: var(--color-text-muted); text-transform: uppercase;">Habit Streak</div>
+              <div>60-Day Mastery Active</div>
+            </div>
+          </div>
+
+          <div class="hero-floating-badge badge-right">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+            <div>
+              <div style="font-size: 0.72rem; color: var(--color-text-muted); text-transform: uppercase;">Privacy Vault</div>
+              <div>Secret Diary (Local Sandbox)</div>
+            </div>
+          </div>
+
+          <!-- Tilt Card Container -->
+          <div class="device-frame-browser tilt-card" aria-label="Authentic UTTAKALA OS Dashboard Screenshot">
+            <div class="device-browser-bar">
+              <div class="device-dots">
+                <span class="device-dot dot-red"></span>
+                <span class="device-dot dot-yellow"></span>
+                <span class="device-dot dot-green"></span>
+              </div>
+              <div class="device-address">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+                <span>uttakala-os://mission-command</span>
+              </div>
+              <div class="device-tag">Native Tactical Interface</div>
+            </div>
+            <img 
+              class="device-screen-img" 
+              src="./assets/images/screenshots/01-mission-command.png" 
+              alt="UTTAKALA OS Mission Command Tactical HUD Screenshot" 
+              loading="eager"
+              title="Click to inspect full-resolution interface"
+            />
+          </div>
+
+          <p class="showcase-caption">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+            Authentic 1920x1080 Native Interface &bull; Move mouse to tilt in 3D &bull; Click to zoom
+          </p>
+        </div>
+
+        <!-- Verified Metrics Strip -->
+        <div class="metrics-strip reveal delay-3">
+          <div class="metric-item">
+            <div class="metric-number">20</div>
+            <div class="metric-label">Verified Modules</div>
+          </div>
+          <div class="metric-item">
+            <div class="metric-number">60 Days</div>
+            <div class="metric-label">Mastery Matrix Grid</div>
+          </div>
+          <div class="metric-item">
+            <div class="metric-number">100%</div>
+            <div class="metric-label">Local-Only Diary</div>
+          </div>
+          <div class="metric-item">
+            <div class="metric-number">0 KB</div>
+            <div class="metric-label">Diary Cloud Exposure</div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================= 2. PRODUCT INTRODUCTION ================= -->
+    <section id="overview" class="section section-alt">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-label">THE ARCHITECTURAL VISION</span>
+          <h2 class="editorial-heading">Your life, thoughtfully unified.</h2>
+          <p class="section-desc">
+            Modern lives are crowded with fragmented tools: notes in one app, habits in another, spreadsheets for college attendance, and chaotic folder trees. UTTAKALA OS unites these essential daily workflows into one serene, high-performance personal command center.
+          </p>
+        </div>
+
+        <div class="philosophy-grid">
+          <div class="philosophy-card reveal delay-1">
+            <h3 style="margin-bottom: 1rem; color: var(--color-primary); font-family: var(--font-serif); font-size: 1.65rem;">A Grounded, Human-Centered Philosophy</h3>
+            <p>
+              We believe personal software should not fight for your attention. It should be a quiet, dependable instrument that helps you reflect on your priorities, complete your obligations, and move through your days with clarity.
+            </p>
+            <p>
+              No intrusive ads, no artificial urgency, and no gamified noise. The website presents a luxury minimal editorial aesthetic; the application inside delivers a focused Cyber Dark environment designed for deep work.
+            </p>
+            <div style="margin-top: 1.75rem;">
+              <a href="./about.html" class="btn btn-outline-green btn-sm">Read Product Story &rarr;</a>
+            </div>
+          </div>
+
+          <div class="reveal delay-2">
+            <ul class="philosophy-list">
+              <li class="philosophy-list-item">
+                <div class="philosophy-bullet">&checkmark;</div>
+                <div class="philosophy-list-content">
+                  <h4>One Central Destination</h4>
+                  <p>Consolidate your daily routine checklist, academic syllabus attendance, deep work timers, and LeetCode mistakes into a single command center.</p>
+                </div>
+              </li>
+              <li class="philosophy-list-item">
+                <div class="philosophy-bullet">&checkmark;</div>
+                <div class="philosophy-list-content">
+                  <h4>Honest Data Architecture</h4>
+                  <p>Transparent boundaries: Supabase for persistent cloud sync, user-authorized Google Drive AppData backups, and a strictly local-only Secret Diary.</p>
+                </div>
+              </li>
+              <li class="philosophy-list-item">
+                <div class="philosophy-bullet">&checkmark;</div>
+                <div class="philosophy-list-content">
+                  <h4>Built for Real Life Friction</h4>
+                  <p>Tools designed specifically for students and engineers: course attendance margin calculators, 10-second urge breakers, and swipe flashcards.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 3. INTERACTIVE TABBED FEATURE SHOWCASE ================= -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-label">INTERACTIVE VAULT MATRIX</span>
+          <h2 class="editorial-heading">Explore Core Sub-Systems</h2>
+          <p class="section-desc">
+            Switch between core sub-systems to experience how UTTAKALA OS structures your day from morning orientation to evening reflection.
+          </p>
+        </div>
+
+        <!-- Interactive Switcher Buttons -->
+        <div class="tabbed-showcase-nav reveal">
+          <button class="tabbed-nav-btn active" data-tab="tab-command">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>
+            Mission Command
+          </button>
+          <button class="tabbed-nav-btn" data-tab="tab-focus">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+            Focus & Deep Work
+          </button>
+          <button class="tabbed-nav-btn" data-tab="tab-academic">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path></svg>
+            Academic Clearance
+          </button>
+          <button class="tabbed-nav-btn" data-tab="tab-coding">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+            LeetCode DSA Vault
+          </button>
+          <button class="tabbed-nav-btn" data-tab="tab-diary">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+            Local Secret Diary
+          </button>
+        </div>
+
+        <!-- Tab 1: Mission Command -->
+        <div id="tab-command" class="tab-pane active">
+          <div class="showcase-split reveal">
+            <div class="showcase-text">
+              <span class="badge badge-available"><span class="badge-dot"></span> Available</span>
+              <h3 style="margin-top: 0.5rem;">Mission Command Tactical HUD</h3>
+              <p>
+                Wake up with total perspective. Mission Command aggregates your active health telemetry, daily prime focus, immediate routine deliverables, and 60-day mastery heatmaps onto a single high-signal canvas.
+              </p>
+              <ul class="showcase-points">
+                <li class="showcase-point"><span class="showcase-point-icon">&check;</span><span><strong>60-Day Habit Matrix:</strong> Visual completion density evaluates cadence over time without streak pressure.</span></li>
+                <li class="showcase-point"><span class="showcase-point-icon">&check;</span><span><strong>Tactical Launchpad Dock:</strong> Instant one-click teleportation to any vault, tool, or assistant persona.</span></li>
+              </ul>
+              <a href="./features.html#dashboard" class="btn btn-secondary">Explore Dashboard &rarr;</a>
+            </div>
+            <div class="showcase-media">
+              <div class="device-frame-browser tilt-card">
+                <div class="device-browser-bar">
+                  <div class="device-dots"><span class="device-dot dot-red"></span><span class="device-dot dot-yellow"></span><span class="device-dot dot-green"></span></div>
+                  <div class="device-address">uttakala-os://mastery-matrix</div>
+                  <div class="device-tag">60-Day View</div>
+                </div>
+                <img class="device-screen-img" src="./assets/images/screenshots/02-mastery-matrix.png" alt="60-Day Mastery Matrix Screenshot" loading="lazy" />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tab 2: Focus & Urge Breaker -->
+        <div id="tab-focus" class="tab-pane">
+          <div class="showcase-split reveal">
+            <div class="showcase-text">
+              <span class="badge badge-available"><span class="badge-dot"></span> Available</span>
+              <h3 style="margin-top: 0.5rem;">Focus Timer & 10-Second Urge Breaker</h3>
+              <p>
+                Overcome procrastination and stop involuntary dopamine seeking. The Focus Timer eliminates distraction, while the Urge Breaker guided breath pause rescues you from compulsive social media loops.
+              </p>
+              <ul class="showcase-points">
+                <li class="showcase-point"><span class="showcase-point-icon">&check;</span><span><strong>Monochrome Intervals:</strong> Pomodoro and Flow State cadences built without flashing notifications.</span></li>
+                <li class="showcase-point"><span class="showcase-point-icon">&check;</span><span><strong>Guided Breath Lockdown:</strong> 10-second rhythmic breathing pause resets impulsive dopamine surges.</span></li>
+              </ul>
+              <a href="./features.html#focus" class="btn btn-secondary">Explore Focus Tools &rarr;</a>
+            </div>
+            <div class="showcase-media">
+              <div class="device-frame-browser tilt-card">
+                <div class="device-browser-bar">
+                  <div class="device-dots"><span class="device-dot dot-red"></span><span class="device-dot dot-yellow"></span><span class="device-dot dot-green"></span></div>
+                  <div class="device-address">uttakala-os://focus-timer</div>
+                  <div class="device-tag">Active Block</div>
+                </div>
+                <img class="device-screen-img" src="./assets/images/screenshots/04-focus-timer.png" alt="High-Performance Focus Timer Screenshot" loading="lazy" />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tab 3: Academic Clearance -->
+        <div id="tab-academic" class="tab-pane">
+          <div class="showcase-split reveal">
+            <div class="showcase-text">
+              <span class="badge badge-available"><span class="badge-dot"></span> Available</span>
+              <h3 style="margin-top: 0.5rem;">Academic Vault & Clearance Margins</h3>
+              <p>
+                Never fall below university attendance requirements. Track course syllabi, log backlog exams, and calculate dynamically how many upcoming lectures you can safely miss or must attend.
+              </p>
+              <ul class="showcase-points">
+                <li class="showcase-point"><span class="showcase-point-icon">&check;</span><span><strong>Threshold Safety Margins:</strong> Real-time calculations against mandatory 75% or 80% criteria.</span></li>
+                <li class="showcase-point"><span class="showcase-point-icon">&check;</span><span><strong>Course Backlog Registry:</strong> Deadlines, lab certificates, and examination sign-offs.</span></li>
+              </ul>
+              <a href="./features.html#academic" class="btn btn-secondary">Explore Academic Vault &rarr;</a>
+            </div>
+            <div class="showcase-media">
+              <div class="device-frame-browser tilt-card">
+                <div class="device-browser-bar">
+                  <div class="device-dots"><span class="device-dot dot-red"></span><span class="device-dot dot-yellow"></span><span class="device-dot dot-green"></span></div>
+                  <div class="device-address">uttakala-os://academic-vault</div>
+                  <div class="device-tag">Course Progress</div>
+                </div>
+                <img class="device-screen-img" src="./assets/images/screenshots/07-academic-vault.png" alt="Academic Backlog Clearance Vault Screenshot" loading="lazy" />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tab 4: LeetCode DSA Vault -->
+        <div id="tab-coding" class="tab-pane">
+          <div class="showcase-split reveal">
+            <div class="showcase-text">
+              <span class="badge badge-available"><span class="badge-dot"></span> Available</span>
+              <h3 style="margin-top: 0.5rem;">LeetCode & Algorithmic Mistake Vault</h3>
+              <p>
+                Engineered specifically for software developers. Catalogue solved data structures, note edge-cases, and review technical patterns with fluid swipeable flashcards.
+              </p>
+              <ul class="showcase-points">
+                <li class="showcase-point"><span class="showcase-point-icon">&check;</span><span><strong>Mistake Repository:</strong> Document the exact conceptual error so you never repeat it in an interview.</span></li>
+                <li class="showcase-point"><span class="showcase-point-icon">&check;</span><span><strong>Spaced Flashcards:</strong> Mobile gesture cards to solidify algorithms during spare minutes.</span></li>
+              </ul>
+              <a href="./features.html#coding" class="btn btn-secondary">Explore Coding Vault &rarr;</a>
+            </div>
+            <div class="showcase-media">
+              <div class="device-frame-browser tilt-card">
+                <div class="device-browser-bar">
+                  <div class="device-dots"><span class="device-dot dot-red"></span><span class="device-dot dot-yellow"></span><span class="device-dot dot-green"></span></div>
+                  <div class="device-address">uttakala-os://coding-vault</div>
+                  <div class="device-tag">DSA Registry</div>
+                </div>
+                <img class="device-screen-img" src="./assets/images/screenshots/08-coding-vault.png" alt="LeetCode Coding & Mistake Vault Screenshot" loading="lazy" />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tab 5: Local Secret Diary -->
+        <div id="tab-diary" class="tab-pane">
+          <div class="showcase-split reveal">
+            <div class="showcase-text">
+              <span class="badge badge-available" style="background-color: #EBF1EA; color: #183D32;"><span class="badge-dot" style="background:#183D32;"></span> Local Only Sandbox</span>
+              <h3 style="margin-top: 0.5rem;">Hardware PIN Protected Diary</h3>
+              <p>
+                Your most personal reflections never belong in cloud databases. The Secret Diary is secured behind a dedicated PIN screen and stored exclusively in your local device sandbox.
+              </p>
+              <ul class="showcase-points">
+                <li class="showcase-point"><span class="showcase-point-icon">&check;</span><span><strong>Zero Cloud Transmission:</strong> Explicitly excluded from Supabase sync and Google Drive backups.</span></li>
+                <li class="showcase-point"><span class="showcase-point-icon">&check;</span><span><strong>PIN Shield:</strong> Guards reflections from unauthorized casual onlookers on shared laptops.</span></li>
+              </ul>
+              <a href="./features.html#journaling" class="btn btn-secondary">Explore Privacy Isolation &rarr;</a>
+            </div>
+            <div class="showcase-media">
+              <div class="device-frame-browser tilt-card">
+                <div class="device-browser-bar">
+                  <div class="device-dots"><span class="device-dot dot-red"></span><span class="device-dot dot-yellow"></span><span class="device-dot dot-green"></span></div>
+                  <div class="device-address">uttakala-os://secret-diary</div>
+                  <div class="device-tag">Private Enclave</div>
+                </div>
+                <img class="device-screen-img" src="./assets/images/screenshots/16-secret-diary-unlocked.png" alt="Secret Diary Unlocked Enclave Screenshot" loading="lazy" />
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================= 4. CINEMATIC DARK CONTRAST SECTION ================= -->
+    <section class="section section-cinematic-dark">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-label">OBSIDIAN ENCLAVE</span>
+          <h2 class="editorial-heading">Built for High-Performance Deep Work</h2>
+          <p class="section-desc">
+            When you enter focused work mode, UTTAKALA OS transitions into an ultra-low-stimulation Cyber Dark interface. Minimalist contrast, ambient telemetry, and cryptographic verification.
+          </p>
+        </div>
+
+        <div class="showcase-split reveal">
+          <div class="showcase-text">
+            <span class="badge badge-label" style="background: rgba(168,185,165,0.15); color: #A8B9A5; border-color: rgba(168,185,165,0.3);">SECURITY ARCHITECTURE</span>
+            <h3>SALTICOR Cybersecurity Gateway</h3>
+            <p>
+              Review active device telemetry, session authorization tokens, and cryptographic verification states from a single security portal.
+            </p>
+            <ul class="showcase-points">
+              <li class="showcase-point">
+                <span class="showcase-point-icon">&check;</span>
+                <span><strong>Device Telemetry Audit:</strong> Monitor active client sessions and local sandbox allocation.</span>
+              </li>
+              <li class="showcase-point">
+                <span class="showcase-point-icon">&check;</span>
+                <span><strong>Drive AppData Enclave:</strong> User-authorized backups write structured JSON directly to your isolated Google Drive folder.</span>
+              </li>
+              <li class="showcase-point">
+                <span class="showcase-point-icon">&check;</span>
+                <span><strong>Honest Backup Disclosure:</strong> Backup JSON files are unencrypted by the application, stored cleanly in your private Google Drive AppData container.</span>
+              </li>
+            </ul>
+            <a href="./features.html#security" class="btn btn-secondary">Inspect SALTICOR Security &rarr;</a>
+          </div>
+
+          <div class="showcase-media">
+            <div class="device-frame-browser tilt-card">
+              <div class="device-browser-bar">
+                <div class="device-dots"><span class="device-dot dot-red"></span><span class="device-dot dot-yellow"></span><span class="device-dot dot-green"></span></div>
+                <div class="device-address">uttakala-os://salticor-gateway</div>
+                <div class="device-tag">Audit Active</div>
+              </div>
+              <img class="device-screen-img" src="./assets/images/screenshots/09-salticor-security.png" alt="SALTICOR Cybersecurity Vault Screenshot" loading="lazy" />
+            </div>
+            <p class="showcase-caption" style="color: #728070;">Figure 2.2: SALTICOR Security Gateway auditing active local sandboxes and session tokens</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================= 5. THE 12 ARCHITECTURAL DOMAINS MATRIX ================= -->
+    <section class="section section-alt">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-label">PLATFORM SPECIFICATIONS</span>
+          <h2 class="editorial-heading">Complete Life Management Architecture</h2>
+          <p class="section-desc">
+            Explore the 12 core domains engineered to streamline every facet of your personal, academic, and technical responsibilities.
+          </p>
+        </div>
+
+        <div class="category-matrix">
+          
+          <!-- 1. Personal Dashboard -->
+          <a href="./features.html#dashboard" class="category-card reveal">
+            <div>
+              <div class="category-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>
+              </div>
+              <div class="category-title">Personal Dashboard</div>
+              <p class="category-desc">Mission Command tactical HUD, Launchpad dock, and 60-day visual mastery distribution heatmaps.</p>
+            </div>
+            <div class="category-count">
+              <span class="badge badge-available"><span class="badge-dot"></span> Available</span>
+              <span>Explore &rarr;</span>
+            </div>
+          </a>
+
+          <!-- 2. Productivity & Tasks -->
+          <a href="./features.html#tasks" class="category-card reveal delay-1">
+            <div>
+              <div class="category-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 11 12 14 22 4"></polyline><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path></svg>
+              </div>
+              <div class="category-title">Productivity & Tasks</div>
+              <p class="category-desc">Daily mission tasks manager, urgency triage matrices, and sub-task checklists.</p>
+            </div>
+            <div class="category-count">
+              <span class="badge badge-available"><span class="badge-dot"></span> Available</span>
+              <span>Explore &rarr;</span>
+            </div>
+          </a>
+
+          <!-- 3. Focus & Deep Work -->
+          <a href="./features.html#focus" class="category-card reveal delay-2">
+            <div>
+              <div class="category-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+              </div>
+              <div class="category-title">Focus & Deep Work</div>
+              <p class="category-desc">High-performance focus timer, flow-state calibrator, and 10-second dopamine urge breaker.</p>
+            </div>
+            <div class="category-count">
+              <span class="badge badge-available"><span class="badge-dot"></span> Available</span>
+              <span>Explore &rarr;</span>
+            </div>
+          </a>
+
+          <!-- 4. Habits & Wellness -->
+          <a href="./features.html#habits" class="category-card reveal delay-3">
+            <div>
+              <div class="category-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+              </div>
+              <div class="category-title">Habits & Wellness</div>
+              <p class="category-desc">Habits cadence, physical health telemetry, hydration, and sleep indicators.</p>
+            </div>
+            <div class="category-count">
+              <span class="badge badge-available"><span class="badge-dot"></span> Available</span>
+              <span>Explore &rarr;</span>
+            </div>
+          </a>
+
+          <!-- 5. Academic Management -->
+          <a href="./features.html#academic" class="category-card reveal">
+            <div>
+              <div class="category-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c3 3 9 3 12 0v-5"></path></svg>
+              </div>
+              <div class="category-title">Academic Management</div>
+              <p class="category-desc">College syllabus tracker, attendance percentage margin calculator, and backlog clearance vault.</p>
+            </div>
+            <div class="category-count">
+              <span class="badge badge-available"><span class="badge-dot"></span> Available</span>
+              <span>Explore &rarr;</span>
+            </div>
+          </a>
+
+          <!-- 6. Coding & DSA -->
+          <a href="./features.html#coding" class="category-card reveal delay-1">
+            <div>
+              <div class="category-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+              </div>
+              <div class="category-title">Coding & DSA Vault</div>
+              <p class="category-desc">LeetCode problem tracker, algorithmic mistake vault, and swipeable spaced flashcards.</p>
+            </div>
+            <div class="category-count">
+              <span class="badge badge-available"><span class="badge-dot"></span> Available</span>
+              <span>Explore &rarr;</span>
+            </div>
+          </a>
+
+          <!-- 7. SALTICOR Security Vault -->
+          <a href="./features.html#security" class="category-card reveal delay-2">
+            <div>
+              <div class="category-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+              </div>
+              <div class="category-title">SALTICOR Security</div>
+              <p class="category-desc">Device sandboxing, session telemetry, and hardware PIN security gateways.</p>
+            </div>
+            <div class="category-count">
+              <span class="badge badge-available"><span class="badge-dot"></span> Available</span>
+              <span>Explore &rarr;</span>
+            </div>
+          </a>
+
+          <!-- 8. Finance Management -->
+          <a href="./features.html#finance" class="category-card reveal delay-3">
+            <div>
+              <div class="category-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+              </div>
+              <div class="category-title">Finance Management</div>
+              <p class="category-desc">Private ledger for daily expenses, category budget allocations, and spending awareness.</p>
+            </div>
+            <div class="category-count">
+              <span class="badge badge-available"><span class="badge-dot"></span> Available</span>
+              <span>Explore &rarr;</span>
+            </div>
+          </a>
+
+          <!-- 9. AI & Personal Growth -->
+          <a href="./features.html#growth" class="category-card reveal">
+            <div>
+              <div class="category-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"></path></svg>
+              </div>
+              <div class="category-title">AI & Personal Growth</div>
+              <p class="category-desc">AI Task Slicer modal, Voice Coach persona engine, and Aura Flex story cards.</p>
+            </div>
+            <div class="category-count">
+              <span class="badge badge-available"><span class="badge-dot"></span> Available</span>
+              <span>Explore &rarr;</span>
+            </div>
+          </a>
+
+          <!-- 10. Journaling & Privacy -->
+          <a href="./features.html#journaling" class="category-card reveal delay-1">
+            <div>
+              <div class="category-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+              </div>
+              <div class="category-title">Journaling & Privacy</div>
+              <p class="category-desc">Strictly local-only Secret Diary protected by hardware PIN lockscreen. Excluded from all cloud sync.</p>
+            </div>
+            <div class="category-count">
+              <span class="badge badge-available"><span class="badge-dot"></span> Local-Only</span>
+              <span>Explore &rarr;</span>
+            </div>
+          </a>
+
+          <!-- 11. Reports & Data Management -->
+          <a href="./features.html#data" class="category-card reveal delay-2">
+            <div>
+              <div class="category-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="17 8 12 3 7 8"></polyline><line x1="12" y1="3" x2="12" y2="15"></line></svg>
+              </div>
+              <div class="category-title">Reports & Cloud Backup</div>
+              <p class="category-desc">Google Drive AppData user-authorized JSON backup and restore routines.</p>
+            </div>
+            <div class="category-count">
+              <span class="badge badge-available"><span class="badge-dot"></span> Available</span>
+              <span>Explore &rarr;</span>
+            </div>
+          </a>
+
+          <!-- 12. Android Experience -->
+          <a href="./features.html#android" class="category-card reveal delay-3">
+            <div>
+              <div class="category-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect><line x1="12" y1="18" x2="12.01" y2="18"></line></svg>
+              </div>
+              <div class="category-title">Android Experience</div>
+              <p class="category-desc">Full touch responsiveness, bottom dock, tactile haptics, and mobile offline readiness.</p>
+            </div>
+            <div class="category-count">
+              <span class="badge badge-available"><span class="badge-dot"></span> Native Ready</span>
+              <span>Explore &rarr;</span>
+            </div>
+          </a>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================= 6. INTERACTIVE FAQ ACCORDION ================= -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-label">FREQUENT QUESTIONS</span>
+          <h2 class="editorial-heading">Clarity on Architecture & Privacy</h2>
+          <p class="section-desc">
+            We believe in complete technical transparency. Here are honest answers regarding how your data is handled.
+          </p>
+        </div>
+
+        <div class="faq-accordion reveal">
+          
+          <div class="faq-item open">
+            <button class="faq-trigger" aria-expanded="true">
+              <span>Where does my Secret Diary text live?</span>
+              <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="faq-content">
+              Your Secret Diary entries live <strong>strictly on your local device's browser sandbox</strong> (IndexedDB / localStorage). They are explicitly filtered out from Supabase database sync and excluded from Google Drive AppData backups. No remote server ever receives your diary text.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-trigger" aria-expanded="false">
+              <span>Are Google Drive JSON backups encrypted?</span>
+              <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="faq-content">
+              <strong>No, they are not encrypted by the application.</strong> Backups exported to Google Drive are structured plaintext JSON files stored in your private Google Drive AppData folder. We strongly encourage you not to store sensitive passwords or credentials in standard routine notes.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-trigger" aria-expanded="false">
+              <span>Can UTTAKALA OS view my other Google Drive files?</span>
+              <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="faq-content">
+              <strong>Never.</strong> The Google OAuth authorization requests only the restricted <code>drive.appdata</code> scope. This grants access exclusively to a hidden folder created specifically for UTTAKALA OS. The platform has zero access to your personal Google Docs, Sheets, Photos, or Drive storage.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-trigger" aria-expanded="false">
+              <span>What data is synchronized via Supabase?</span>
+              <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="faq-content">
+              User authentication credentials, daily routine completion states, course attendance logs, and task priorities are synchronized through Supabase managed tables, protected by user-level Row Level Security (RLS) policies.
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================= 7. TUTORIALS PREVIEW ================= -->
+    <section class="section section-alt">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-label">OPERATIONAL WALKTHROUGHS</span>
+          <h2 class="editorial-heading">Master Every Sub-System</h2>
+          <p class="section-desc">
+            Explore step-by-step visual operational guides covering morning initialization, focus calibration, and cloud backup hygiene.
+          </p>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem;" class="reveal">
+          
+          <div class="feature-card">
+            <div class="feature-thumb-wrap">
+              <img class="feature-thumb-img" src="./assets/images/screenshots/01-mission-command.png" alt="Mission Command Setup Walkthrough" />
+              <div class="feature-thumb-overlay">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                <span>Interactive Demonstration</span>
+              </div>
+            </div>
+            <h3 class="feature-title">01. Setting Up Mission Command</h3>
+            <p class="feature-desc">Learn how to initialize your morning HUD, set the daily focus banner, and launch sub-vaults.</p>
+            <div class="feature-footer">
+              <span>Duration: 02:45</span>
+              <a href="./tutorials.html" style="font-weight: 700;">Open Walkthrough &rarr;</a>
+            </div>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-thumb-wrap">
+              <img class="feature-thumb-img" src="./assets/images/screenshots/04-focus-timer.png" alt="Focus Timer Deep Work Walkthrough" />
+              <div class="feature-thumb-overlay">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                <span>Interactive Demonstration</span>
+              </div>
+            </div>
+            <h3 class="feature-title">02. Deep Work & Urge Breaker</h3>
+            <p class="feature-desc">Calibrate distraction-free focus intervals and deploy the 10-second urge breaker to sustain momentum.</p>
+            <div class="feature-footer">
+              <span>Duration: 03:10</span>
+              <a href="./tutorials.html" style="font-weight: 700;">Open Walkthrough &rarr;</a>
+            </div>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-thumb-wrap">
+              <img class="feature-thumb-img" src="./assets/images/screenshots/07-academic-vault.png" alt="Academic & Coding Vault Walkthrough" />
+              <div class="feature-thumb-overlay">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                <span>Interactive Demonstration</span>
+              </div>
+            </div>
+            <h3 class="feature-title">03. Academic Vault & LeetCode</h3>
+            <p class="feature-desc">Track college course backlogs, manage lecture attendance margins, and catalogue algorithmic errors.</p>
+            <div class="feature-footer">
+              <span>Duration: 04:00</span>
+              <a href="./tutorials.html" style="font-weight: 700;">Open Walkthrough &rarr;</a>
+            </div>
+          </div>
+
+        </div>
+
+        <div style="text-align: center; margin-top: 2.75rem;" class="reveal">
+          <a href="./tutorials.html" class="btn btn-primary btn-magnetic">Visit Tutorials Center &rarr;</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 8. FINAL CTA BANNER ================= -->
+    <!-- ================= 8. FOUR-PLATFORM DOWNLOAD OVERVIEW ================= -->
+    <section id="download" class="section section-cinematic-dark">
+      <div class="container">
+        <div class="section-header reveal">
+          <div class="hero-badge">
+            <span class="badge badge-available">
+              <span class="badge-dot"></span> Central Release Distribution
+            </span>
+          </div>
+          <h2 class="section-title" style="margin-top: 1rem;">GET <span class="text-gradient-cyan">UTTAKALA OS</span></h2>
+          <p class="section-subtitle">
+            One cohesive Life OS built for your desktop and mobile ecosystems. Certified SHA-256 integrity, local-first database, zero telemetry.
+          </p>
+        </div>
+
+        <div class="download-grid reveal">
+          <!-- Windows Preview Card -->
+          <div class="dl-card highlight">
+            <div class="dl-card-header">
+              <div class="dl-platform-icon">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M0 3.449L9.75 2.1v9.451H0m10.949-9.602L24 0v11.4h-13.051M0 12.6h9.75v9.451L0 20.699M10.949 12.6H24V24l-13.051-1.951"/>
+                </svg>
+              </div>
+              <span class="badge badge-available"><span class="badge-dot"></span> v1.0.0 Stable</span>
+            </div>
+            <h3 class="dl-title">Windows Desktop</h3>
+            <div class="dl-version-tag"><span>64-bit x64</span><span>•</span><span>136 MB Setup</span></div>
+            <p style="font-size: 0.88rem; color: var(--text-secondary); line-height: 1.5; margin-bottom: 1.25rem;">
+              NSIS installer and portable executable with hardware sandboxing and local LevelDB persistence.
+            </p>
+            <div class="dl-actions">
+              <a href="./download.html#downloads" class="btn-download-primary">Download Windows App</a>
+            </div>
+          </div>
+
+          <!-- Android Preview Card -->
+          <div class="dl-card android-card">
+            <div class="dl-card-header">
+              <div class="dl-platform-icon">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M17.523 15.3414c-.5511 0-.9993-.4486-.9993-.9997s.4482-.9993.9993-.9993c.551 0 .9993.4482.9993.9993.0001.5511-.4482.9997-.9993.9997m-11.046 0c-.5511 0-.9993-.4486-.9993-.9997s.4482-.9993.9993-.9993c.551 0 .9993.4482.9993.9993 0 .5511-.4483.9997-.9993.9997m11.4045-6.02l1.9973-3.4592a.416.416 0 00-.1521-.5676.416.416 0 00-.5676.1521l-2.0223 3.503C15.5902 8.4116 13.8533 8.1 12 8.1s-3.5902.3116-5.1367.8497L4.841 5.4467a.4161.4161 0 00-.5677-.1521.4157.4157 0 00-.1521.5676l1.9973 3.4592C2.6889 11.1867.3432 14.6589 0 18.761h24c-.3432-4.1021-2.6889-7.5743-6.1185-9.4396"/>
+                </svg>
+              </div>
+              <span class="badge badge-available"><span class="badge-dot"></span> v1.0 Production</span>
+            </div>
+            <h3 class="dl-title">Android</h3>
+            <div class="dl-version-tag"><span>Universal APK</span><span>•</span><span>5.5 MB Direct Install</span></div>
+            <p style="font-size: 0.88rem; color: var(--text-secondary); line-height: 1.5; margin-bottom: 1.25rem;">
+              Native background Focus Timer, loud native alarms, vibration feedback, and local Secret Diary lock.
+            </p>
+            <div class="dl-actions">
+              <a href="./download.html#downloads" class="btn-download-primary" style="background: linear-gradient(135deg, #0e8f6e, #0fc896);">Download Android APK</a>
+            </div>
+          </div>
+
+          <!-- Apple iOS Preview Card -->
+          <div class="dl-card ios-card">
+            <div class="dl-card-header">
+              <div class="dl-platform-icon">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M15.97 6.47c.63-.77 1.06-1.84.94-2.91-.91.04-2.02.61-2.67 1.38-.57.66-1.07 1.74-.94 2.8.01 0 .02 0 .03 0 1.02 0 2.01-.5 2.64-1.27z"/>
+                </svg>
+              </div>
+              <span class="badge badge-planned">Preparation Stage</span>
+            </div>
+            <h3 class="dl-title">Apple iOS & iPadOS</h3>
+            <div class="dl-version-tag"><span>Universal App</span><span>•</span><span>iOS 15.0+</span></div>
+            <p style="font-size: 0.88rem; color: var(--text-secondary); line-height: 1.5; margin-bottom: 1.25rem;">
+              Native Xcode scaffold prepared. TestFlight Beta distribution will launch upon Apple Developer signing.
+            </p>
+            <div class="dl-actions">
+              <a href="./download.html" class="btn-download-secondary">View iOS Status</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 9. FINAL CTA BANNER ================= -->
+    <section class="section">
+      <div class="container">
+        <div class="cta-banner reveal">
+          <h2>Master your everyday rhythm.</h2>
+          <p>
+            Experience a personal life operating system engineered to respect your focus, honor your routines, and keep your vital data accessible.
+          </p>
+          <div style="display: flex; justify-content: center; gap: 1.15rem; flex-wrap: wrap;">
+            <a href="./download.html" class="btn btn-cta btn-lg btn-magnetic">Get UTTAKALA OS</a>
+            <a href="./features.html" class="btn btn-secondary btn-lg btn-magnetic" style="background-color: transparent; color: #FFFFFF; border-color: rgba(255,255,255,0.3);">Explore Features</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= SITE FOOTER ================= -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="./index.html" class="footer-brand-link" aria-label="UTTAKALA OS Home">
+            <img 
+              src="./assets/images/uttakala-os-logo.png" 
+              alt="UTTAKALA OS official logo" 
+              class="footer-brand-logo" 
+              width="48" 
+              height="48" 
+              loading="lazy"
+            />
+            <div class="brand-title">
+              <span class="brand-title-main">UTTAKALA</span>
+              <span class="brand-title-sub">OS</span>
+            </div>
+          </a>
+          <div class="footer-tagline">Your Personal Life OS</div>
+          <p>
+            Autonomous cyberpunk personal productivity and life-management operating system. Precision engineering for focus, habits, academics, and personal sovereignty.
+          </p>
+          <div style="margin-top: 1rem; display: flex; gap: 0.75rem; align-items: center;">
+            <span class="badge badge-available"><span class="badge-dot"></span> System Online v2.4</span>
+            <span style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-muted);">LATENCY: 0.4MS</span>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Platform Hub</h4>
+          <ul class="footer-links">
+            <li><a href="./index.html">Command Center</a></li>
+            <li><a href="./download.html">Get UTTAKALA OS</a></li>
+            <li><a href="./features.html">Feature Matrix</a></li>
+            <li><a href="./experience.html">OS Live Simulator</a></li>
+            <li><a href="./tutorials.html">Operator Tutorials</a></li>
+            <li><a href="./about.html">System Architecture</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Trust & Security</h4>
+          <ul class="footer-links">
+            <li><a href="./trust.html">Trust Center Hub</a></li>
+            <li><a href="./security.html">Data & Security Whitepaper</a></li>
+            <li><a href="./privacy.html">Privacy Policy</a></li>
+            <li><a href="./terms.html">Terms of Service</a></li>
+            <li><a href="./trust.html#compliance">Local vs Cloud Isolation</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Communication</h4>
+          <ul class="footer-links">
+            <li><a href="./contact.html">Dispatch Console</a></li>
+            <li><a href="mailto:uttakaladeba.codes@gmail.com">Direct Developer Line</a></li>
+            <li><a href="./contact.html#security-report">Report Vulnerability</a></li>
+            <li><a href="./about.html#roadmap">Release Roadmap</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          &copy; <span data-year>2026</span> UTTAKALA OS. Precision engineering. Built for individual autonomy.
+        </div>
+        <div class="footer-bottom-links">
+          <a href="./trust.html">Trust Center</a>
+          <a href="./security.html">Security</a>
+          <a href="./privacy.html">Privacy</a>
+          <a href="./terms.html">Terms</a>
+          <a href="./experience.html">Experience</a>
+          <a href="./contact.html">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Main JavaScript -->
+  <script src="./assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tutorials & Guides — UTTAKALA OS Walkthroughs</title>
+  <meta name="description" content="Step-by-step interactive visual guides and operational demonstrations for UTTAKALA OS. Learn how to configure Mission Command, manage focus timers, clear backlogs, and secure personal notes." />
+  
+  <!-- Canonical Placeholder -->
+  <link rel="canonical" href="https://YOUR-GITHUB-USERNAME.github.io/uttakala-os-website/tutorials.html" />
+
+  <!-- Open Graph / Meta -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Tutorials & Guides — UTTAKALA OS Walkthroughs" />
+  <meta property="og:description" content="Visual operational guides for UTTAKALA OS: Mission Command, Focus Timer, Academic Vault, and Secret Diary." />
+  <meta property="og:url" content="https://YOUR-GITHUB-USERNAME.github.io/uttakala-os-website/tutorials.html" />
+  <meta property="og:site_name" content="UTTAKALA OS" />
+  <meta property="og:image" content="./assets/images/favicon.svg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Tutorials & Walkthroughs — UTTAKALA OS" />
+  <meta name="twitter:description" content="Master your personal life operating system with step-by-step visual guides." />
+
+  <!-- Favicon -->
+    <!-- Favicon & Browser Branding -->
+  <link rel="icon" type="image/svg+xml" href="./assets/images/favicon.svg" />
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="./assets/images/apple-touch-icon.png" />
+  <meta name="theme-color" content="#0B0C10" />
+  <meta name="msapplication-TileColor" content="#0B0C10" />
+
+  <!-- Google Fonts: Plus Jakarta Sans & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="./assets/css/style.css" />
+</head>
+<body>
+
+  <!-- Ambient Light Orbs -->
+  <div class="ambient-bg-glow" aria-hidden="true">
+    <div class="ambient-orb-1"></div>
+    <div class="ambient-orb-2"></div>
+  </div>
+
+  <!-- ================= SITE HEADER ================= -->
+  <header class="site-header">
+    <div class="container nav-container">
+            <a href="./index.html" class="brand-link" aria-label="UTTAKALA OS Home">
+        <img 
+          src="./assets/images/uttakala-os-logo.png" 
+          alt="UTTAKALA OS official logo" 
+          class="brand-logo-img" 
+          width="40" 
+          height="40" 
+          loading="eager" 
+        />
+        <span class="brand-title">
+          <span class="brand-title-main">UTTAKALA</span>
+          <span class="brand-title-sub">OS</span>
+        </span>
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav aria-label="Main Navigation">
+        <ul class="nav-menu">
+          <li class="nav-item"><a href="./index.html">Home</a></li>
+          <li class="nav-item"><a href="./features.html">Features</a></li>
+          <li class="nav-item"><a href="./experience.html">Experience</a></li>
+          <li class="nav-item"><a href="./download.html">Download</a></li>
+          <li class="nav-item"><a href="./tutorials.html" class="active">Tutorials</a></li>
+          <li class="nav-item"><a href="./trust.html">Trust Center</a></li>
+          <li class="nav-item"><a href="./about.html">About</a></li>
+          <li class="nav-item"><a href="./contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Desktop Action -->
+      <div class="nav-actions">
+        <a href="./download.html" class="btn btn-primary btn-sm btn-glow btn-magnetic">Get OS</a>
+        <button class="mobile-nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+          <svg class="icon-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+          <svg class="icon-close" style="display:none;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation Drawer -->
+  <div class="mobile-drawer" role="dialog" aria-modal="true" aria-label="Mobile Navigation">
+    <ul class="mobile-nav-list">
+      <li><a href="./index.html">Home</a></li>
+      <li><a href="./features.html">Features</a></li>
+      <li><a href="./experience.html">Experience Simulator</a></li>
+      <li><a href="./tutorials.html" class="active">Tutorials & Docs</a></li>
+      <li><a href="./trust.html">Trust Center</a></li>
+      <li><a href="./security.html">Data & Security</a></li>
+      <li><a href="./privacy.html">Privacy Policy</a></li>
+      <li><a href="./terms.html">Terms of Service</a></li>
+      <li><a href="./about.html">About & Vision</a></li>
+      <li><a href="./contact.html">Contact Support</a></li>
+    </ul>
+    <div class="mobile-drawer-cta">
+      <a href="./experience.html" class="btn btn-primary">Launch Experience</a>
+      <a href="./features.html" class="btn btn-secondary">Explore Features</a>
+    </div>
+  </div>
+
+  <main>
+    <!-- ================= EDITORIAL HEADER ================= -->
+    <section class="doc-header">
+      <div class="container container-narrow">
+        <span class="badge badge-label">PRACTICAL GUIDANCE</span>
+        <h1 class="editorial-heading" style="margin-top: 0.75rem;">Visual Tutorials & Interactive Demonstrations</h1>
+        <p class="lead" style="margin-top: 1rem;">
+          Explore step-by-step visual operational walkthroughs. Each module demonstrates how to configure your tactical HUD, execute deep work sessions, organize college courses, and secure your personal records.
+        </p>
+        <div class="doc-meta">
+          <div class="doc-meta-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polygon points="10 8 16 12 10 16 10 8"></polygon></svg>
+            <span>Interactive Simulator Active</span>
+          </div>
+          <div class="doc-meta-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line></svg>
+            <span>Verified 2026 Builds</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= INTERACTIVE TUTORIAL SHOWCASE ================= -->
+    <section class="section">
+      <div class="container">
+        
+        <!-- Interactive Player Container -->
+        <div class="tutorial-player-container reveal">
+          <!-- Stage Viewport -->
+          <div class="tutorial-player-stage">
+            <img class="tutorial-stage-media" src="./assets/images/screenshots/01-mission-command.png" alt="Tutorial Demonstration Stage" />
+            
+            <div class="tutorial-step-overlay">
+              <span class="tutorial-step-dot"></span>
+              <span>01. Setting Up Mission Command — Step 1 of 4</span>
+            </div>
+
+            <div class="tutorial-caption-overlay">
+              <div class="tutorial-caption-text">
+                <h4>Initialize Dashboard HUD</h4>
+                <p>Configure your active biometric status, primary mission objective, and quick-launch bookmarks.</p>
+              </div>
+              <div>
+                <span class="badge badge-label" style="background: rgba(255,255,255,0.1); color: #FFFFFF; border-color: rgba(255,255,255,0.2);">Interactive Demo</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Controls Bar -->
+          <div class="tutorial-player-controls">
+            <button class="tutorial-play-btn" aria-label="Play or Pause Demonstration">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                <polygon points="5 3 19 12 5 21 5 3"></polygon>
+              </svg>
+            </button>
+
+            <div class="tutorial-progress-wrap">
+              <div class="tutorial-progress-bar" title="Progress Bar">
+                <div class="tutorial-progress-fill"></div>
+              </div>
+              <span class="tutorial-time">00:15 / 02:45</span>
+            </div>
+
+            <div class="tutorial-step-nav">
+              <button class="tutorial-nav-btn tutorial-prev-btn" aria-label="Previous Step">&larr; Prev Step</button>
+              <button class="tutorial-nav-btn tutorial-next-btn" aria-label="Next Step">Next Step &rarr;</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Transparency Note regarding demonstrations -->
+        <div class="notice-box reveal" style="margin-bottom: 3.5rem;">
+          <div class="notice-box-title">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+            Authentic Demonstration Notice
+          </div>
+          <p>
+            The media shown above is rendered from verified 1920x1080 native application screenshots captured directly from the production environment of UTTAKALA OS. As video walkthrough recordings are produced, they will seamlessly stream through this player without requiring third-party video trackers.
+          </p>
+        </div>
+
+        <!-- Tutorial Modules Selector Grid -->
+        <div style="margin-bottom: 2rem;">
+          <h2 class="editorial-heading" style="font-size: 1.85rem; color: var(--color-primary); margin-bottom: 0.5rem;">Select a Tutorial Module</h2>
+          <p style="color: var(--color-text-secondary);">Click on any module below to load its interactive sequence into the demonstration viewer above.</p>
+        </div>
+
+        <div class="tutorial-grid">
+          
+          <!-- Module 1: Mission Command -->
+          <div class="tutorial-card active-tutorial reveal">
+            <div class="tutorial-card-meta">
+              <span class="badge badge-available"><span class="badge-dot"></span> Available</span>
+              <span class="tutorial-duration">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                02:45
+              </span>
+            </div>
+            <h3 style="font-size: 1.15rem; color: var(--color-primary); margin-bottom: 0.4rem;">01. Setting Up Mission Command</h3>
+            <p style="font-size: 0.9rem; color: var(--color-text-secondary); line-height: 1.55; margin-bottom: 1rem; flex-grow: 1;">
+              Learn how to calibrate your morning dashboard, configure the tactical launchpad, review your 60-day mastery matrix, and customize operator profiles.
+            </p>
+            <div style="font-size: 0.8rem; font-weight: 700; color: var(--color-primary); display: flex; align-items: center; gap: 0.35rem;">
+              <span>Load Module &rarr;</span>
+            </div>
+          </div>
+
+          <!-- Module 2: Focus & Dopamine -->
+          <div class="tutorial-card reveal delay-1">
+            <div class="tutorial-card-meta">
+              <span class="badge badge-available"><span class="badge-dot"></span> Available</span>
+              <span class="tutorial-duration">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                03:10
+              </span>
+            </div>
+            <h3 style="font-size: 1.15rem; color: var(--color-primary); margin-bottom: 0.4rem;">02. Deep Work & Urge Breaker</h3>
+            <p style="font-size: 0.9rem; color: var(--color-text-secondary); line-height: 1.55; margin-bottom: 1rem; flex-grow: 1;">
+              Master the high-performance focus timer, check off daily mission deliverables, and engage the 10-second urge breaker to stop mindless smartphone scrolling.
+            </p>
+            <div style="font-size: 0.8rem; font-weight: 700; color: var(--color-primary); display: flex; align-items: center; gap: 0.35rem;">
+              <span>Load Module &rarr;</span>
+            </div>
+          </div>
+
+          <!-- Module 3: Academic & Coding -->
+          <div class="tutorial-card reveal delay-2">
+            <div class="tutorial-card-meta">
+              <span class="badge badge-available"><span class="badge-dot"></span> Available</span>
+              <span class="tutorial-duration">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                04:00
+              </span>
+            </div>
+            <h3 style="font-size: 1.15rem; color: var(--color-primary); margin-bottom: 0.4rem;">03. Academic Vault & LeetCode</h3>
+            <p style="font-size: 0.9rem; color: var(--color-text-secondary); line-height: 1.55; margin-bottom: 1rem; flex-grow: 1;">
+              Organize university coursework, track backlog clearances, maintain minimum attendance requirements, and log LeetCode algorithmic problem breakdowns.
+            </p>
+            <div style="font-size: 0.8rem; font-weight: 700; color: var(--color-primary); display: flex; align-items: center; gap: 0.35rem;">
+              <span>Load Module &rarr;</span>
+            </div>
+          </div>
+
+          <!-- Module 4: Privacy & SALTICOR -->
+          <div class="tutorial-card reveal delay-3">
+            <div class="tutorial-card-meta">
+              <span class="badge badge-available"><span class="badge-dot"></span> Available</span>
+              <span class="tutorial-duration">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                03:30
+              </span>
+            </div>
+            <h3 style="font-size: 1.15rem; color: var(--color-primary); margin-bottom: 0.4rem;">04. SALTICOR & Secret Diary</h3>
+            <p style="font-size: 0.9rem; color: var(--color-text-secondary); line-height: 1.55; margin-bottom: 1rem; flex-grow: 1;">
+              Navigate SALTICOR security parameters, initialize the PIN-protected Secret Diary sandbox, and learn how unencrypted Google Drive AppData backups operate.
+            </p>
+            <div style="font-size: 0.8rem; font-weight: 700; color: var(--color-primary); display: flex; align-items: center; gap: 0.35rem;">
+              <span>Load Module &rarr;</span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================= DETAILED STEP-BY-STEP GUIDES ================= -->
+    <section class="section section-alt">
+      <div class="container container-narrow">
+        <div class="section-header text-left reveal">
+          <span class="section-label">WRITTEN FIELD MANUAL</span>
+          <h2 class="editorial-heading">Step-by-Step Operator Instructions</h2>
+          <p class="section-desc">
+            Quick reference guides to help you make the most of your daily workflow inside UTTAKALA OS.
+          </p>
+        </div>
+
+        <!-- Guide 1 -->
+        <article class="doc-section reveal">
+          <h2>1. Daily Morning Initialization (5-Minute Routine)</h2>
+          <p>
+            The secret to sustained focus is establishing a consistent morning orientation cadence before reacting to incoming emails or chat notifications:
+          </p>
+          <ol>
+            <li><strong>Launch Mission Command:</strong> Open the dashboard and observe your active habit completion matrix. Note your current streak score.</li>
+            <li><strong>Set Your Prime Focus:</strong> Enter one high-leverage objective into the Daily Focus banner. All secondary tasks support this primary milestone.</li>
+            <li><strong>Audit Daily Tasks:</strong> Review scheduled action items. If any task is overly complex or vague, use the AI Task Slicer to break it down into atomic 15-minute sub-steps.</li>
+            <li><strong>Engage Focus Timer:</strong> Begin your first uninterrupted 50-minute deep work block with phone notifications placed out of sight.</li>
+          </ol>
+        </article>
+
+        <!-- Guide 2 -->
+        <article class="doc-section reveal delay-1">
+          <h2>2. Combating Digital Compulsion with the Dopamine Urge Breaker</h2>
+          <p>
+            When working at a screen, your brain inevitably experiences momentary boredom or impulses to open social media, short-video feeds, or shopping tabs.
+          </p>
+          <ul>
+            <li><strong>Immediate Trigger:</strong> As soon as you sense the urge to divert your attention, navigate to the <em>Urge Breaker</em> in UTTAKALA OS.</li>
+            <li><strong>10-Second Breath Lock:</strong> The tool initiates a rhythmic 10-second guided inhale/exhale sequence while visually pausing all stimuli.</li>
+            <li><strong>Dopamine Reset:</strong> In 90% of instances, taking 10 mindful seconds dissipates the automatic dopamine impulse, allowing you to return to productive flow without losing momentum.</li>
+          </ul>
+        </article>
+
+        <!-- Guide 3 -->
+        <article class="doc-section reveal delay-2">
+          <h2>3. Managing Academic Attendance & Backlog Clearances</h2>
+          <p>
+            College courses often penalize students whose attendance falls below strict thresholds (such as 75% or 80%). The Academic Vault automates this tracking:
+          </p>
+          <ul>
+            <li><strong>Define Subjects & Targets:</strong> Input each registered course along with its mandatory attendance ratio.</li>
+            <li><strong>Real-Time Margin Calculator:</strong> The vault dynamically calculates how many upcoming lectures you must attend to maintain clearance, or how many sessions you can safely miss in case of health emergencies.</li>
+            <li><strong>Backlog Task Tracking:</strong> Keep a dedicated registry of backlogs, assignment submission deadlines, and lab certification sign-offs.</li>
+          </ul>
+        </article>
+
+        <!-- Guide 4 -->
+        <article class="doc-section reveal">
+          <h2>4. Data Isolation & Google Drive AppData Sync Hygiene</h2>
+          <p>
+            Understanding where your data lives ensures you never lose important records while safeguarding personal thoughts:
+          </p>
+          <ul>
+            <li><strong>Cloud Backups:</strong> Use the Google Drive AppData backup feature weekly. Remember: these files are readable JSON placed inside your hidden Drive app folder. Do not store plain text passwords in routine notes.</li>
+            <li><strong>Local Secret Diary:</strong> Your Secret Diary text is NEVER synced to cloud databases. If you plan to clear your browser data or switch devices, export your reflections manually to a safe personal offline file.</li>
+          </ul>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ================= CTA BANNER ================= -->
+    <section class="section">
+      <div class="container">
+        <div class="cta-banner reveal">
+          <h2>Ready to explore every capability?</h2>
+          <p>
+            Discover all 12 operational categories and verified features in our full platform directory.
+          </p>
+          <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
+            <a href="./features.html" class="btn btn-cta btn-lg">Browse All Features</a>
+            <a href="./index.html" class="btn btn-secondary btn-lg" style="background-color: transparent; color: #FFFFFF; border-color: rgba(255,255,255,0.3);">Return to Overview</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= SITE FOOTER ================= -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+                <div class="footer-brand">
+          <a href="./index.html" class="footer-brand-link" aria-label="UTTAKALA OS Home">
+            <img 
+              src="./assets/images/uttakala-os-logo.png" 
+              alt="UTTAKALA OS official logo" 
+              class="footer-brand-logo" 
+              width="48" 
+              height="48" 
+              loading="lazy" 
+            />
+            <div class="brand-title">
+              <span class="brand-title-main">UTTAKALA</span>
+              <span class="brand-title-sub">OS</span>
+            </div>
+          </a>
+          <div class="footer-tagline">Your Personal Life OS</div>
+          <p>
+            Autonomous cyberpunk personal productivity and life-management operating system. Precision engineering for focus, habits, academics, and personal sovereignty.
+          </p>
+          <div style="margin-top: 1rem; display: flex; gap: 0.75rem; align-items: center;">
+            <span class="badge badge-available"><span class="badge-dot"></span> System Online v2.4</span>
+            <span style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-muted);">LATENCY: 0.4MS</span>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Platform Hub</h4>
+          <ul class="footer-links">
+            <li><a href="./index.html">Command Center</a></li>
+            <li><a href="./features.html">Feature Matrix</a></li>
+            <li><a href="./experience.html">OS Live Simulator</a></li>
+            <li><a href="./tutorials.html">Operator Tutorials</a></li>
+            <li><a href="./about.html">System Architecture</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Trust & Security</h4>
+          <ul class="footer-links">
+            <li><a href="./trust.html">Trust Center Hub</a></li>
+            <li><a href="./security.html">Data & Security Whitepaper</a></li>
+            <li><a href="./privacy.html">Privacy Policy</a></li>
+            <li><a href="./terms.html">Terms of Service</a></li>
+            <li><a href="./trust.html#compliance">Local vs Cloud Isolation</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Communication</h4>
+          <ul class="footer-links">
+            <li><a href="./contact.html">Dispatch Console</a></li>
+            <li><a href="mailto:uttakaladeba.codes@gmail.com">Direct Developer Line</a></li>
+            <li><a href="./contact.html#security-report">Report Vulnerability</a></li>
+            <li><a href="./about.html#roadmap">Release Roadmap</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          &copy; <span data-year>2026</span> UTTAKALA OS. Precision engineering. Built for individual autonomy.
+        </div>
+        <div class="footer-bottom-links">
+          <a href="./trust.html">Trust Center</a>
+          <a href="./security.html">Security</a>
+          <a href="./privacy.html">Privacy</a>
+          <a href="./terms.html">Terms</a>
+          <a href="./experience.html">Experience</a>
+          <a href="./contact.html">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Main JavaScript -->
+  <script src="./assets/js/main.js"></script>
+</body>
+</html>

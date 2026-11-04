@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Data &amp; Security Architecture — UTTAKALA OS</title>
+  <meta name="description" content="Technical security whitepaper for UTTAKALA OS: Local SQLite/Room DB isolation, Supabase Row-Level Security, Google Drive AppData JSON backups, and threat model analysis." />
+  
+  <link rel="canonical" href="https://YOUR-GITHUB-USERNAME.github.io/uttakala-os-website/security.html" />
+    <!-- Favicon & Browser Branding -->
+  <link rel="icon" type="image/svg+xml" href="./assets/images/favicon.svg" />
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="./assets/images/apple-touch-icon.png" />
+  <meta name="theme-color" content="#0B0C10" />
+  <meta name="msapplication-TileColor" content="#0B0C10" />
+
+  <!-- Google Fonts: Plus Jakarta Sans & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="./assets/css/style.css" />
+</head>
+<body>
+
+  <!-- Ambient Light Orbs -->
+  <div class="ambient-bg-glow" aria-hidden="true">
+    <div class="ambient-orb-1"></div>
+    <div class="ambient-orb-2"></div>
+  </div>
+
+  <!-- Reading Progress Bar -->
+  <div class="doc-progress-container" aria-hidden="true">
+    <div class="doc-progress-bar" id="docProgressBar"></div>
+  </div>
+
+  <!-- ================= SITE HEADER ================= -->
+  <header class="site-header">
+    <div class="container nav-container">
+            <a href="./index.html" class="brand-link" aria-label="UTTAKALA OS Home">
+        <img 
+          src="./assets/images/uttakala-os-logo.png" 
+          alt="UTTAKALA OS official logo" 
+          class="brand-logo-img" 
+          width="40" 
+          height="40" 
+          loading="eager" 
+        />
+        <span class="brand-title">
+          <span class="brand-title-main">UTTAKALA</span>
+          <span class="brand-title-sub">OS</span>
+        </span>
+      </a>
+
+      <!-- Desktop Navigation Pill -->
+      <nav aria-label="Main Navigation">
+        <ul class="nav-menu">
+          <li class="nav-item"><a href="./index.html">Home</a></li>
+          <li class="nav-item"><a href="./features.html">Features</a></li>
+          <li class="nav-item"><a href="./experience.html">Experience</a></li>
+          <li class="nav-item"><a href="./download.html">Download</a></li>
+          <li class="nav-item"><a href="./tutorials.html">Tutorials</a></li>
+          <li class="nav-item"><a href="./trust.html">Trust Center</a></li>
+          <li class="nav-item"><a href="./about.html">About</a></li>
+          <li class="nav-item"><a href="./contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Desktop Action -->
+      <div class="nav-actions">
+        <a href="./download.html" class="btn btn-primary btn-sm btn-glow btn-magnetic">Get OS</a>
+        <button class="mobile-nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+          <svg class="icon-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+          <svg class="icon-close" style="display:none;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation Drawer -->
+  <div class="mobile-drawer" role="dialog" aria-modal="true" aria-label="Mobile Navigation">
+    <ul class="mobile-nav-list">
+      <li><a href="./index.html">Home</a></li>
+      <li><a href="./features.html">Features</a></li>
+      <li><a href="./experience.html">Experience Simulator</a></li>
+      <li><a href="./tutorials.html">Tutorials & Docs</a></li>
+      <li><a href="./trust.html">Trust Center</a></li>
+      <li><a href="./security.html" class="active">Data & Security</a></li>
+      <li><a href="./privacy.html">Privacy Policy</a></li>
+      <li><a href="./terms.html">Terms of Service</a></li>
+      <li><a href="./about.html">About & Vision</a></li>
+      <li><a href="./contact.html">Contact Support</a></li>
+    </ul>
+    <div class="mobile-drawer-cta">
+      <a href="./experience.html" class="btn btn-primary">Launch Experience</a>
+      <a href="./features.html" class="btn btn-secondary">Explore Features</a>
+    </div>
+  </div>
+
+  <main>
+    <!-- Document Header -->
+    <section class="doc-header">
+      <div class="container">
+        <div class="hero-pill reveal">
+          <span class="pulse-beacon"></span>
+          <span class="hero-pill-tag">TECHNICAL WHITEPAPER</span>
+          <span>Architecture Specification v2.4</span>
+        </div>
+        <h1 class="reveal delay-1" style="font-size: clamp(2rem, 4vw, 3.2rem); margin-top: 1rem; color: var(--text-primary);">
+          Data &amp; Security Architecture
+        </h1>
+        <p class="reveal delay-2" style="color: var(--text-secondary); max-width: 720px; font-size: 1.05rem; margin-top: 0.75rem;">
+          Detailed technical analysis of data boundaries, local SQLite sandbox isolation, Supabase cloud sync protocol, and Google Drive AppData storage realities.
+        </p>
+
+        <div class="doc-meta-bar reveal delay-3">
+          <div class="doc-meta-item">
+            <span class="doc-meta-label">DOCUMENT REVISION</span>
+            <span class="doc-meta-val">SEC-SPEC-2026.04</span>
+          </div>
+          <div class="doc-meta-item">
+            <span class="doc-meta-label">LAST VERIFIED</span>
+            <span class="doc-meta-val">March 2026</span>
+          </div>
+          <div class="doc-meta-item">
+            <span class="doc-meta-label">STATUS</span>
+            <span class="doc-meta-val" style="color: var(--accent-mint);">&bull; ACTIVE SPECIFICATION</span>
+          </div>
+          <div class="doc-meta-item">
+            <span class="doc-meta-label">SYSTEM ENGINE</span>
+            <span class="doc-meta-val">Salticor Engine v1.8</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Document Body with Sticky Table of Contents -->
+    <div class="container doc-body-layout">
+      
+      <!-- Sticky Navigation Sidebar -->
+      <aside class="doc-sidebar">
+        <div class="doc-sidebar-sticky">
+          <div class="doc-toc-title">Whitepaper Sections</div>
+          <ul class="doc-toc-list">
+            <li><a href="#overview">1. System Architecture Overview</a></li>
+            <li><a href="#local-sandbox">2. Local SQLite Sandbox</a></li>
+            <li><a href="#secret-diary">3. Secret Diary Isolation Boundary</a></li>
+            <li><a href="#supabase-sync">4. Supabase Cloud Sync Protocol</a></li>
+            <li><a href="#gdrive-backup">5. Google Drive AppData Backups</a></li>
+            <li><a href="#unencrypted-disclosure">6. Unencrypted JSON Disclosure</a></li>
+            <li><a href="#threat-model">7. Threat Model & Boundaries</a></li>
+            <li><a href="#incident-response">8. Vulnerability Reporting</a></li>
+          </ul>
+
+          <div style="margin-top: 2rem; padding: 1rem; background: var(--bg-surface); border: 1px solid var(--border-color); border-radius: var(--radius-sm);">
+            <div style="font-size: 0.75rem; color: var(--text-muted); text-transform: uppercase; font-family: var(--font-mono); margin-bottom: 0.5rem;">Cross References</div>
+            <a href="./trust.html" style="display: block; font-size: 0.82rem; color: var(--highlight-cyan); margin-bottom: 0.35rem;">&larr; Trust Center Hub</a>
+            <a href="./privacy.html" style="display: block; font-size: 0.82rem; color: var(--text-secondary);">&rarr; Privacy Policy</a>
+            <a href="./terms.html" style="display: block; font-size: 0.82rem; color: var(--text-secondary);">&rarr; Terms of Service</a>
+          </div>
+        </div>
+      </aside>
+
+      <!-- Main Technical Content -->
+      <article class="doc-content">
+
+        <!-- Section 1 -->
+        <section id="overview" class="doc-section">
+          <h2>1. System Architecture Overview</h2>
+          <p>
+            UTTAKALA OS is an offline-first, client-driven Android productivity application paired with optional cloud sync and snapshot backup utilities. The system architecture is divided into three strictly compartmentalized tiers:
+          </p>
+
+          <div class="hud-panel" style="margin: 1.5rem 0; padding: 1.5rem;">
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.25rem;">
+              <div>
+                <strong style="color: var(--accent-mint); display: block; font-family: var(--font-mono); font-size: 0.9rem;">TIER 1 &bull; LOCAL STORAGE</strong>
+                <p style="font-size: 0.85rem; color: var(--text-secondary); margin-top: 0.35rem;">
+                  Private Android Room/SQLite database residing in internal application data directory. Completely offline capable.
+                </p>
+              </div>
+              <div>
+                <strong style="color: var(--primary-blue); display: block; font-family: var(--font-mono); font-size: 0.9rem;">TIER 2 &bull; CLOUD SYNC</strong>
+                <p style="font-size: 0.85rem; color: var(--text-secondary); margin-top: 0.35rem;">
+                  Supabase PostgreSQL database with Row-Level Security (RLS) over TLS 1.3. Synchronizes habits, tasks, timetables, and analytics.
+                </p>
+              </div>
+              <div>
+                <strong style="color: var(--highlight-cyan); display: block; font-family: var(--font-mono); font-size: 0.9rem;">TIER 3 &bull; SNAPSHOT BACKUPS</strong>
+                <p style="font-size: 0.85rem; color: var(--text-secondary); margin-top: 0.35rem;">
+                  Google Drive AppData folder (`drive.appdata`). Houses unencrypted JSON snapshot files controlled by the user's Google account.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <p>
+            By designing the system in independent operational tiers, UTTAKALA OS guarantees that sensitive private records can be physically withheld from network transmission without sacrificing the convenience of multi-device synchronization for daily routines.
+          </p>
+        </section>
+
+        <!-- Section 2 -->
+        <section id="local-sandbox" class="doc-section">
+          <h2>2. Local SQLite Sandbox</h2>
+          <p>
+            The core engine of UTTAKALA OS executes on Android utilizing Google's recommended Jetpack Room persistence abstraction over SQLite. The underlying database files are stored inside:
+          </p>
+          <pre style="background: var(--bg-surface); border: 1px solid var(--border-color); padding: 1rem; border-radius: var(--radius-sm); font-family: var(--font-mono); font-size: 0.85rem; color: var(--accent-mint); overflow-x: auto;">
+/data/data/com.uttakala.lifeos/databases/uttakala_os.db
+/data/data/com.uttakala.lifeos/databases/uttakala_os.db-wal
+/data/data/com.uttakala.lifeos/databases/uttakala_os.db-shm</pre>
+          <p>
+            Under Android's Linux UID sandbox model, other third-party apps installed on the device cannot read or modify these files unless the device is rooted or the user explicitly grants system debugging access.
+          </p>
+          <p>
+            The Salticor Security Guard submodule (as illustrated in interface screenshot <code>09-salticor-security.png</code>) enforces application-level authentication (PIN or Android BiometricPrompt) before allowing the UI thread to initialize SQLite DAOs for restricted modules.
+          </p>
+        </section>
+
+        <!-- Section 3 -->
+        <section id="secret-diary" class="doc-section">
+          <h2>3. Secret Diary Isolation Boundary</h2>
+          <p>
+            The Secret Diary module (screenshots <code>15-secret-diary-locked.png</code> and <code>16-secret-diary-unlocked.png</code>) represents our strictest privacy tier. Its architectural boundaries are verified as follows:
+          </p>
+
+          <div style="background: rgba(15, 252, 190, 0.06); border-left: 3px solid var(--accent-mint); padding: 1.25rem; margin: 1.5rem 0; border-radius: var(--radius-xs);">
+            <strong style="color: var(--accent-mint); display: block; margin-bottom: 0.5rem;">CRITICAL BOUNDARY GUARANTEE:</strong>
+            <ul style="margin: 0; padding-left: 1.25rem; color: var(--text-secondary); font-size: 0.9rem; display: flex; flex-direction: column; gap: 0.4rem;">
+              <li>Secret Diary records are stored <strong>strictly</strong> in the local device SQLite tables.</li>
+              <li>Secret Diary records are <strong>filtered out</strong> before Supabase cloud sync payloads are constructed.</li>
+              <li>Secret Diary records are <strong>excluded</strong> from Google Drive AppData JSON snapshot generators.</li>
+              <li>Secret Diary entries are never sent to any external server or analytics pipeline.</li>
+            </ul>
+          </div>
+
+          <p>
+            <strong>Consequence of Local-Only Isolation:</strong> If a user uninstalls UTTAKALA OS without making a manual export, or loses their physical Android device, Secret Diary entries cannot be recovered from any cloud service. This is an intentional security tradeoff prioritizing user sovereignty over remote backup convenience.
+          </p>
+          <p>
+            <em>Audit Note <span class="badge badge-dev">[OWNER REVIEW REQUIRED]</span>: Secret Diary entries are protected by Android's application sandbox and UI PIN gate. Do not claim cryptographic zero-knowledge at-rest database encryption (e.g., SQLCipher) unless verified in the production Android build.</em>
+          </p>
+        </section>
+
+        <!-- Section 4 -->
+        <section id="supabase-sync" class="doc-section">
+          <h2>4. Supabase Cloud Sync Protocol</h2>
+          <p>
+            When cloud sync is enabled, UTTAKALA OS communicates with our Supabase PostgreSQL infrastructure to ensure cross-device consistency for daily productivity data:
+          </p>
+
+          <table style="width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.88rem;">
+            <thead>
+              <tr style="border-bottom: 1px solid var(--border-color); text-align: left; color: var(--text-primary);">
+                <th style="padding: 0.75rem 0.5rem;">Data Category</th>
+                <th style="padding: 0.75rem 0.5rem;">Sync Status</th>
+                <th style="padding: 0.75rem 0.5rem;">Protection Mechanism</th>
+              </tr>
+            </thead>
+            <tbody style="color: var(--text-secondary);">
+              <tr style="border-bottom: 1px solid var(--border-subtle);">
+                <td style="padding: 0.75rem 0.5rem; font-family: var(--font-mono); color: var(--text-primary);">Daily Tasks &amp; Habits</td>
+                <td style="padding: 0.75rem 0.5rem;"><span class="badge badge-available">Synced</span></td>
+                <td style="padding: 0.75rem 0.5rem;">PostgreSQL Row-Level Security (RLS) tied to Supabase UID</td>
+              </tr>
+              <tr style="border-bottom: 1px solid var(--border-subtle);">
+                <td style="padding: 0.75rem 0.5rem; font-family: var(--font-mono); color: var(--text-primary);">Timetable &amp; Attendance</td>
+                <td style="padding: 0.75rem 0.5rem;"><span class="badge badge-available">Synced</span></td>
+                <td style="padding: 0.75rem 0.5rem;">PostgreSQL RLS with TLS 1.3 transit encryption</td>
+              </tr>
+              <tr style="border-bottom: 1px solid var(--border-subtle);">
+                <td style="padding: 0.75rem 0.5rem; font-family: var(--font-mono); color: var(--text-primary);">Focus Timer Sessions</td>
+                <td style="padding: 0.75rem 0.5rem;"><span class="badge badge-available">Synced</span></td>
+                <td style="padding: 0.75rem 0.5rem;">PostgreSQL RLS with TLS 1.3 transit encryption</td>
+              </tr>
+              <tr style="border-bottom: 1px solid var(--border-subtle);">
+                <td style="padding: 0.75rem 0.5rem; font-family: var(--font-mono); color: var(--text-primary);">Financial Logs</td>
+                <td style="padding: 0.75rem 0.5rem;"><span class="badge badge-available">Synced</span></td>
+                <td style="padding: 0.75rem 0.5rem;">PostgreSQL RLS with TLS 1.3 transit encryption</td>
+              </tr>
+              <tr style="border-bottom: 1px solid var(--border-subtle);">
+                <td style="padding: 0.75rem 0.5rem; font-family: var(--font-mono); color: var(--accent-mint);">Secret Diary</td>
+                <td style="padding: 0.75rem 0.5rem;"><span class="badge badge-planned" style="color: var(--accent-mint); border-color: var(--accent-mint);">EXCLUDED</span></td>
+                <td style="padding: 0.75rem 0.5rem;">Physical network exclusion (Never sent to Supabase)</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <p>
+            <strong>Row-Level Security Enforcement:</strong> All Supabase tables use PostgreSQL policies configured such that read, insert, update, and delete statements are valid only when <code>auth.uid() = user_id</code>. No user can access or view another user's database records.
+          </p>
+        </section>
+
+        <!-- Section 5 -->
+        <section id="gdrive-backup" class="doc-section">
+          <h2>5. Google Drive AppData Backups</h2>
+          <p>
+            UTTAKALA OS provides integration with Google Drive (as displayed in screenshot <code>17-google-drive-backup.png</code>) to allow users to generate disaster recovery snapshots.
+          </p>
+          <p>
+            When a user authorizes Google OAuth, the app requests the specific, least-privilege scope:
+          </p>
+          <pre style="background: var(--bg-surface); border: 1px solid var(--border-color); padding: 1rem; border-radius: var(--radius-sm); font-family: var(--font-mono); font-size: 0.85rem; color: var(--highlight-cyan); overflow-x: auto;">
+https://www.googleapis.com/auth/drive.appdata</pre>
+          <p>
+            <strong>What AppData means:</strong> This scope restricts UTTAKALA OS to its own dedicated, hidden application folder within your Google Drive. UTTAKALA OS <em>cannot read, modify, or view</em> any of your personal files, Google Docs, photos, or spreadsheets. Conversely, other third-party apps cannot view UTTAKALA OS's AppData folder.
+          </p>
+        </section>
+
+        <!-- Section 6 -->
+        <section id="unencrypted-disclosure" class="doc-section">
+          <h2>6. Unencrypted JSON Disclosure</h2>
+          <div class="hud-panel" style="border-color: rgba(255, 189, 46, 0.5); padding: 1.5rem; background: rgba(255, 189, 46, 0.05);">
+            <div style="display: flex; gap: 0.75rem; align-items: flex-start;">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#FFBD2E" stroke-width="2" style="flex-shrink: 0; margin-top: 2px;"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
+              <div>
+                <strong style="color: #FFBD2E; font-size: 1.05rem; display: block; margin-bottom: 0.5rem;">EXPLICIT SECURITY DISCLOSURE &bull; RAW JSON BACKUPS</strong>
+                <p style="font-size: 0.9rem; color: var(--text-secondary); line-height: 1.6; margin: 0;">
+                  Google Drive backup payloads uploaded by UTTAKALA OS are stored as <strong>unencrypted JSON snapshots</strong>. UTTAKALA OS does NOT apply client-side zero-knowledge encryption to these backup files prior to upload.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <p style="margin-top: 1.25rem;">
+            It is critical not to confuse Google Drive's hidden AppData folder with client-side cryptographic encryption:
+          </p>
+          <ul style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.7; padding-left: 1.5rem;">
+            <li><strong>Transit Security:</strong> Data is encrypted in transit between your Android device and Google's servers via TLS 1.3.</li>
+            <li><strong>Google At-Rest Security:</strong> Data is stored on Google Drive servers protected by Google's standard server-side storage encryption.</li>
+            <li><strong>No Independent Cipher:</strong> If someone gains unauthorized access to your personal Google Account, they would have the technical ability to download and parse the raw JSON data stored in the AppData folder.</li>
+            <li><strong>User Recommendation:</strong> We strongly advise all UTTAKALA OS users to enable <strong>Two-Factor Authentication (2FA)</strong> on their personal Google Accounts to protect their cloud backups.</li>
+          </ul>
+        </section>
+
+        <!-- Section 7 -->
+        <section id="threat-model" class="doc-section">
+          <h2>7. Threat Model &amp; System Boundaries</h2>
+          <p>
+            Security is defined by honest threat modeling. Here are the realistic boundaries of the UTTAKALA OS client environment:
+          </p>
+
+          <div style="display: flex; flex-direction: column; gap: 1rem; margin: 1.5rem 0;">
+            <div class="hud-panel" style="padding: 1.25rem;">
+              <h4 style="color: var(--highlight-cyan); margin-bottom: 0.5rem;">Physical Device Theft / Loss</h4>
+              <p style="font-size: 0.88rem; color: var(--text-secondary); margin: 0;">
+                If a phone is stolen while locked, Android's hardware-backed Full Disk Encryption (FBE) and the UTTAKALA OS Salticor PIN lock prevent extraction. If a device is unlocked and handed to an attacker, the PIN gate prevents unauthorized opening of the Secret Diary.
+              </p>
+            </div>
+
+            <div class="hud-panel" style="padding: 1.25rem;">
+              <h4 style="color: var(--highlight-cyan); margin-bottom: 0.5rem;">Rooted Android Environments</h4>
+              <p style="font-size: 0.88rem; color: var(--text-secondary); margin: 0;">
+                On a rooted Android device, the operating system's sandbox guarantees are void. Root users or malicious root-privileged apps can inspect any SQLite database file on the filesystem. Users operating rooted devices assume responsibility for safeguarding local data.
+              </p>
+            </div>
+
+            <div class="hud-panel" style="padding: 1.25rem;">
+              <h4 style="color: var(--highlight-cyan); margin-bottom: 0.5rem;">Third-Party Telemetry &amp; Ad Trackers</h4>
+              <p style="font-size: 0.88rem; color: var(--text-secondary); margin: 0;">
+                There are zero third-party commercial SDKs (no Adjust, AppsFlyer, Facebook Graph, or Google AdMob) integrated into UTTAKALA OS. Your behavioral metrics, habit completion rates, and daily focus times are never sold or shared.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Section 8 -->
+        <section id="incident-response" class="doc-section">
+          <h2>8. Vulnerability Reporting &amp; Disclosure</h2>
+          <p>
+            We take potential security vulnerabilities seriously and adhere to coordinated vulnerability disclosure practices.
+          </p>
+          <p>
+            If you identify a potential security vulnerability in our Android client, Supabase PostgreSQL configuration, or OAuth implementation, please email our lead developer directly:
+          </p>
+          <div style="padding: 1.25rem; background: var(--bg-surface); border: 1px solid var(--border-color); border-radius: var(--radius-sm); margin: 1.25rem 0;">
+            <div style="font-family: var(--font-mono); font-size: 0.95rem; color: var(--highlight-cyan);">
+              Email: <a href="mailto:uttakaladeba.codes@gmail.com" style="color: var(--accent-mint); text-decoration: underline;">uttakaladeba.codes@gmail.com</a>
+            </div>
+            <div style="font-size: 0.85rem; color: var(--text-secondary); margin-top: 0.5rem;">
+              Subject: <code>[SECURITY VULNERABILITY] UTTAKALA OS</code>
+            </div>
+          </div>
+          <p>
+            Please provide a detailed proof of concept, affected version, and reproduction steps. We will acknowledge receipt within 48 hours and work with you to patch verified defects prior to public disclosure.
+          </p>
+        </section>
+
+      </article>
+
+    </div>
+
+    <!-- CTA Section -->
+    <section class="section" style="padding-top: 0;">
+      <div class="container">
+        <div class="cta-banner reveal">
+          <h2>Explore our user privacy commitments</h2>
+          <p>
+            Read the plain-language Privacy Policy to understand your legal rights, data access options, and account management tools.
+          </p>
+          <div style="display: flex; justify-content: center; gap: 1.15rem; flex-wrap: wrap;">
+            <a href="./privacy.html" class="btn btn-cta btn-lg btn-magnetic">Read Privacy Policy</a>
+            <a href="./trust.html" class="btn btn-secondary btn-lg btn-magnetic" style="color: #FFFFFF; border-color: rgba(255,255,255,0.3);">Trust Center Hub</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= SITE FOOTER ================= -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+                <div class="footer-brand">
+          <a href="./index.html" class="footer-brand-link" aria-label="UTTAKALA OS Home">
+            <img 
+              src="./assets/images/uttakala-os-logo.png" 
+              alt="UTTAKALA OS official logo" 
+              class="footer-brand-logo" 
+              width="48" 
+              height="48" 
+              loading="lazy" 
+            />
+            <div class="brand-title">
+              <span class="brand-title-main">UTTAKALA</span>
+              <span class="brand-title-sub">OS</span>
+            </div>
+          </a>
+          <div class="footer-tagline">Your Personal Life OS</div>
+          <p>
+            Autonomous cyberpunk personal productivity and life-management operating system. Precision engineering for focus, habits, academics, and personal sovereignty.
+          </p>
+          <div style="margin-top: 1rem; display: flex; gap: 0.75rem; align-items: center;">
+            <span class="badge badge-available"><span class="badge-dot"></span> System Online v2.4</span>
+            <span style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-muted);">LATENCY: 0.4MS</span>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Platform Hub</h4>
+          <ul class="footer-links">
+            <li><a href="./index.html">Command Center</a></li>
+            <li><a href="./features.html">Feature Matrix</a></li>
+            <li><a href="./experience.html">OS Live Simulator</a></li>
+            <li><a href="./tutorials.html">Operator Tutorials</a></li>
+            <li><a href="./about.html">System Architecture</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Trust & Security</h4>
+          <ul class="footer-links">
+            <li><a href="./trust.html">Trust Center Hub</a></li>
+            <li><a href="./security.html">Data & Security Whitepaper</a></li>
+            <li><a href="./privacy.html">Privacy Policy</a></li>
+            <li><a href="./terms.html">Terms of Service</a></li>
+            <li><a href="./trust.html#compliance">Local vs Cloud Isolation</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Communication</h4>
+          <ul class="footer-links">
+            <li><a href="./contact.html">Dispatch Console</a></li>
+            <li><a href="mailto:uttakaladeba.codes@gmail.com">Direct Developer Line</a></li>
+            <li><a href="./contact.html#security-report">Report Vulnerability</a></li>
+            <li><a href="./about.html#roadmap">Release Roadmap</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          &copy; <span data-year>2026</span> UTTAKALA OS. Precision engineering. Built for individual autonomy.
+        </div>
+        <div class="footer-bottom-links">
+          <a href="./trust.html">Trust Center</a>
+          <a href="./security.html">Security</a>
+          <a href="./privacy.html">Privacy</a>
+          <a href="./terms.html">Terms</a>
+          <a href="./experience.html">Experience</a>
+          <a href="./contact.html">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Main JavaScript -->
+  <script src="./assets/js/main.js"></script>
+</body>
+</html>

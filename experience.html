@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Live Experience Simulator — UTTAKALA OS</title>
+  <meta name="description" content="Test-drive UTTAKALA OS in your browser. Interactive simulator featuring Mission Command, working Focus Timer, 60-Day Habit Matrix, and live Cyberpunk theme customizer." />
+  
+  <link rel="canonical" href="https://YOUR-GITHUB-USERNAME.github.io/uttakala-os-website/experience.html" />
+    <!-- Favicon & Browser Branding -->
+  <link rel="icon" type="image/svg+xml" href="./assets/images/favicon.svg" />
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="./assets/images/apple-touch-icon.png" />
+  <meta name="theme-color" content="#0B0C10" />
+  <meta name="msapplication-TileColor" content="#0B0C10" />
+
+  <!-- Google Fonts: Plus Jakarta Sans & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="./assets/css/style.css" />
+
+  <style>
+    /* Experience Simulator Custom Styles */
+    .simulator-hud {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      box-shadow: var(--shadow-float);
+      overflow: hidden;
+      margin-top: 2rem;
+    }
+
+    .sim-topbar {
+      background: var(--bg-obsidian);
+      border-bottom: 1px solid var(--border-color);
+      padding: 0.75rem 1.25rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .sim-tabs {
+      display: flex;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+    }
+
+    .sim-tab-btn {
+      background: transparent;
+      border: 1px solid var(--border-color);
+      color: var(--text-secondary);
+      padding: 0.45rem 1rem;
+      border-radius: var(--radius-xs);
+      font-family: var(--font-mono);
+      font-size: 0.82rem;
+      cursor: pointer;
+      transition: all var(--transition-fast);
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .sim-tab-btn:hover {
+      border-color: var(--primary-blue);
+      color: var(--text-primary);
+    }
+
+    .sim-tab-btn.active {
+      background: var(--primary-blue-subtle);
+      border-color: var(--highlight-cyan);
+      color: var(--highlight-cyan);
+      box-shadow: 0 0 12px rgba(0, 255, 255, 0.2);
+    }
+
+    .sim-viewport {
+      padding: 2.5rem;
+      min-height: 480px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      position: relative;
+    }
+
+    .sim-panel {
+      display: none;
+      animation: fadeIn 0.3s ease forwards;
+    }
+
+    .sim-panel.active {
+      display: block;
+    }
+
+    /* Focus Timer UI in Sim */
+    .timer-display-box {
+      text-align: center;
+      max-width: 480px;
+      margin: 0 auto;
+      padding: 2rem;
+      background: var(--bg-obsidian);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      box-shadow: 0 0 30px rgba(0, 255, 255, 0.08);
+    }
+
+    .timer-digits {
+      font-family: var(--font-mono);
+      font-size: clamp(3rem, 8vw, 5rem);
+      font-weight: 700;
+      color: var(--highlight-cyan);
+      letter-spacing: 2px;
+      text-shadow: 0 0 20px rgba(0, 255, 255, 0.4);
+      margin: 1rem 0;
+    }
+
+    .timer-controls {
+      display: flex;
+      justify-content: center;
+      gap: 0.75rem;
+      flex-wrap: wrap;
+    }
+
+    /* Habit Matrix Simulation Grid */
+    .sim-habit-grid {
+      display: grid;
+      grid-template-columns: repeat(10, 1fr);
+      gap: 0.4rem;
+      max-width: 500px;
+      margin: 1.5rem auto;
+    }
+
+    .habit-cell {
+      aspect-ratio: 1;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid var(--border-color);
+      border-radius: 3px;
+      cursor: pointer;
+      transition: all 0.15s ease;
+    }
+
+    .habit-cell.checked {
+      background: var(--accent-mint);
+      border-color: var(--accent-mint);
+      box-shadow: 0 0 8px rgba(15, 252, 190, 0.4);
+    }
+
+    .habit-cell:hover {
+      border-color: var(--highlight-cyan);
+      transform: scale(1.15);
+    }
+
+    /* Live Theme Switcher */
+    .theme-picker-row {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin-top: 1.5rem;
+      flex-wrap: wrap;
+    }
+
+    .theme-swatch {
+      padding: 0.75rem 1.25rem;
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--border-color);
+      cursor: pointer;
+      font-size: 0.85rem;
+      font-family: var(--font-mono);
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      transition: all 0.2s ease;
+    }
+
+    .theme-swatch:hover, .theme-swatch.active {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-card);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Ambient Light Orbs -->
+  <div class="ambient-bg-glow" aria-hidden="true">
+    <div class="ambient-orb-1"></div>
+    <div class="ambient-orb-2"></div>
+  </div>
+
+  <!-- ================= SITE HEADER ================= -->
+  <header class="site-header">
+    <div class="container nav-container">
+            <a href="./index.html" class="brand-link" aria-label="UTTAKALA OS Home">
+        <img 
+          src="./assets/images/uttakala-os-logo.png" 
+          alt="UTTAKALA OS official logo" 
+          class="brand-logo-img" 
+          width="40" 
+          height="40" 
+          loading="eager" 
+        />
+        <span class="brand-title">
+          <span class="brand-title-main">UTTAKALA</span>
+          <span class="brand-title-sub">OS</span>
+        </span>
+      </a>
+
+      <!-- Desktop Navigation Pill -->
+      <nav aria-label="Main Navigation">
+        <ul class="nav-menu">
+          <li class="nav-item"><a href="./index.html">Home</a></li>
+          <li class="nav-item"><a href="./features.html">Features</a></li>
+          <li class="nav-item"><a href="./experience.html" class="active">Experience</a></li>
+          <li class="nav-item"><a href="./download.html">Download</a></li>
+          <li class="nav-item"><a href="./tutorials.html">Tutorials</a></li>
+          <li class="nav-item"><a href="./trust.html">Trust Center</a></li>
+          <li class="nav-item"><a href="./about.html">About</a></li>
+          <li class="nav-item"><a href="./contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Desktop Action -->
+      <div class="nav-actions">
+        <a href="./download.html" class="btn btn-primary btn-sm btn-glow btn-magnetic">Get OS</a>
+        <button class="mobile-nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+          <svg class="icon-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+          <svg class="icon-close" style="display:none;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation Drawer -->
+  <div class="mobile-drawer" role="dialog" aria-modal="true" aria-label="Mobile Navigation">
+    <ul class="mobile-nav-list">
+      <li><a href="./index.html">Home</a></li>
+      <li><a href="./download.html">Download Center</a></li>
+      <li><a href="./features.html">Features</a></li>
+      <li><a href="./experience.html" class="active">Experience Simulator</a></li>
+      <li><a href="./tutorials.html">Tutorials & Docs</a></li>
+      <li><a href="./trust.html">Trust Center</a></li>
+      <li><a href="./security.html">Data & Security</a></li>
+      <li><a href="./privacy.html">Privacy Policy</a></li>
+      <li><a href="./terms.html">Terms of Service</a></li>
+      <li><a href="./about.html">About & Vision</a></li>
+      <li><a href="./contact.html">Contact Support</a></li>
+    </ul>
+    <div class="mobile-drawer-cta">
+      <a href="./experience.html" class="btn btn-primary">Launch Experience</a>
+      <a href="./features.html" class="btn btn-secondary">Explore Features</a>
+    </div>
+  </div>
+
+  <main>
+    <!-- ================= SIMULATOR HERO ================= -->
+    <section class="hero-section" style="padding-top: 130px; padding-bottom: 30px;">
+      <div class="container hero-content">
+        <div class="hero-pill reveal">
+          <span class="pulse-beacon"></span>
+          <span class="hero-pill-tag">BROWSER SANDBOX</span>
+          <span>Interactive Test-Drive &bull; Zero Installation Required</span>
+        </div>
+
+        <h1 class="hero-title reveal delay-1">
+          OPERATIONAL <span style="color: var(--highlight-cyan); text-shadow: 0 0 25px rgba(0, 255, 255, 0.45);">SIMULATOR</span>
+        </h1>
+
+        <p class="hero-lead reveal delay-2">
+          Experience the tactile mechanics of UTTAKALA OS directly in your browser. Switch modules, calibrate focus sessions, click habit cells, and preview authentic interface screens.
+        </p>
+      </div>
+    </section>
+
+    <!-- ================= INTERACTIVE SIMULATOR HUD ================= -->
+    <section class="section" style="padding-top: 10px;">
+      <div class="container">
+        
+        <div class="simulator-hud reveal">
+          
+          <!-- Topbar with Module Selectors -->
+          <div class="sim-topbar">
+            <div style="display: flex; align-items: center; gap: 0.75rem;">
+              <div class="device-dots">
+                <span class="device-dot dot-red"></span>
+                <span class="device-dot dot-yellow"></span>
+                <span class="device-dot dot-green"></span>
+              </div>
+              <span style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--text-muted);">SIM://UTTAKALA-V2.4</span>
+            </div>
+
+            <!-- Tabs -->
+            <div class="sim-tabs" role="tablist">
+              <button class="sim-tab-btn active" data-tab="tab-focus" role="tab">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                Focus Engine
+              </button>
+              <button class="sim-tab-btn" data-tab="tab-habits" role="tab">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                60-Day Habit Matrix
+              </button>
+              <button class="sim-tab-btn" data-tab="tab-mission" role="tab">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>
+                Mission Command
+              </button>
+              <button class="sim-tab-btn" data-tab="tab-theme" role="tab">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line></svg>
+                Theme Engine
+              </button>
+            </div>
+
+            <div style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--accent-mint);">
+              STATE: ONLINE
+            </div>
+          </div>
+
+          <!-- Simulation Viewport -->
+          <div class="sim-viewport">
+
+            <!-- Panel 1: Focus Engine -->
+            <div class="sim-panel active" id="tab-focus">
+              <div class="timer-display-box">
+                <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--border-color); padding-bottom: 0.75rem;">
+                  <span class="badge badge-available">Tactical Pomodoro</span>
+                  <span style="font-family: var(--font-mono); font-size: 0.78rem; color: var(--text-muted);" id="simIntervalTag">INTERVAL 01 / 04</span>
+                </div>
+
+                <div class="timer-digits" id="simTimerDigits">25:00</div>
+
+                <p style="font-size: 0.88rem; color: var(--text-secondary); margin-bottom: 1.5rem;" id="simStatusText">
+                  Calibrate deep focus session. Zero notifications, zero distractions.
+                </p>
+
+                <div class="timer-controls">
+                  <button class="btn btn-primary btn-sm btn-glow" id="simTimerStartBtn">Start Focus</button>
+                  <button class="btn btn-secondary btn-sm" id="simTimerPauseBtn" style="display: none;">Pause</button>
+                  <button class="btn btn-ghost btn-sm" id="simTimerResetBtn">Reset</button>
+                  <button class="btn btn-ghost btn-sm" id="simTimerBreakBtn">5m Break</button>
+                </div>
+
+                <div style="margin-top: 1.75rem; padding-top: 1rem; border-top: 1px solid var(--border-subtle); display: flex; justify-content: space-around; font-family: var(--font-mono); font-size: 0.78rem;">
+                  <div>
+                    <span style="color: var(--text-muted); display: block;">TODAY'S FOCUS</span>
+                    <strong style="color: var(--highlight-cyan);" id="simFocusAccumulator">1h 45m</strong>
+                  </div>
+                  <div>
+                    <span style="color: var(--text-muted); display: block;">URGE BREAKERS</span>
+                    <strong style="color: var(--accent-mint);">3 Sustained</strong>
+                  </div>
+                  <div>
+                    <span style="color: var(--text-muted); display: block;">PRODUCTIVITY INDEX</span>
+                    <strong style="color: #FFBD2E;">94.2%</strong>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Panel 2: 60-Day Habit Matrix -->
+            <div class="sim-panel" id="tab-habits">
+              <div style="text-align: center; max-width: 600px; margin: 0 auto;">
+                <div class="badge badge-available" style="margin-bottom: 0.75rem;">Interactive 60-Day Grid</div>
+                <h3 style="color: var(--text-primary); font-size: 1.5rem; margin-bottom: 0.5rem;">LeetCode Daily Problem Solving</h3>
+                <p style="font-size: 0.88rem; color: var(--text-secondary);">
+                  Click the cells below to toggle habit execution. Real UTTAKALA OS tracks completion mathematically to calculate consistency thresholds.
+                </p>
+
+                <!-- 60-Day Grid -->
+                <div class="sim-habit-grid" id="habitGrid">
+                  <!-- Generated dynamically via JS -->
+                </div>
+
+                <div style="display: flex; justify-content: center; gap: 2rem; font-family: var(--font-mono); font-size: 0.85rem; margin-top: 1rem;">
+                  <div>
+                    <span style="color: var(--text-muted);">CURRENT STREAK:</span>
+                    <strong style="color: var(--accent-mint); margin-left: 0.25rem;" id="streakCount">42 DAYS</strong>
+                  </div>
+                  <div>
+                    <span style="color: var(--text-muted);">COMPLETION:</span>
+                    <strong style="color: var(--highlight-cyan); margin-left: 0.25rem;" id="completionRate">70%</strong>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Panel 3: Mission Command Showcase -->
+            <div class="sim-panel" id="tab-mission">
+              <div style="text-align: center; max-width: 800px; margin: 0 auto;">
+                <span class="badge badge-available" style="margin-bottom: 0.75rem;">Native App Screenshot Preview</span>
+                <h3 style="color: var(--text-primary); font-size: 1.5rem; margin-bottom: 0.5rem;">Mission Command HUD</h3>
+                <p style="font-size: 0.88rem; color: var(--text-secondary); margin-bottom: 1.5rem;">
+                  The central morning dashboard. Real screenshot captured from the Android device at 1920x1080 resolution.
+                </p>
+
+                <div class="device-frame-browser tilt-card" style="cursor: zoom-in;" onclick="window.openImageLightbox && window.openImageLightbox('./assets/images/screenshots/01-mission-command.png', 'Mission Command Tactical Interface')">
+                  <div class="device-browser-bar">
+                    <div class="device-dots">
+                      <span class="device-dot dot-red"></span>
+                      <span class="device-dot dot-yellow"></span>
+                      <span class="device-dot dot-green"></span>
+                    </div>
+                    <div class="device-address">
+                      <span>uttakala-os://mission-command</span>
+                    </div>
+                    <div class="device-tag">Tap to Enlarge</div>
+                  </div>
+                  <img src="./assets/images/screenshots/01-mission-command.png" alt="Mission Command HUD Screenshot" class="device-screen-img" />
+                </div>
+              </div>
+            </div>
+
+            <!-- Panel 4: Theme Engine -->
+            <div class="sim-panel" id="tab-theme">
+              <div style="text-align: center; max-width: 580px; margin: 0 auto;">
+                <span class="badge badge-available" style="margin-bottom: 0.75rem;">Colorway Customizer</span>
+                <h3 style="color: var(--text-primary); font-size: 1.5rem; margin-bottom: 0.5rem;">Cyberpunk Color Palette Engine</h3>
+                <p style="font-size: 0.88rem; color: var(--text-secondary);">
+                  Switch active neon accent channels to preview how UTTAKALA OS renders under alternate HUD visual profiles.
+                </p>
+
+                <div class="theme-picker-row">
+                  <div class="theme-swatch active" data-accent="#00FFFF" style="background: rgba(0, 255, 255, 0.1); border-color: #00FFFF; color: #00FFFF;">
+                    <span style="display: inline-block; width: 12px; height: 12px; border-radius: 50%; background: #00FFFF;"></span>
+                    Obsidian Cyan (Default)
+                  </div>
+                  <div class="theme-swatch" data-accent="#0FFCBE" style="background: rgba(15, 252, 190, 0.1); border-color: #0FFCBE; color: #0FFCBE;">
+                    <span style="display: inline-block; width: 12px; height: 12px; border-radius: 50%; background: #0FFCBE;"></span>
+                    Cyber Mint
+                  </div>
+                  <div class="theme-swatch" data-accent="#106EBE" style="background: rgba(16, 110, 190, 0.1); border-color: #106EBE; color: #106EBE;">
+                    <span style="display: inline-block; width: 12px; height: 12px; border-radius: 50%; background: #106EBE;"></span>
+                    Electric Blue
+                  </div>
+                </div>
+
+                <div class="hud-panel" style="margin-top: 2rem; padding: 1.5rem; text-align: left;" id="themePreviewBox">
+                  <div style="font-family: var(--font-mono); font-size: 0.85rem; color: var(--text-muted); margin-bottom: 0.5rem;">PALETTE PREVIEW OUTPUT</div>
+                  <h4 style="color: var(--highlight-cyan); margin-bottom: 0.5rem;" id="themePreviewTitle">Active Palette: Electric Cyan Resonance</h4>
+                  <p style="font-size: 0.85rem; color: var(--text-secondary); margin: 0;">
+                    HUD borders and primary glow vectors recalibrated. High-contrast legibility maintained across OLED panels.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================= AUTHENTIC MODULE GALLERY ================= -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-label">REAL SCREENSHOT ARCHIVE</span>
+          <h2 class="editorial-heading">Inspect Native Interface Screens</h2>
+          <p class="section-desc">
+            Explore authentic captured screenshots from the Android build. Click any card to inspect in full-screen high-resolution lightbox.
+          </p>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem;" class="reveal">
+          
+          <!-- Item 1 -->
+          <div class="feature-card tilt-card" onclick="window.openImageLightbox && window.openImageLightbox('./assets/images/screenshots/02-mastery-matrix.png', '60-Day Habit Mastery Matrix')">
+            <div class="feature-thumb-wrap">
+              <img class="feature-thumb-img" src="./assets/images/screenshots/02-mastery-matrix.png" alt="60-Day Habit Mastery Matrix" loading="lazy" />
+              <div class="feature-thumb-overlay">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                <span>Click to Inspect (1080p)</span>
+              </div>
+            </div>
+            <h3 class="feature-title">Habit Mastery Matrix</h3>
+            <p class="feature-desc">Visual grid tracking habit streaks, completion thresholds, and discipline curves.</p>
+          </div>
+
+          <!-- Item 2 -->
+          <div class="feature-card tilt-card" onclick="window.openImageLightbox && window.openImageLightbox('./assets/images/screenshots/03-launchpad-mascot.png', 'Launchpad Module Grid & AI Mascot')">
+            <div class="feature-thumb-wrap">
+              <img class="feature-thumb-img" src="./assets/images/screenshots/03-launchpad-mascot.png" alt="Launchpad & Mascot" loading="lazy" />
+              <div class="feature-thumb-overlay">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                <span>Click to Inspect (1080p)</span>
+              </div>
+            </div>
+            <h3 class="feature-title">Launchpad &amp; Mascot</h3>
+            <p class="feature-desc">Tactical launcher interface with interactive AI mascot companion.</p>
+          </div>
+
+          <!-- Item 3 -->
+          <div class="feature-card tilt-card" onclick="window.openImageLightbox && window.openImageLightbox('./assets/images/screenshots/04-focus-timer.png', 'Focus Timer & Urge Breaker')">
+            <div class="feature-thumb-wrap">
+              <img class="feature-thumb-img" src="./assets/images/screenshots/04-focus-timer.png" alt="Focus Timer" loading="lazy" />
+              <div class="feature-thumb-overlay">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                <span>Click to Inspect (1080p)</span>
+              </div>
+            </div>
+            <h3 class="feature-title">Tactical Focus Engine</h3>
+            <p class="feature-desc">Deep work timer with ambient soundscapes and 10-second urge breaker module.</p>
+          </div>
+
+          <!-- Item 4 -->
+          <div class="feature-card tilt-card" onclick="window.openImageLightbox && window.openImageLightbox('./assets/images/screenshots/09-salticor-security.png', 'Salticor Security Guard')">
+            <div class="feature-thumb-wrap">
+              <img class="feature-thumb-img" src="./assets/images/screenshots/09-salticor-security.png" alt="Salticor Security" loading="lazy" />
+              <div class="feature-thumb-overlay">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                <span>Click to Inspect (1080p)</span>
+              </div>
+            </div>
+            <h3 class="feature-title">Salticor Security Guard</h3>
+            <p class="feature-desc">Hardware-backed biometric and PIN authentication gate for sensitive vaults.</p>
+          </div>
+
+        </div>
+
+        <div style="text-align: center; margin-top: 2.5rem;" class="reveal">
+          <a href="./features.html" class="btn btn-primary btn-magnetic">Explore All 20 Native Screenshots &rarr;</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Lightbox Modal -->
+    <div class="lightbox-modal" id="imageLightbox" role="dialog" aria-modal="true" aria-hidden="true">
+      <button class="lightbox-close" id="lightboxCloseBtn" aria-label="Close Lightbox">&times;</button>
+      <div class="lightbox-content">
+        <img class="lightbox-img" id="lightboxImg" src="" alt="Full-screen Screenshot" />
+        <div class="lightbox-caption" id="lightboxCaption"></div>
+      </div>
+    </div>
+  </main>
+
+  <!-- ================= SITE FOOTER ================= -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+                <div class="footer-brand">
+          <a href="./index.html" class="footer-brand-link" aria-label="UTTAKALA OS Home">
+            <img 
+              src="./assets/images/uttakala-os-logo.png" 
+              alt="UTTAKALA OS official logo" 
+              class="footer-brand-logo" 
+              width="48" 
+              height="48" 
+              loading="lazy" 
+            />
+            <div class="brand-title">
+              <span class="brand-title-main">UTTAKALA</span>
+              <span class="brand-title-sub">OS</span>
+            </div>
+          </a>
+          <div class="footer-tagline">Your Personal Life OS</div>
+          <p>
+            Autonomous cyberpunk personal productivity and life-management operating system. Precision engineering for focus, habits, academics, and personal sovereignty.
+          </p>
+          <div style="margin-top: 1rem; display: flex; gap: 0.75rem; align-items: center;">
+            <span class="badge badge-available"><span class="badge-dot"></span> System Online v2.4</span>
+            <span style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-muted);">LATENCY: 0.4MS</span>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Platform Hub</h4>
+          <ul class="footer-links">
+            <li><a href="./index.html">Command Center</a></li>
+            <li><a href="./features.html">Feature Matrix</a></li>
+            <li><a href="./experience.html">OS Live Simulator</a></li>
+            <li><a href="./tutorials.html">Operator Tutorials</a></li>
+            <li><a href="./about.html">System Architecture</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Trust & Security</h4>
+          <ul class="footer-links">
+            <li><a href="./trust.html">Trust Center Hub</a></li>
+            <li><a href="./security.html">Data & Security Whitepaper</a></li>
+            <li><a href="./privacy.html">Privacy Policy</a></li>
+            <li><a href="./terms.html">Terms of Service</a></li>
+            <li><a href="./trust.html#compliance">Local vs Cloud Isolation</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Communication</h4>
+          <ul class="footer-links">
+            <li><a href="./contact.html">Dispatch Console</a></li>
+            <li><a href="mailto:uttakaladeba.codes@gmail.com">Direct Developer Line</a></li>
+            <li><a href="./contact.html#security-report">Report Vulnerability</a></li>
+            <li><a href="./about.html#roadmap">Release Roadmap</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          &copy; <span data-year>2026</span> UTTAKALA OS. Precision engineering. Built for individual autonomy.
+        </div>
+        <div class="footer-bottom-links">
+          <a href="./trust.html">Trust Center</a>
+          <a href="./security.html">Security</a>
+          <a href="./privacy.html">Privacy</a>
+          <a href="./terms.html">Terms</a>
+          <a href="./experience.html">Experience</a>
+          <a href="./contact.html">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Main JavaScript -->
+  <script src="./assets/js/main.js"></script>
+
+  <!-- Simulator Specific Interactive Logic -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // 1. Simulator Tabs Switcher
+      const simTabBtns = document.querySelectorAll('.sim-tab-btn');
+      const simPanels = document.querySelectorAll('.sim-panel');
+
+      simTabBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          simTabBtns.forEach(b => b.classList.remove('active'));
+          simPanels.forEach(p => p.classList.remove('active'));
+
+          btn.classList.add('active');
+          const targetId = btn.getAttribute('data-tab');
+          const targetPanel = document.getElementById(targetId);
+          if (targetPanel) targetPanel.classList.add('active');
+        });
+      });
+
+      // 2. Working Pomodoro Timer
+      let timerInterval = null;
+      let totalSeconds = 25 * 60;
+      let isRunning = false;
+
+      const timerDigits = document.getElementById('simTimerDigits');
+      const startBtn = document.getElementById('simTimerStartBtn');
+      const pauseBtn = document.getElementById('simTimerPauseBtn');
+      const resetBtn = document.getElementById('simTimerResetBtn');
+      const breakBtn = document.getElementById('simTimerBreakBtn');
+      const statusText = document.getElementById('simStatusText');
+
+      function updateTimerDisplay() {
+        const mins = Math.floor(totalSeconds / 60);
+        const secs = totalSeconds % 60;
+        if (timerDigits) {
+          timerDigits.textContent = `${String(mins).padStart(2, '0')}:${String(secs).padStart(2, '0')}`;
+        }
+      }
+
+      if (startBtn) {
+        startBtn.addEventListener('click', () => {
+          if (!isRunning) {
+            isRunning = true;
+            startBtn.style.display = 'none';
+            if (pauseBtn) pauseBtn.style.display = 'inline-block';
+            if (statusText) statusText.textContent = 'Session active. Neural focus locked in.';
+
+            timerInterval = setInterval(() => {
+              if (totalSeconds > 0) {
+                totalSeconds--;
+                updateTimerDisplay();
+              } else {
+                clearInterval(timerInterval);
+                isRunning = false;
+                startBtn.style.display = 'inline-block';
+                if (pauseBtn) pauseBtn.style.display = 'none';
+                if (statusText) statusText.textContent = 'Session completed! Take a 5-minute break.';
+              }
+            }, 1000);
+          }
+        });
+      }
+
+      if (pauseBtn) {
+        pauseBtn.addEventListener('click', () => {
+          if (isRunning) {
+            clearInterval(timerInterval);
+            isRunning = false;
+            startBtn.style.display = 'inline-block';
+            pauseBtn.style.display = 'none';
+            if (statusText) statusText.textContent = 'Session paused. Resume when ready.';
+          }
+        });
+      }
+
+      if (resetBtn) {
+        resetBtn.addEventListener('click', () => {
+          clearInterval(timerInterval);
+          isRunning = false;
+          totalSeconds = 25 * 60;
+          updateTimerDisplay();
+          if (startBtn) startBtn.style.display = 'inline-block';
+          if (pauseBtn) pauseBtn.style.display = 'none';
+          if (statusText) statusText.textContent = 'Timer reset to 25:00 focus interval.';
+        });
+      }
+
+      if (breakBtn) {
+        breakBtn.addEventListener('click', () => {
+          clearInterval(timerInterval);
+          isRunning = false;
+          totalSeconds = 5 * 60;
+          updateTimerDisplay();
+          if (startBtn) startBtn.style.display = 'inline-block';
+          if (pauseBtn) pauseBtn.style.display = 'none';
+          if (statusText) statusText.textContent = 'Short break calibrated (05:00).';
+        });
+      }
+
+      // 3. Habit Matrix Interactive 60 Cells Generator
+      const habitGrid = document.getElementById('habitGrid');
+      const streakCount = document.getElementById('streakCount');
+      const completionRate = document.getElementById('completionRate');
+
+      if (habitGrid) {
+        let activeChecks = 42;
+        for (let i = 1; i <= 60; i++) {
+          const cell = document.createElement('div');
+          cell.className = 'habit-cell' + (i <= 42 ? ' checked' : '');
+          cell.setAttribute('title', `Day ${i}`);
+          cell.addEventListener('click', () => {
+            cell.classList.toggle('checked');
+            const totalChecked = habitGrid.querySelectorAll('.habit-cell.checked').length;
+            if (streakCount) streakCount.textContent = `${totalChecked} DAYS`;
+            if (completionRate) completionRate.textContent = `${Math.round((totalChecked / 60) * 100)}%`;
+          });
+          habitGrid.appendChild(cell);
+        }
+      }
+
+      // 4. Live Theme Swatch Selector
+      const swatches = document.querySelectorAll('.theme-swatch');
+      const previewBox = document.getElementById('themePreviewBox');
+      const previewTitle = document.getElementById('themePreviewTitle');
+
+      swatches.forEach(swatch => {
+        swatch.addEventListener('click', () => {
+          swatches.forEach(s => s.classList.remove('active'));
+          swatch.classList.add('active');
+          const color = swatch.getAttribute('data-accent');
+          if (previewBox) {
+            previewBox.style.borderColor = color;
+            previewBox.style.boxShadow = `0 0 25px ${color}22`;
+          }
+          if (previewTitle) {
+            previewTitle.style.color = color;
+            previewTitle.textContent = `Active Palette: ${swatch.textContent.trim()}`;
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>

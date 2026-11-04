@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact &amp; Dispatch Console — UTTAKALA OS</title>
+  <meta name="description" content="Get in touch with the creator of UTTAKALA OS for technical support, feature feedback, privacy requests, and security vulnerability disclosures." />
+  
+  <link rel="canonical" href="https://YOUR-GITHUB-USERNAME.github.io/uttakala-os-website/contact.html" />
+    <!-- Favicon & Browser Branding -->
+  <link rel="icon" type="image/svg+xml" href="./assets/images/favicon.svg" />
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="./assets/images/apple-touch-icon.png" />
+  <meta name="theme-color" content="#0B0C10" />
+  <meta name="msapplication-TileColor" content="#0B0C10" />
+
+  <!-- Google Fonts: Plus Jakarta Sans & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="./assets/css/style.css" />
+
+  <style>
+    .dispatch-box {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      padding: 2rem;
+      box-shadow: var(--shadow-card);
+    }
+
+    .form-group {
+      margin-bottom: 1.25rem;
+    }
+
+    .form-label {
+      display: block;
+      font-family: var(--font-mono);
+      font-size: 0.82rem;
+      color: var(--text-secondary);
+      text-transform: uppercase;
+      margin-bottom: 0.4rem;
+      letter-spacing: 0.5px;
+    }
+
+    .form-control {
+      width: 100%;
+      background: var(--bg-obsidian);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-xs);
+      padding: 0.75rem 1rem;
+      color: var(--text-primary);
+      font-family: var(--font-sans);
+      font-size: 0.95rem;
+      transition: all var(--transition-fast);
+      box-sizing: border-box;
+    }
+
+    .form-control:focus {
+      outline: none;
+      border-color: var(--highlight-cyan);
+      box-shadow: 0 0 12px rgba(0, 255, 255, 0.25);
+    }
+
+    textarea.form-control {
+      resize: vertical;
+      min-height: 120px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Ambient Light Orbs -->
+  <div class="ambient-bg-glow" aria-hidden="true">
+    <div class="ambient-orb-1"></div>
+    <div class="ambient-orb-2"></div>
+  </div>
+
+  <!-- ================= SITE HEADER ================= -->
+  <header class="site-header">
+    <div class="container nav-container">
+            <a href="./index.html" class="brand-link" aria-label="UTTAKALA OS Home">
+        <img 
+          src="./assets/images/uttakala-os-logo.png" 
+          alt="UTTAKALA OS official logo" 
+          class="brand-logo-img" 
+          width="40" 
+          height="40" 
+          loading="eager" 
+        />
+        <span class="brand-title">
+          <span class="brand-title-main">UTTAKALA</span>
+          <span class="brand-title-sub">OS</span>
+        </span>
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav aria-label="Main Navigation">
+        <ul class="nav-menu">
+          <li class="nav-item"><a href="./index.html">Home</a></li>
+          <li class="nav-item"><a href="./features.html">Features</a></li>
+          <li class="nav-item"><a href="./experience.html">Experience</a></li>
+          <li class="nav-item"><a href="./download.html">Download</a></li>
+          <li class="nav-item"><a href="./tutorials.html">Tutorials</a></li>
+          <li class="nav-item"><a href="./trust.html">Trust Center</a></li>
+          <li class="nav-item"><a href="./about.html">About</a></li>
+          <li class="nav-item"><a href="./contact.html" class="active">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Desktop Action -->
+      <div class="nav-actions">
+        <a href="mailto:uttakaladeba.codes@gmail.com" class="btn btn-primary btn-sm btn-glow btn-magnetic">Direct Line</a>
+        <button class="mobile-nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+          <svg class="icon-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+          <svg class="icon-close" style="display:none;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation Drawer -->
+  <div class="mobile-drawer" role="dialog" aria-modal="true" aria-label="Mobile Navigation">
+    <ul class="mobile-nav-list">
+      <li><a href="./index.html">Home</a></li>
+      <li><a href="./features.html">Features</a></li>
+      <li><a href="./experience.html">Experience Simulator</a></li>
+      <li><a href="./tutorials.html">Tutorials & Docs</a></li>
+      <li><a href="./trust.html">Trust Center</a></li>
+      <li><a href="./security.html">Data & Security</a></li>
+      <li><a href="./privacy.html">Privacy Policy</a></li>
+      <li><a href="./terms.html">Terms of Service</a></li>
+      <li><a href="./about.html">About & Vision</a></li>
+      <li><a href="./contact.html" class="active">Contact Support</a></li>
+    </ul>
+    <div class="mobile-drawer-cta">
+      <a href="mailto:uttakaladeba.codes@gmail.com" class="btn btn-primary">Compose Email</a>
+      <a href="./experience.html" class="btn btn-secondary">Launch Experience</a>
+    </div>
+  </div>
+
+  <main>
+    <!-- Document Header -->
+    <section class="doc-header">
+      <div class="container container-narrow">
+        <div class="hero-pill reveal">
+          <span class="pulse-beacon"></span>
+          <span class="hero-pill-tag">COMMUNICATIONS DISPATCH</span>
+          <span>Direct Operator Access</span>
+        </div>
+        <h1 class="reveal delay-1" style="font-size: clamp(2rem, 4vw, 3.2rem); margin-top: 1rem; color: var(--text-primary);">
+          Support &amp; Dispatch Console
+        </h1>
+        <p class="reveal delay-2" style="color: var(--text-secondary); max-width: 720px; font-size: 1.05rem; margin-top: 0.75rem;">
+          Direct communication line to the lead developer. Zero automated bots, zero ticket queues — human responses within 48 business hours.
+        </p>
+      </div>
+    </section>
+
+    <!-- Main Contact Layout -->
+    <section class="section" style="padding-top: 0;">
+      <div class="container">
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2rem;">
+          
+          <!-- Column 1: Dispatch Form -->
+          <div class="dispatch-box reveal">
+            <h3 style="color: var(--text-primary); font-size: 1.4rem; margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem;">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--highlight-cyan)" stroke-width="2"><path d="M22 2L11 13"></path><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+              Transmit Dispatch
+            </h3>
+            <p style="font-size: 0.88rem; color: var(--text-secondary); margin-bottom: 1.5rem;">
+              Select dispatch channel and enter your message. Will automatically draft directly to our support line.
+            </p>
+
+            <form id="contactForm" onsubmit="event.preventDefault(); handleDispatchSubmit();">
+              <div class="form-group">
+                <label class="form-label" for="contactName">Name / Callsign</label>
+                <input type="text" id="contactName" class="form-control" placeholder="e.g. Operator Deba" required />
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="contactEmail">Return Email Address</label>
+                <input type="email" id="contactEmail" class="form-control" placeholder="your.name@domain.com" required />
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="contactTopic">Channel / Topic</label>
+                <select id="contactTopic" class="form-control" style="background: var(--bg-obsidian); cursor: pointer;">
+                  <option value="General Feedback">General Feedback &amp; Suggestions</option>
+                  <option value="Bug Report">Bug Report &amp; Device Diagnostics</option>
+                  <option value="Privacy Request">Privacy &amp; Supabase Account Deletion</option>
+                  <option value="Security Vulnerability">Security Vulnerability Disclosure</option>
+                  <option value="Academic Vault Inquiry">Academic Vault / Timetable Integration</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="contactMessage">Message Content</label>
+                <textarea id="contactMessage" class="form-control" rows="5" placeholder="Describe your inquiry, device specs, or suggestion..." required></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-block btn-glow btn-magnetic" id="submitBtn">
+                Transmit to Developer &rarr;
+              </button>
+
+              <div id="formFeedback" style="display: none; margin-top: 1rem; padding: 0.75rem 1rem; border-radius: var(--radius-xs); font-family: var(--font-mono); font-size: 0.82rem;"></div>
+            </form>
+          </div>
+
+          <!-- Column 2: Direct Channels & Information -->
+          <div style="display: flex; flex-direction: column; gap: 1.5rem;" class="reveal delay-1">
+            
+            <!-- Direct Email Card -->
+            <div class="hud-panel" style="padding: 1.75rem;">
+              <span class="badge badge-available" style="margin-bottom: 0.75rem;">Verified Direct Line</span>
+              <h3 style="color: var(--text-primary); font-size: 1.25rem; margin-bottom: 0.5rem;">Developer Support Email</h3>
+              <p style="font-size: 0.88rem; color: var(--text-secondary); margin-bottom: 1.25rem;">
+                Prefer composing directly in your personal email client? Use our official support address:
+              </p>
+
+              <div style="background: var(--bg-obsidian); border: 1px solid var(--border-color); padding: 0.85rem 1.2rem; border-radius: var(--radius-xs); display: flex; justify-content: space-between; align-items: center;">
+                <code style="color: var(--accent-mint); font-family: var(--font-mono); font-size: 0.95rem;">uttakaladeba.codes@gmail.com</code>
+                <a href="mailto:uttakaladeba.codes@gmail.com" class="btn btn-sm btn-ghost" style="padding: 0.25rem 0.6rem; font-size: 0.75rem;">Open &nearr;</a>
+              </div>
+            </div>
+
+            <!-- Security Reporting Anchor -->
+            <div class="hud-panel" id="security-report" style="padding: 1.75rem; border-color: rgba(0, 255, 255, 0.4);">
+              <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem;">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--highlight-cyan)" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                <h3 style="color: var(--highlight-cyan); font-size: 1.25rem; margin: 0;">Security Vulnerability Protocol</h3>
+              </div>
+              <p style="font-size: 0.88rem; color: var(--text-secondary); margin-bottom: 0.75rem;">
+                If you have uncovered a potential security flaw in our Supabase RLS rules, Android SQLite permissions, or OAuth handling, please mark your subject header with:
+              </p>
+              <pre style="background: var(--bg-obsidian); border: 1px solid var(--border-color); padding: 0.6rem 0.8rem; border-radius: var(--radius-xs); font-family: var(--font-mono); font-size: 0.8rem; color: var(--text-primary); margin: 0;">
+Subject: [SECURITY DISCLOSURE] UTTAKALA OS</pre>
+              <p style="font-size: 0.82rem; color: var(--text-muted); margin-top: 0.5rem; margin-bottom: 0;">
+                Coordinated disclosure acknowledged within 48 hours.
+              </p>
+            </div>
+
+            <!-- Quick FAQ Card -->
+            <div class="hud-panel" style="padding: 1.75rem;">
+              <h4 style="color: var(--text-primary); font-size: 1.1rem; margin-bottom: 0.75rem;">Frequently Addressed Topics</h4>
+              <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 0.75rem; font-size: 0.85rem; color: var(--text-secondary);">
+                <li>
+                  <strong style="color: var(--text-primary);">How do I delete my synced Supabase account?</strong><br/>
+                  Email us with subject "Account Deletion Request" from your registered email.
+                </li>
+                <li>
+                  <strong style="color: var(--text-primary);">Can you recover my lost Secret Diary entries?</strong><br/>
+                  No. Secret Diary entries are local-only and never leave your phone.
+                </li>
+                <li>
+                  <strong style="color: var(--text-primary);">Are Google Drive backups encrypted?</strong><br/>
+                  No. They are stored as raw JSON in your Drive AppData folder.
+                </li>
+              </ul>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= SITE FOOTER ================= -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+                <div class="footer-brand">
+          <a href="./index.html" class="footer-brand-link" aria-label="UTTAKALA OS Home">
+            <img 
+              src="./assets/images/uttakala-os-logo.png" 
+              alt="UTTAKALA OS official logo" 
+              class="footer-brand-logo" 
+              width="48" 
+              height="48" 
+              loading="lazy" 
+            />
+            <div class="brand-title">
+              <span class="brand-title-main">UTTAKALA</span>
+              <span class="brand-title-sub">OS</span>
+            </div>
+          </a>
+          <div class="footer-tagline">Your Personal Life OS</div>
+          <p>
+            Autonomous cyberpunk personal productivity and life-management operating system. Precision engineering for focus, habits, academics, and personal sovereignty.
+          </p>
+          <div style="margin-top: 1rem; display: flex; gap: 0.75rem; align-items: center;">
+            <span class="badge badge-available"><span class="badge-dot"></span> System Online v2.4</span>
+            <span style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-muted);">LATENCY: 0.4MS</span>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Platform Hub</h4>
+          <ul class="footer-links">
+            <li><a href="./index.html">Command Center</a></li>
+            <li><a href="./features.html">Feature Matrix</a></li>
+            <li><a href="./experience.html">OS Live Simulator</a></li>
+            <li><a href="./tutorials.html">Operator Tutorials</a></li>
+            <li><a href="./about.html">System Architecture</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Trust & Security</h4>
+          <ul class="footer-links">
+            <li><a href="./trust.html">Trust Center Hub</a></li>
+            <li><a href="./security.html">Data & Security Whitepaper</a></li>
+            <li><a href="./privacy.html">Privacy Policy</a></li>
+            <li><a href="./terms.html">Terms of Service</a></li>
+            <li><a href="./trust.html#compliance">Local vs Cloud Isolation</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Communication</h4>
+          <ul class="footer-links">
+            <li><a href="./contact.html">Dispatch Console</a></li>
+            <li><a href="mailto:uttakaladeba.codes@gmail.com">Direct Developer Line</a></li>
+            <li><a href="./contact.html#security-report">Report Vulnerability</a></li>
+            <li><a href="./about.html#roadmap">Release Roadmap</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          &copy; <span data-year>2026</span> UTTAKALA OS. Precision engineering. Built for individual autonomy.
+        </div>
+        <div class="footer-bottom-links">
+          <a href="./trust.html">Trust Center</a>
+          <a href="./security.html">Security</a>
+          <a href="./privacy.html">Privacy</a>
+          <a href="./terms.html">Terms</a>
+          <a href="./experience.html">Experience</a>
+          <a href="./contact.html">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Main JavaScript -->
+  <script src="./assets/js/main.js"></script>
+
+  <!-- Interactive Form Handling -->
+  <script>
+    function handleDispatchSubmit() {
+      const name = document.getElementById('contactName').value.trim();
+      const email = document.getElementById('contactEmail').value.trim();
+      const topic = document.getElementById('contactTopic').value;
+      const message = document.getElementById('contactMessage').value.trim();
+      const feedback = document.getElementById('formFeedback');
+
+      const subject = encodeURIComponent(`[${topic.toUpperCase()}] From: ${name}`);
+      const body = encodeURIComponent(`From: ${name} (${email})\nChannel: ${topic}\n\nMessage:\n${message}\n\nSent via UTTAKALA OS Dispatch Console`);
+
+      feedback.style.display = 'block';
+      feedback.style.background = 'rgba(15, 252, 190, 0.12)';
+      feedback.style.border = '1px solid var(--accent-mint)';
+      feedback.style.color = 'var(--accent-mint)';
+      feedback.innerHTML = `&check; Dispatch formatted. Opening client to transmit to <code>uttakaladeba.codes@gmail.com</code>...`;
+
+      setTimeout(() => {
+        window.location.href = `mailto:uttakaladeba.codes@gmail.com?subject=${subject}&body=${body}`;
+      }, 700);
+    }
+  </script>
+</body>
+</html>

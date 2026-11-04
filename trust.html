@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Trust Center — UTTAKALA OS</title>
+  <meta name="description" content="UTTAKALA OS Trust Center. Complete transparency into our data architecture, local-first boundaries, Supabase cloud sync, Google Drive JSON backups, and user sovereignty." />
+  
+  <link rel="canonical" href="https://YOUR-GITHUB-USERNAME.github.io/uttakala-os-website/trust.html" />
+    <!-- Favicon & Browser Branding -->
+  <link rel="icon" type="image/svg+xml" href="./assets/images/favicon.svg" />
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="./assets/images/apple-touch-icon.png" />
+  <meta name="theme-color" content="#0B0C10" />
+  <meta name="msapplication-TileColor" content="#0B0C10" />
+
+  <!-- Google Fonts: Plus Jakarta Sans & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="./assets/css/style.css" />
+</head>
+<body>
+
+  <!-- Ambient Light Orbs -->
+  <div class="ambient-bg-glow" aria-hidden="true">
+    <div class="ambient-orb-1"></div>
+    <div class="ambient-orb-2"></div>
+  </div>
+
+  <!-- ================= SITE HEADER ================= -->
+  <header class="site-header">
+    <div class="container nav-container">
+            <a href="./index.html" class="brand-link" aria-label="UTTAKALA OS Home">
+        <img 
+          src="./assets/images/uttakala-os-logo.png" 
+          alt="UTTAKALA OS official logo" 
+          class="brand-logo-img" 
+          width="40" 
+          height="40" 
+          loading="eager" 
+        />
+        <span class="brand-title">
+          <span class="brand-title-main">UTTAKALA</span>
+          <span class="brand-title-sub">OS</span>
+        </span>
+      </a>
+
+      <!-- Desktop Navigation Pill -->
+      <nav aria-label="Main Navigation">
+        <ul class="nav-menu">
+          <li class="nav-item"><a href="./index.html">Home</a></li>
+          <li class="nav-item"><a href="./features.html">Features</a></li>
+          <li class="nav-item"><a href="./experience.html">Experience</a></li>
+          <li class="nav-item"><a href="./download.html">Download</a></li>
+          <li class="nav-item"><a href="./tutorials.html">Tutorials</a></li>
+          <li class="nav-item"><a href="./trust.html" class="active">Trust Center</a></li>
+          <li class="nav-item"><a href="./about.html">About</a></li>
+          <li class="nav-item"><a href="./contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Desktop Action -->
+      <div class="nav-actions">
+        <a href="./download.html" class="btn btn-primary btn-sm btn-glow btn-magnetic">Get OS</a>
+        <button class="mobile-nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+          <svg class="icon-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+          <svg class="icon-close" style="display:none;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation Drawer -->
+  <div class="mobile-drawer" role="dialog" aria-modal="true" aria-label="Mobile Navigation">
+    <ul class="mobile-nav-list">
+      <li><a href="./index.html">Home</a></li>
+      <li><a href="./features.html">Features</a></li>
+      <li><a href="./experience.html">Experience Simulator</a></li>
+      <li><a href="./tutorials.html">Tutorials & Docs</a></li>
+      <li><a href="./trust.html" class="active">Trust Center</a></li>
+      <li><a href="./security.html">Data & Security</a></li>
+      <li><a href="./privacy.html">Privacy Policy</a></li>
+      <li><a href="./terms.html">Terms of Service</a></li>
+      <li><a href="./about.html">About & Vision</a></li>
+      <li><a href="./contact.html">Contact Support</a></li>
+    </ul>
+    <div class="mobile-drawer-cta">
+      <a href="./experience.html" class="btn btn-primary">Launch Experience</a>
+      <a href="./features.html" class="btn btn-secondary">Explore Features</a>
+    </div>
+  </div>
+
+  <main>
+    <!-- ================= TRUST HERO ================= -->
+    <section class="hero-section" style="padding-top: 130px; padding-bottom: 50px;">
+      <div class="container hero-content">
+        <div class="hero-pill reveal">
+          <span class="pulse-beacon"></span>
+          <span class="hero-pill-tag">SECURITY & TRANSPARENCY</span>
+          <span>Zero Surveillance &bull; Absolute Clarity</span>
+        </div>
+
+        <h1 class="hero-title reveal delay-1">
+          TRUST &amp; DATA <span style="color: var(--highlight-cyan); text-shadow: 0 0 25px rgba(0, 255, 255, 0.45);">INTEGRITY</span>
+        </h1>
+
+        <p class="hero-lead reveal delay-2">
+          UTTAKALA OS is built on a simple premise: your thoughts, routines, and personal records belong exclusively to you. Here is the verified technical reality of how our architecture handles, isolates, and protects your data.
+        </p>
+
+        <!-- Quick Status Strip -->
+        <div class="metrics-strip reveal delay-3" style="margin-top: 2rem;">
+          <div class="metric-item">
+            <div class="metric-number" style="color: var(--accent-mint);">Local-Only</div>
+            <div class="metric-label">Secret Diary Sandbox</div>
+          </div>
+          <div class="metric-item">
+            <div class="metric-number" style="color: var(--primary-blue);">Raw JSON</div>
+            <div class="metric-label">Drive AppData Backups</div>
+          </div>
+          <div class="metric-item">
+            <div class="metric-number" style="color: var(--highlight-cyan);">Supabase</div>
+            <div class="metric-label">PostgreSQL Cloud Sync</div>
+          </div>
+          <div class="metric-item">
+            <div class="metric-number" style="color: #FFBD2E;">0 Ads</div>
+            <div class="metric-label">Commercial Tracking</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 4 CORE TRUST HUBS ================= -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-label">SYSTEM GOVERNANCE</span>
+          <h2 class="editorial-heading">Official Documentation Hub</h2>
+          <p class="section-desc">
+            Direct access to our audited policies, legal terms, and deep technical architecture disclosures.
+          </p>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem;" class="reveal">
+          
+          <!-- Card 1: Data & Security Whitepaper -->
+          <div class="feature-card tilt-card" style="border-top: 3px solid var(--highlight-cyan);">
+            <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 1.25rem;">
+              <span class="badge badge-available">Technical Whitepaper</span>
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--highlight-cyan)" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+            </div>
+            <h3 class="feature-title">Data &amp; Security Architecture</h3>
+            <p class="feature-desc">
+              Examine the low-level infrastructure: SQLite local storage, Google Drive AppData folder mechanics, Supabase token exchange, and boundary guarantees.
+            </p>
+            <div style="margin-top: 1.5rem;">
+              <a href="./security.html" class="btn btn-outline-cyan btn-sm btn-magnetic">Read Security Paper &rarr;</a>
+            </div>
+          </div>
+
+          <!-- Card 2: Privacy Policy -->
+          <div class="feature-card tilt-card" style="border-top: 3px solid var(--accent-mint);">
+            <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 1.25rem;">
+              <span class="badge badge-available">Legal Standard v2.0</span>
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--accent-mint)" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+            </div>
+            <h3 class="feature-title">Privacy Policy</h3>
+            <p class="feature-desc">
+              Understand our data minimization protocols, what information is retained, OAuth scopes used, and your explicit rights under GDPR &amp; CCPA principles.
+            </p>
+            <div style="margin-top: 1.5rem;">
+              <a href="./privacy.html" class="btn btn-outline-green btn-sm btn-magnetic">Read Privacy Policy &rarr;</a>
+            </div>
+          </div>
+
+          <!-- Card 3: Terms of Service -->
+          <div class="feature-card tilt-card" style="border-top: 3px solid var(--primary-blue);">
+            <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 1.25rem;">
+              <span class="badge badge-available">Contract Terms v2.0</span>
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--primary-blue)" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+            </div>
+            <h3 class="feature-title">Terms of Service</h3>
+            <p class="feature-desc">
+              Clear account ownership terms, fair use limits, user responsibilities regarding unencrypted JSON backup storage, and system warranties.
+            </p>
+            <div style="margin-top: 1.5rem;">
+              <a href="./terms.html" class="btn btn-secondary btn-sm btn-magnetic">Review Terms &rarr;</a>
+            </div>
+          </div>
+
+          <!-- Card 4: Support & Security Contact -->
+          <div class="feature-card tilt-card" style="border-top: 3px solid #FFBD2E;">
+            <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 1.25rem;">
+              <span class="badge badge-dev">Direct Line</span>
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#FFBD2E" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+            </div>
+            <h3 class="feature-title">Contact &amp; Vulnerability Reporting</h3>
+            <p class="feature-desc">
+              Direct communication channel with the lead developer. Report security vulnerabilities, request full account purges, or clarify policy statements.
+            </p>
+            <div style="margin-top: 1.5rem;">
+              <a href="./contact.html" class="btn btn-secondary btn-sm btn-magnetic">Open Dispatch Console &rarr;</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= TECHNICAL VERIFICATION & CLARITY ================= -->
+    <section class="section section-alt" id="compliance">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-label">UNCOMPROMISING HONESTY</span>
+          <h2 class="editorial-heading">What We Guarantee — And What We Don't</h2>
+          <p class="section-desc">
+            Many productivity tools mislead users with marketing buzzwords like "bank-grade military encryption." At UTTAKALA OS, we state the exact factual parameters of our implementation.
+          </p>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2rem;" class="reveal">
+          
+          <!-- Column 1: Verified Architectural Truths -->
+          <div class="hud-panel" style="padding: 2rem;">
+            <h3 style="color: var(--accent-mint); font-size: 1.35rem; margin-bottom: 1.25rem; display: flex; align-items: center; gap: 0.5rem;">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              Verified Architecture Facts
+            </h3>
+            <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 1.25rem;">
+              <li style="border-left: 2px solid var(--accent-mint); padding-left: 1rem;">
+                <strong style="color: var(--text-primary); display: block;">Local-Only Secret Diary</strong>
+                <span style="font-size: 0.88rem; color: var(--text-secondary);">
+                  Secret Diary entries are stored strictly in local application storage (Room/SQLite). They are physically excluded from Supabase cloud sync and from Google Drive backups. If you uninstall the app without manual export, they are erased with the sandbox.
+                </span>
+              </li>
+              <li style="border-left: 2px solid var(--accent-mint); padding-left: 1rem;">
+                <strong style="color: var(--text-primary); display: block;">User Google Account Isolation</strong>
+                <span style="font-size: 0.88rem; color: var(--text-secondary);">
+                  Backups utilize Google Drive's restricted AppData folder (`drive.appdata` scope). Other applications and file explorers cannot see this folder, keeping backup files isolated to UTTAKALA OS.
+                </span>
+              </li>
+              <li style="border-left: 2px solid var(--accent-mint); padding-left: 1rem;">
+                <strong style="color: var(--text-primary); display: block;">Supabase PostgreSQL Row Level Security</strong>
+                <span style="font-size: 0.88rem; color: var(--text-secondary);">
+                  Cloud routines, habit records, and academic schedules synced via Supabase are protected by PostgreSQL RLS policies tied to your authenticated Supabase user UID.
+                </span>
+              </li>
+              <li style="border-left: 2px solid var(--accent-mint); padding-left: 1rem;">
+                <strong style="color: var(--text-primary); display: block;">Zero Third-Party Ad Trackers</strong>
+                <span style="font-size: 0.88rem; color: var(--text-secondary);">
+                  There are no Facebook Pixels, Google AdSense tags, adjust SDKs, or commercial telemetry beacons bundled inside the app or the website.
+                </span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Column 2: Explicit Disclosures & Non-Claims -->
+          <div class="hud-panel" style="padding: 2rem; border-color: rgba(255, 189, 46, 0.4);">
+            <h3 style="color: #FFBD2E; font-size: 1.35rem; margin-bottom: 1.25rem; display: flex; align-items: center; gap: 0.5rem;">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
+              Explicit Technical Disclosures
+            </h3>
+            <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 1.25rem;">
+              <li style="border-left: 2px solid #FFBD2E; padding-left: 1rem;">
+                <strong style="color: var(--text-primary); display: block;">Google Drive Backups Are NOT Encrypted</strong>
+                <span style="font-size: 0.88rem; color: var(--text-secondary);">
+                  Backup payloads uploaded to your Google Drive AppData folder are formatted as raw, unencrypted JSON. They inherit Google's transit (TLS) and at-rest cloud security, but are NOT end-to-end encrypted with an independent cipher.
+                </span>
+              </li>
+              <li style="border-left: 2px solid #FFBD2E; padding-left: 1rem;">
+                <strong style="color: var(--text-primary); display: block;">Secret Diary Encryption Status</strong>
+                <span style="font-size: 0.88rem; color: var(--text-secondary);">
+                  Secret Diary entries are protected by an in-app biometric/passcode gate and stored in private local database files. We do not claim cryptographic zero-knowledge or hardware HSM encryption unless explicitly audited <span class="badge badge-dev" style="font-size:0.65rem;">[OWNER REVIEW REQUIRED]</span>.
+                </span>
+              </li>
+              <li style="border-left: 2px solid #FFBD2E; padding-left: 1rem;">
+                <strong style="color: var(--text-primary); display: block;">No Enterprise SOC-2 / ISO Inventions</strong>
+                <span style="font-size: 0.88rem; color: var(--text-secondary);">
+                  We do not falsely claim SOC-2 Type II, ISO 27001, HIPAA, or FedRAMP compliance certifications. We rely on verified infrastructure provided by Supabase and Google Cloud.
+                </span>
+              </li>
+              <li style="border-left: 2px solid #FFBD2E; padding-left: 1rem;">
+                <strong style="color: var(--text-primary); display: block;">User Backup Responsibility</strong>
+                <span style="font-size: 0.88rem; color: var(--text-secondary);">
+                  Because local data is sovereign, users must periodically trigger manual Google Drive backups or offline JSON exports to avoid data loss during device replacement.
+                </span>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= DATA LIFECYCLE DIAGRAM ================= -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-label">DATA PATHWAY</span>
+          <h2 class="editorial-heading">Visual Architecture Map</h2>
+          <p class="section-desc">
+            How different categories of information travel through the UTTAKALA OS ecosystem.
+          </p>
+        </div>
+
+        <div class="hud-panel reveal" style="padding: 2.5rem;">
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 2rem;">
+            
+            <div style="text-align: center; border: 1px dashed var(--border-color); padding: 1.5rem; border-radius: var(--radius-sm);">
+              <div style="font-size: 2rem; margin-bottom: 0.5rem;">📱</div>
+              <h4 style="color: var(--accent-mint); margin-bottom: 0.5rem;">Local Device Sandbox</h4>
+              <p style="font-size: 0.85rem; color: var(--text-secondary);">
+                Private SQLite/Room DB on Android device.<br/>
+                <strong>Secret Diary</strong>, local drafts, PIN cache.<br/>
+                <em>Boundary: Never exits device over network.</em>
+              </p>
+            </div>
+
+            <div style="text-align: center; border: 1px dashed var(--border-color); padding: 1.5rem; border-radius: var(--radius-sm);">
+              <div style="font-size: 2rem; margin-bottom: 0.5rem;">🔄</div>
+              <h4 style="color: var(--primary-blue); margin-bottom: 0.5rem;">Cloud Sync Engine</h4>
+              <p style="font-size: 0.85rem; color: var(--text-secondary);">
+                Supabase Auth &amp; PostgreSQL Database.<br/>
+                <strong>Habits, Daily Tasks, Timetable, Focus Stats</strong>.<br/>
+                <em>Boundary: Transmitted via TLS with user JWT authentication.</em>
+              </p>
+            </div>
+
+            <div style="text-align: center; border: 1px dashed var(--border-color); padding: 1.5rem; border-radius: var(--radius-sm);">
+              <div style="font-size: 2rem; margin-bottom: 0.5rem;">☁️</div>
+              <h4 style="color: var(--highlight-cyan); margin-bottom: 0.5rem;">Google Drive AppData</h4>
+              <p style="font-size: 0.85rem; color: var(--text-secondary);">
+                User's personal Google Drive storage (`drive.appdata`).<br/>
+                <strong>Complete Snapshot Backups (Unencrypted JSON)</strong>.<br/>
+                <em>Boundary: Governed by user's personal Google credentials.</em>
+              </p>
+            </div>
+
+          </div>
+
+          <div style="margin-top: 2rem; padding: 1.25rem; background: rgba(16, 110, 190, 0.08); border-left: 3px solid var(--primary-blue); border-radius: var(--radius-xs);">
+            <div style="font-size: 0.88rem; color: var(--text-primary); font-family: var(--font-mono);">
+              <strong>ARCHITECTURAL NOTE:</strong> Secret Diary records are filtered out programmatically before generating both Supabase sync payloads and Google Drive backup JSON blobs.
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================= CTA BANNER ================= -->
+    <section class="section">
+      <div class="container">
+        <div class="cta-banner reveal">
+          <h2>Ready to inspect the legal details?</h2>
+          <p>
+            Explore the formal legal agreements or verify how we uphold your statutory rights.
+          </p>
+          <div style="display: flex; justify-content: center; gap: 1.15rem; flex-wrap: wrap;">
+            <a href="./privacy.html" class="btn btn-cta btn-lg btn-magnetic">Review Privacy Policy</a>
+            <a href="./security.html" class="btn btn-secondary btn-lg btn-magnetic" style="color: #FFFFFF; border-color: rgba(255,255,255,0.3);">Security Architecture</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= SITE FOOTER ================= -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+                <div class="footer-brand">
+          <a href="./index.html" class="footer-brand-link" aria-label="UTTAKALA OS Home">
+            <img 
+              src="./assets/images/uttakala-os-logo.png" 
+              alt="UTTAKALA OS official logo" 
+              class="footer-brand-logo" 
+              width="48" 
+              height="48" 
+              loading="lazy" 
+            />
+            <div class="brand-title">
+              <span class="brand-title-main">UTTAKALA</span>
+              <span class="brand-title-sub">OS</span>
+            </div>
+          </a>
+          <div class="footer-tagline">Your Personal Life OS</div>
+          <p>
+            Autonomous cyberpunk personal productivity and life-management operating system. Precision engineering for focus, habits, academics, and personal sovereignty.
+          </p>
+          <div style="margin-top: 1rem; display: flex; gap: 0.75rem; align-items: center;">
+            <span class="badge badge-available"><span class="badge-dot"></span> System Online v2.4</span>
+            <span style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-muted);">LATENCY: 0.4MS</span>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Platform Hub</h4>
+          <ul class="footer-links">
+            <li><a href="./index.html">Command Center</a></li>
+            <li><a href="./features.html">Feature Matrix</a></li>
+            <li><a href="./experience.html">OS Live Simulator</a></li>
+            <li><a href="./tutorials.html">Operator Tutorials</a></li>
+            <li><a href="./about.html">System Architecture</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Trust & Security</h4>
+          <ul class="footer-links">
+            <li><a href="./trust.html">Trust Center Hub</a></li>
+            <li><a href="./security.html">Data & Security Whitepaper</a></li>
+            <li><a href="./privacy.html">Privacy Policy</a></li>
+            <li><a href="./terms.html">Terms of Service</a></li>
+            <li><a href="./trust.html#compliance">Local vs Cloud Isolation</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Communication</h4>
+          <ul class="footer-links">
+            <li><a href="./contact.html">Dispatch Console</a></li>
+            <li><a href="mailto:uttakaladeba.codes@gmail.com">Direct Developer Line</a></li>
+            <li><a href="./contact.html#security-report">Report Vulnerability</a></li>
+            <li><a href="./about.html#roadmap">Release Roadmap</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          &copy; <span data-year>2026</span> UTTAKALA OS. Precision engineering. Built for individual autonomy.
+        </div>
+        <div class="footer-bottom-links">
+          <a href="./trust.html">Trust Center</a>
+          <a href="./security.html">Security</a>
+          <a href="./privacy.html">Privacy</a>
+          <a href="./terms.html">Terms</a>
+          <a href="./experience.html">Experience</a>
+          <a href="./contact.html">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Main JavaScript -->
+  <script src="./assets/js/main.js"></script>
+</body>
+</html>

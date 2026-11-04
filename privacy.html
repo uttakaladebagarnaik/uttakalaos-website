@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy — UTTAKALA OS</title>
+  <meta name="description" content="Official Privacy Policy for UTTAKALA OS. Clear disclosures on Supabase cloud sync, Google Drive AppData unencrypted JSON backups, local Secret Diary isolation, and your rights." />
+  
+  <link rel="canonical" href="https://YOUR-GITHUB-USERNAME.github.io/uttakala-os-website/privacy.html" />
+    <!-- Favicon & Browser Branding -->
+  <link rel="icon" type="image/svg+xml" href="./assets/images/favicon.svg" />
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="./assets/images/apple-touch-icon.png" />
+  <meta name="theme-color" content="#0B0C10" />
+  <meta name="msapplication-TileColor" content="#0B0C10" />
+
+  <!-- Google Fonts: Plus Jakarta Sans & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="./assets/css/style.css" />
+</head>
+<body>
+
+  <!-- Ambient Light Orbs -->
+  <div class="ambient-bg-glow" aria-hidden="true">
+    <div class="ambient-orb-1"></div>
+    <div class="ambient-orb-2"></div>
+  </div>
+
+  <!-- Reading Progress Bar -->
+  <div class="doc-progress-container" aria-hidden="true">
+    <div class="doc-progress-bar" id="docProgressBar"></div>
+  </div>
+
+  <!-- ================= SITE HEADER ================= -->
+  <header class="site-header">
+    <div class="container nav-container">
+            <a href="./index.html" class="brand-link" aria-label="UTTAKALA OS Home">
+        <img 
+          src="./assets/images/uttakala-os-logo.png" 
+          alt="UTTAKALA OS official logo" 
+          class="brand-logo-img" 
+          width="40" 
+          height="40" 
+          loading="eager" 
+        />
+        <span class="brand-title">
+          <span class="brand-title-main">UTTAKALA</span>
+          <span class="brand-title-sub">OS</span>
+        </span>
+      </a>
+
+      <!-- Desktop Navigation Pill -->
+      <nav aria-label="Main Navigation">
+        <ul class="nav-menu">
+          <li class="nav-item"><a href="./index.html">Home</a></li>
+          <li class="nav-item"><a href="./features.html">Features</a></li>
+          <li class="nav-item"><a href="./experience.html">Experience</a></li>
+          <li class="nav-item"><a href="./download.html">Download</a></li>
+          <li class="nav-item"><a href="./tutorials.html">Tutorials</a></li>
+          <li class="nav-item"><a href="./trust.html">Trust Center</a></li>
+          <li class="nav-item"><a href="./about.html">About</a></li>
+          <li class="nav-item"><a href="./contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Desktop Action -->
+      <div class="nav-actions">
+        <a href="./terms.html" class="btn btn-secondary btn-sm btn-magnetic">Terms of Service</a>
+        <button class="mobile-nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+          <svg class="icon-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+          <svg class="icon-close" style="display:none;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation Drawer -->
+  <div class="mobile-drawer" role="dialog" aria-modal="true" aria-label="Mobile Navigation">
+    <ul class="mobile-nav-list">
+      <li><a href="./index.html">Home</a></li>
+      <li><a href="./features.html">Features</a></li>
+      <li><a href="./experience.html">Experience Simulator</a></li>
+      <li><a href="./tutorials.html">Tutorials & Docs</a></li>
+      <li><a href="./trust.html">Trust Center</a></li>
+      <li><a href="./security.html">Data & Security</a></li>
+      <li><a href="./privacy.html" class="active">Privacy Policy</a></li>
+      <li><a href="./terms.html">Terms of Service</a></li>
+      <li><a href="./about.html">About & Vision</a></li>
+      <li><a href="./contact.html">Contact Support</a></li>
+    </ul>
+    <div class="mobile-drawer-cta">
+      <a href="./trust.html" class="btn btn-primary">Trust Center</a>
+      <a href="./terms.html" class="btn btn-secondary">Terms of Service</a>
+    </div>
+  </div>
+
+  <main>
+    <!-- Document Header -->
+    <section class="doc-header">
+      <div class="container">
+        <div class="hero-pill reveal">
+          <span class="pulse-beacon"></span>
+          <span class="hero-pill-tag">STATUTORY DISCLOSURE</span>
+          <span>Version 2.0 Active</span>
+        </div>
+        <h1 class="reveal delay-1" style="font-size: clamp(2rem, 4vw, 3.2rem); margin-top: 1rem; color: var(--text-primary);">
+          Official Privacy Policy
+        </h1>
+        <p class="reveal delay-2" style="color: var(--text-secondary); max-width: 720px; font-size: 1.05rem; margin-top: 0.75rem;">
+          How UTTAKALA OS processes, synchronizes, isolates, and protects your personal data. We provide verified technical realities without generic marketing fluff.
+        </p>
+
+        <div class="doc-meta-bar reveal delay-3">
+          <div class="doc-meta-item">
+            <span class="doc-meta-label">EFFECTIVE DATE</span>
+            <span class="doc-meta-val">March 2026</span>
+          </div>
+          <div class="doc-meta-item">
+            <span class="doc-meta-label">LAST UPDATED</span>
+            <span class="doc-meta-val">March 2026</span>
+          </div>
+          <div class="doc-meta-item">
+            <span class="doc-meta-label">VERSION</span>
+            <span class="doc-meta-val" style="color: var(--accent-mint);">&bull; Release 2.0</span>
+          </div>
+          <div class="doc-meta-item">
+            <span class="doc-meta-label">GOVERNANCE</span>
+            <span class="doc-meta-val">GDPR &bull; CCPA Principles</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Document Body with Sticky Table of Contents -->
+    <div class="container doc-body-layout">
+      
+      <!-- Sticky Navigation Sidebar -->
+      <aside class="doc-sidebar">
+        <div class="doc-sidebar-sticky">
+          <div class="doc-toc-title">Policy Sections</div>
+          <ul class="doc-toc-list">
+            <li><a href="#summary">0. Technical Summary Notice</a></li>
+            <li><a href="#intro">1. Introduction &amp; Scope</a></li>
+            <li><a href="#supabase">2. Supabase Synchronization</a></li>
+            <li><a href="#gdrive">3. Google Drive AppData Backups</a></li>
+            <li><a href="#secretdiary">4. Secret Diary Local Sandbox</a></li>
+            <li><a href="#matrix">5. Data Storage Matrix</a></li>
+            <li><a href="#thirdparties">6. Third-Party Infrastructure</a></li>
+            <li><a href="#securitylimits">7. Security &amp; Limitations</a></li>
+            <li><a href="#retention">8. Retention &amp; Deletion</a></li>
+            <li><a href="#rights">9. User Privacy Rights</a></li>
+            <li><a href="#contact">10. Contact &amp; Maintainer Line</a></li>
+            <li><a href="#changes">11. Policy Changes</a></li>
+          </ul>
+
+          <div style="margin-top: 2rem; padding: 1rem; background: var(--bg-surface); border: 1px solid var(--border-color); border-radius: var(--radius-sm);">
+            <div style="font-size: 0.75rem; color: var(--text-muted); text-transform: uppercase; font-family: var(--font-mono); margin-bottom: 0.5rem;">Cross References</div>
+            <a href="./trust.html" style="display: block; font-size: 0.82rem; color: var(--highlight-cyan); margin-bottom: 0.35rem;">&larr; Trust Center Hub</a>
+            <a href="./security.html" style="display: block; font-size: 0.82rem; color: var(--accent-mint); margin-bottom: 0.35rem;">&rarr; Data &amp; Security Whitepaper</a>
+            <a href="./terms.html" style="display: block; font-size: 0.82rem; color: var(--text-secondary);">&rarr; Terms of Service</a>
+          </div>
+        </div>
+      </aside>
+
+      <!-- Main Privacy Policy Content -->
+      <article class="doc-content">
+
+        <!-- Critical Notice Box -->
+        <section id="summary" class="doc-section" style="padding-top: 0;">
+          <div class="hud-panel" style="border-color: rgba(255, 189, 46, 0.45); padding: 1.5rem; background: rgba(255, 189, 46, 0.05);">
+            <div style="display: flex; gap: 0.75rem; align-items: flex-start;">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#FFBD2E" stroke-width="2" style="flex-shrink: 0; margin-top: 2px;"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
+              <div>
+                <strong style="color: #FFBD2E; font-size: 1.05rem; display: block; margin-bottom: 0.5rem;">CRITICAL SUMMARY OF TECHNICAL REALITIES</strong>
+                <ul style="margin: 0; padding-left: 1.25rem; color: var(--text-secondary); font-size: 0.9rem; line-height: 1.6; display: flex; flex-direction: column; gap: 0.5rem;">
+                  <li><strong>Not all data is local-only:</strong> We utilize <strong>Supabase</strong> for user authentication and cross-device synchronization of habits, daily tasks, academic schedules, and analytics.</li>
+                  <li><strong>Google Drive AppData backups are NOT encrypted:</strong> Backups created in your Google Drive AppData folder are structured as raw, unencrypted JSON snapshots.</li>
+                  <li><strong>Secret Diary IS strictly local-only:</strong> Secret Diary entries remain in private client SQLite storage on your Android device. They are NEVER sent to Supabase or exported to Google Drive.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 1. Introduction -->
+        <section id="intro" class="doc-section">
+          <h2>1. Introduction &amp; Overview</h2>
+          <p>
+            This Privacy Policy describes the policies and procedures of <strong>UTTAKALA OS</strong> ("UTTAKALA OS", "we", "our", or "the Platform") regarding the collection, use, synchronization, and disclosure of information when you access or use the UTTAKALA OS application and this website.
+          </p>
+          <p>
+            UTTAKALA OS is an autonomous personal productivity and life-management operating system engineered to help individuals organize routines, attendance, tasks, records, and personal development. We are committed to absolute honesty regarding data architecture, boundaries, and security.
+          </p>
+          <p>
+            By creating an account or using the Platform, you acknowledge the practices described in this Privacy Policy.
+          </p>
+        </section>
+
+        <!-- 2. Supabase Synchronization -->
+        <section id="supabase" class="doc-section">
+          <h2>2. Account Authentication &amp; Supabase Synchronization</h2>
+          <p>
+            To provide persistent access to your personal command center across sessions and devices, UTTAKALA OS integrates with <strong>Supabase</strong> (an open-source cloud backend and PostgreSQL database platform):
+          </p>
+          <ul style="color: var(--text-secondary); line-height: 1.7; padding-left: 1.5rem;">
+            <li><strong>Account Credentials:</strong> When you register or sign in, your email address, unique authentication identifier, and password hash (or third-party OAuth token handled via Supabase Auth) are securely processed by Supabase. We do not store or transmit plaintext passwords.</li>
+            <li><strong>Synchronized Application Data:</strong> Depending on your account configuration, data including your daily routine checklists, attendance logs, tasks, timetable schedules, and focus metrics are transmitted to and stored within managed Supabase database tables associated with your user ID.</li>
+            <li><strong>Row Level Security:</strong> Database queries are restricted by PostgreSQL Row Level Security (RLS) policies, ensuring authenticated users can strictly query and mutate only rows where <code>auth.uid() = user_id</code>.</li>
+            <li><strong>Session Management:</strong> Authentication tokens are stored securely in your client device session to maintain your logged-in state over TLS 1.3 encrypted connections.</li>
+          </ul>
+        </section>
+
+        <!-- 3. Google Drive AppData Backups -->
+        <section id="gdrive" class="doc-section">
+          <h2>3. Google Account Authorization &amp; Google Drive AppData</h2>
+          <p>
+            UTTAKALA OS provides an optional snapshot backup and recovery feature powered by Google Drive. Understanding how this integration operates is essential:
+          </p>
+          
+          <h3 style="color: var(--text-primary); font-size: 1.15rem; margin-top: 1.25rem;">3.1 Explicit User Authorization</h3>
+          <p>
+            UTTAKALA OS does not access your Google Account without your explicit, voluntary authorization through the standard Google OAuth consent dialog. You can freely choose whether or not to connect your Google account.
+          </p>
+
+          <h3 style="color: var(--text-primary); font-size: 1.15rem; margin-top: 1.25rem;">3.2 Limited AppData Scope</h3>
+          <p>
+            When authorized, the Platform requests access strictly to Google Drive's dedicated <strong>Application Data folder</strong> (<code>https://www.googleapis.com/auth/drive.appdata</code>).
+          </p>
+          <ul style="color: var(--text-secondary); line-height: 1.7; padding-left: 1.5rem;">
+            <li>The Application Data folder is a hidden directory created by Google Drive specifically for UTTAKALA OS.</li>
+            <li>UTTAKALA OS <strong>cannot view, access, modify, or delete</strong> your personal Google Docs, Sheets, Photos, or general files stored in your primary Google Drive.</li>
+            <li>UTTAKALA OS only creates, reads, and updates backup snapshot files located directly within its own designated AppData container.</li>
+          </ul>
+
+          <h3 style="color: var(--text-primary); font-size: 1.15rem; margin-top: 1.25rem;">3.3 Clear Notice: Google Drive Backups are Unencrypted JSON</h3>
+          <p>
+            <strong>Important Technical Disclosure:</strong> Backup files created in Google Drive are formatted as structured JSON (JavaScript Object Notation). <strong>These backup files are NOT encrypted</strong> by UTTAKALA OS prior to upload. While Google maintains transport-level encryption (HTTPS/TLS) and server-side encryption at rest across Google Cloud infrastructure, the JSON content itself is stored in plaintext representation within your Google Drive AppData directory. You should be aware of this when choosing what data to include in routine backups.
+          </p>
+        </section>
+
+        <!-- 4. Secret Diary -->
+        <section id="secretdiary" class="doc-section">
+          <h2>4. Secret Diary: Strictly Local-Only Storage</h2>
+          <p>
+            To honor deep personal sovereignty, UTTAKALA OS implements an architectural quarantine for the <strong>Secret Diary</strong> feature:
+          </p>
+          <ul style="color: var(--text-secondary); line-height: 1.7; padding-left: 1.5rem;">
+            <li><strong>Local Sandbox Only:</strong> Diary entries, private journal notes, and diary-specific settings are stored exclusively in your local Android Room/SQLite database on your physical device.</li>
+            <li><strong>Excluded from Supabase Sync:</strong> Secret Diary text is <strong>never</strong> transmitted to our Supabase database or backend synchronization servers.</li>
+            <li><strong>Excluded from Google Drive Backups:</strong> The backup routines that generate JSON snapshots for Google Drive AppData explicitly filter out and omit Secret Diary entries.</li>
+            <li><strong>Device Dependence:</strong> Because diary entries exist solely on your local device, clearing your application storage or deleting local app data without an offline manual export will permanently erase local diary entries.</li>
+          </ul>
+        </section>
+
+        <!-- 5. Data Storage Matrix -->
+        <section id="matrix" class="doc-section">
+          <h2>5. Summary of Data Storage by Feature</h2>
+          <table style="width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.88rem;">
+            <thead>
+              <tr style="border-bottom: 1px solid var(--border-color); text-align: left; color: var(--text-primary);">
+                <th style="padding: 0.75rem 0.5rem;">Feature / Data Type</th>
+                <th style="padding: 0.75rem 0.5rem;">Storage Location</th>
+                <th style="padding: 0.75rem 0.5rem;">Synced to Cloud?</th>
+                <th style="padding: 0.75rem 0.5rem;">Included in Drive Backup?</th>
+              </tr>
+            </thead>
+            <tbody style="color: var(--text-secondary);">
+              <tr style="border-bottom: 1px solid var(--border-subtle);">
+                <td style="padding: 0.75rem 0.5rem; font-family: var(--font-mono); color: var(--text-primary);">Account Credentials</td>
+                <td style="padding: 0.75rem 0.5rem;">Supabase Auth</td>
+                <td style="padding: 0.75rem 0.5rem;"><span class="badge badge-available">Yes (Cloud)</span></td>
+                <td style="padding: 0.75rem 0.5rem;">No</td>
+              </tr>
+              <tr style="border-bottom: 1px solid var(--border-subtle);">
+                <td style="padding: 0.75rem 0.5rem; font-family: var(--font-mono); color: var(--text-primary);">Daily Routines &amp; Habits</td>
+                <td style="padding: 0.75rem 0.5rem;">Local &amp; Supabase DB</td>
+                <td style="padding: 0.75rem 0.5rem;"><span class="badge badge-available">Yes</span></td>
+                <td style="padding: 0.75rem 0.5rem;">Yes (Plain JSON)</td>
+              </tr>
+              <tr style="border-bottom: 1px solid var(--border-subtle);">
+                <td style="padding: 0.75rem 0.5rem; font-family: var(--font-mono); color: var(--text-primary);">Attendance Records</td>
+                <td style="padding: 0.75rem 0.5rem;">Local &amp; Supabase DB</td>
+                <td style="padding: 0.75rem 0.5rem;"><span class="badge badge-available">Yes</span></td>
+                <td style="padding: 0.75rem 0.5rem;">Yes (Plain JSON)</td>
+              </tr>
+              <tr style="border-bottom: 1px solid var(--border-subtle);">
+                <td style="padding: 0.75rem 0.5rem; font-family: var(--font-mono); color: var(--text-primary);">Task Lists &amp; Priorities</td>
+                <td style="padding: 0.75rem 0.5rem;">Local &amp; Supabase DB</td>
+                <td style="padding: 0.75rem 0.5rem;"><span class="badge badge-available">Yes</span></td>
+                <td style="padding: 0.75rem 0.5rem;">Yes (Plain JSON)</td>
+              </tr>
+              <tr style="border-bottom: 1px solid var(--border-subtle);">
+                <td style="padding: 0.75rem 0.5rem; font-family: var(--font-mono); color: var(--accent-mint);">Secret Diary Entries</td>
+                <td style="padding: 0.75rem 0.5rem;">Client Device Only</td>
+                <td style="padding: 0.75rem 0.5rem;"><span class="badge badge-planned" style="color: var(--accent-mint); border-color: var(--accent-mint);">NO (Never Synced)</span></td>
+                <td style="padding: 0.75rem 0.5rem;"><span class="badge badge-planned" style="color: var(--accent-mint); border-color: var(--accent-mint);">NO (Excluded)</span></td>
+              </tr>
+              <tr style="border-bottom: 1px solid var(--border-subtle);">
+                <td style="padding: 0.75rem 0.5rem; font-family: var(--font-mono); color: var(--text-primary);">Google OAuth Tokens</td>
+                <td style="padding: 0.75rem 0.5rem;">Device KeyStore / Session</td>
+                <td style="padding: 0.75rem 0.5rem;">Used for API calls only</td>
+                <td style="padding: 0.75rem 0.5rem;">No</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+
+        <!-- 6. Third Parties -->
+        <section id="thirdparties" class="doc-section">
+          <h2>6. Third-Party Service Providers</h2>
+          <p>
+            UTTAKALA OS relies on select verified infrastructure providers to operate the Platform:
+          </p>
+          <ul style="color: var(--text-secondary); line-height: 1.7; padding-left: 1.5rem;">
+            <li><strong>Supabase Inc.:</strong> For user authentication, database management, and cloud data synchronization over TLS 1.3. For more details, consult <a href="https://supabase.com/privacy" target="_blank" rel="noopener noreferrer" style="color: var(--highlight-cyan);">Supabase's Privacy Policy</a>.</li>
+            <li><strong>Google LLC / Google Cloud:</strong> For optional user-authorized Google Drive AppData backups. The use and transfer of information received from Google APIs adheres to the <a href="https://developers.google.com/terms/api-services-user-data-policy" target="_blank" rel="noopener noreferrer" style="color: var(--highlight-cyan);">Google API Services User Data Policy</a>, including the Limited Use requirements.</li>
+            <li><strong>GitHub Pages / CDN Hosting:</strong> This official website is delivered via GitHub Pages. Standard server connection logs (such as visitor IP addresses) may be collected by GitHub for infrastructure integrity and DDoS prevention. Consult the <a href="https://docs.github.com/en/site-policy/privacy-policies/github-privacy-statement" target="_blank" rel="noopener noreferrer" style="color: var(--highlight-cyan);">GitHub Privacy Statement</a>.</li>
+          </ul>
+          <p>
+            We do not sell, rent, or trade your personal data to marketing brokers, third-party advertising networks, or telemetry aggregators.
+          </p>
+        </section>
+
+        <!-- 7. Security Limitations -->
+        <section id="securitylimits" class="doc-section">
+          <h2>7. Data Security &amp; Technical Limitations</h2>
+          <p>
+            We employ modern industry transport security (HTTPS/TLS) across all website and application interactions. Database access via Supabase is governed by row-level security policies (RLS) ensuring that users may only read and write data mapped directly to their authenticated account identifier.
+          </p>
+          <p>
+            <strong>Realistic Security Limitations:</strong> No method of electronic transmission over the internet or method of digital storage is 100% impenetrable. We do not claim end-to-end zero-knowledge encryption, nor do we falsely claim military-grade security certifications (such as SOC2, FedRAMP, or ISO 27001). We urge users to use strong, unique passwords and maintain security on their personal physical devices.
+          </p>
+        </section>
+
+        <!-- 8. Retention and Deletion -->
+        <section id="retention" class="doc-section">
+          <h2>8. Data Retention and Account Deletion</h2>
+          <p>
+            We retain your synchronized application data on Supabase for as long as your account remains active.
+          </p>
+          <ul style="color: var(--text-secondary); line-height: 1.7; padding-left: 1.5rem;">
+            <li><strong>Account Deletion:</strong> If you wish to delete your account and associated database records from Supabase, you may submit a request using the contact email below. Upon request verification, your account profile and database records will be deleted from active production tables within 30 days.</li>
+            <li><strong>Drive Backup Removal:</strong> Because Google Drive AppData backups reside within your personal Google account storage, you may directly revoke access or delete application backup files at any time via your Google Account Settings (&rarr; Security &rarr; Third-party apps with account access).</li>
+            <li><strong>Local Data Removal:</strong> Clearing your Android application storage or uninstalling the app will immediately delete local cache, local offline databases, and your Secret Diary entries.</li>
+          </ul>
+        </section>
+
+        <!-- 9. User Rights -->
+        <section id="rights" class="doc-section">
+          <h2>9. Your Privacy Rights</h2>
+          <p>
+            Depending on your geographic jurisdiction, you may have rights under applicable privacy legislation (such as the GDPR, UK GDPR, or CCPA), including:
+          </p>
+          <ul style="color: var(--text-secondary); line-height: 1.7; padding-left: 1.5rem;">
+            <li>The right to request access to the personal data we hold about you.</li>
+            <li>The right to request correction of inaccurate or incomplete data.</li>
+            <li>The right to request deletion of your personal account data.</li>
+            <li>The right to revoke previously granted Google OAuth authorizations at any time.</li>
+          </ul>
+        </section>
+
+        <!-- 10. Contact -->
+        <section id="contact" class="doc-section">
+          <h2>10. Contact Information &amp; Privacy Queries</h2>
+          <p>
+            If you have questions, feedback, or requests regarding this Privacy Policy or your personal data, please contact the maintainer at the official address below:
+          </p>
+          <div class="hud-panel" style="margin-top: 1rem; padding: 1.5rem;">
+            <p style="margin-bottom: 0.5rem; color: var(--text-primary);"><strong>Project:</strong> UTTAKALA OS</p>
+            <p style="margin-bottom: 0.5rem; color: var(--text-primary);">
+              <strong>Official Support &amp; Privacy Email:</strong>
+              <a href="mailto:uttakaladeba.codes@gmail.com" style="color: var(--accent-mint); font-family: var(--font-mono);">uttakaladeba.codes@gmail.com</a>
+            </p>
+            <p style="margin-bottom: 0; font-size: 0.85rem; color: var(--text-secondary);">
+              <em>Direct developer communications channel. Responses typically dispatched within 48 business hours.</em>
+            </p>
+          </div>
+        </section>
+
+        <!-- 11. Changes -->
+        <section id="changes" class="doc-section">
+          <h2>11. Changes to This Privacy Policy</h2>
+          <p>
+            We may update this Privacy Policy from time to time as UTTAKALA OS continues to evolve and introduce new features. Any revisions will be reflected on this page with an updated "Effective Date" and "Last Updated" notation at the top. We encourage you to review this page periodically.
+          </p>
+        </section>
+
+      </article>
+
+    </div>
+
+    <!-- CTA Section -->
+    <section class="section" style="padding-top: 0;">
+      <div class="container">
+        <div class="cta-banner reveal">
+          <h2>Need to review our Terms of Service?</h2>
+          <p>
+            Examine our clear account usage guidelines, licensing terms, and backup responsibilities.
+          </p>
+          <div style="display: flex; justify-content: center; gap: 1.15rem; flex-wrap: wrap;">
+            <a href="./terms.html" class="btn btn-cta btn-lg btn-magnetic">Review Terms of Service</a>
+            <a href="./trust.html" class="btn btn-secondary btn-lg btn-magnetic" style="color: #FFFFFF; border-color: rgba(255,255,255,0.3);">Trust Center Hub</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= SITE FOOTER ================= -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+                <div class="footer-brand">
+          <a href="./index.html" class="footer-brand-link" aria-label="UTTAKALA OS Home">
+            <img 
+              src="./assets/images/uttakala-os-logo.png" 
+              alt="UTTAKALA OS official logo" 
+              class="footer-brand-logo" 
+              width="48" 
+              height="48" 
+              loading="lazy" 
+            />
+            <div class="brand-title">
+              <span class="brand-title-main">UTTAKALA</span>
+              <span class="brand-title-sub">OS</span>
+            </div>
+          </a>
+          <div class="footer-tagline">Your Personal Life OS</div>
+          <p>
+            Autonomous cyberpunk personal productivity and life-management operating system. Precision engineering for focus, habits, academics, and personal sovereignty.
+          </p>
+          <div style="margin-top: 1rem; display: flex; gap: 0.75rem; align-items: center;">
+            <span class="badge badge-available"><span class="badge-dot"></span> System Online v2.4</span>
+            <span style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-muted);">LATENCY: 0.4MS</span>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Platform Hub</h4>
+          <ul class="footer-links">
+            <li><a href="./index.html">Command Center</a></li>
+            <li><a href="./features.html">Feature Matrix</a></li>
+            <li><a href="./experience.html">OS Live Simulator</a></li>
+            <li><a href="./tutorials.html">Operator Tutorials</a></li>
+            <li><a href="./about.html">System Architecture</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Trust & Security</h4>
+          <ul class="footer-links">
+            <li><a href="./trust.html">Trust Center Hub</a></li>
+            <li><a href="./security.html">Data & Security Whitepaper</a></li>
+            <li><a href="./privacy.html">Privacy Policy</a></li>
+            <li><a href="./terms.html">Terms of Service</a></li>
+            <li><a href="./trust.html#compliance">Local vs Cloud Isolation</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Communication</h4>
+          <ul class="footer-links">
+            <li><a href="./contact.html">Dispatch Console</a></li>
+            <li><a href="mailto:uttakaladeba.codes@gmail.com">Direct Developer Line</a></li>
+            <li><a href="./contact.html#security-report">Report Vulnerability</a></li>
+            <li><a href="./about.html#roadmap">Release Roadmap</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          &copy; <span data-year>2026</span> UTTAKALA OS. Precision engineering. Built for individual autonomy.
+        </div>
+        <div class="footer-bottom-links">
+          <a href="./trust.html">Trust Center</a>
+          <a href="./security.html">Security</a>
+          <a href="./privacy.html">Privacy</a>
+          <a href="./terms.html">Terms</a>
+          <a href="./experience.html">Experience</a>
+          <a href="./contact.html">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Main JavaScript -->
+  <script src="./assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Features Directory — UTTAKALA OS Platform Architecture</title>
+  <meta name="description" content="Explore verified features and capabilities across the 12 domains of UTTAKALA OS. Authentic screenshots, accurate implementation statuses, and distraction-free engineering." />
+  
+  <!-- Canonical Placeholder -->
+  <link rel="canonical" href="https://YOUR-GITHUB-USERNAME.github.io/uttakala-os-website/features.html" />
+
+  <!-- Open Graph / Meta -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Features Directory — UTTAKALA OS Platform Architecture" />
+  <meta property="og:description" content="A comprehensive directory of verified features across 12 operational domains in UTTAKALA OS." />
+  <meta property="og:url" content="https://YOUR-GITHUB-USERNAME.github.io/uttakala-os-website/features.html" />
+  <meta property="og:site_name" content="UTTAKALA OS" />
+  <meta property="og:image" content="./assets/images/favicon.svg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="UTTAKALA OS Features Directory" />
+  <meta name="twitter:description" content="Discover verified tools, vaults, and capabilities in UTTAKALA OS." />
+
+  <!-- Favicon -->
+    <!-- Favicon & Browser Branding -->
+  <link rel="icon" type="image/svg+xml" href="./assets/images/favicon.svg" />
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="./assets/images/apple-touch-icon.png" />
+  <meta name="theme-color" content="#0B0C10" />
+  <meta name="msapplication-TileColor" content="#0B0C10" />
+
+  <!-- Google Fonts: Plus Jakarta Sans & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="./assets/css/style.css" />
+</head>
+<body>
+
+  <!-- Ambient Light Orbs -->
+  <div class="ambient-bg-glow" aria-hidden="true">
+    <div class="ambient-orb-1"></div>
+    <div class="ambient-orb-2"></div>
+  </div>
+
+  <!-- ================= SITE HEADER ================= -->
+  <header class="site-header">
+    <div class="container nav-container">
+            <a href="./index.html" class="brand-link" aria-label="UTTAKALA OS Home">
+        <img 
+          src="./assets/images/uttakala-os-logo.png" 
+          alt="UTTAKALA OS official logo" 
+          class="brand-logo-img" 
+          width="40" 
+          height="40" 
+          loading="eager" 
+        />
+        <span class="brand-title">
+          <span class="brand-title-main">UTTAKALA</span>
+          <span class="brand-title-sub">OS</span>
+        </span>
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav aria-label="Main Navigation">
+        <ul class="nav-menu">
+          <li class="nav-item"><a href="./index.html">Home</a></li>
+          <li class="nav-item"><a href="./features.html" class="active">Features</a></li>
+          <li class="nav-item"><a href="./experience.html">Experience</a></li>
+          <li class="nav-item"><a href="./download.html">Download</a></li>
+          <li class="nav-item"><a href="./tutorials.html">Tutorials</a></li>
+          <li class="nav-item"><a href="./trust.html">Trust Center</a></li>
+          <li class="nav-item"><a href="./about.html">About</a></li>
+          <li class="nav-item"><a href="./contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Desktop Action -->
+      <div class="nav-actions">
+        <a href="./download.html" class="btn btn-primary btn-sm btn-glow btn-magnetic">Get OS</a>
+        <button class="mobile-nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+          <svg class="icon-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+          <svg class="icon-close" style="display:none;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation Drawer -->
+  <div class="mobile-drawer" role="dialog" aria-modal="true" aria-label="Mobile Navigation">
+    <ul class="mobile-nav-list">
+      <li><a href="./index.html">Home</a></li>
+      <li><a href="./download.html">Download Center</a></li>
+      <li><a href="./features.html" class="active">Features</a></li>
+      <li><a href="./experience.html">Experience Simulator</a></li>
+      <li><a href="./tutorials.html">Tutorials & Docs</a></li>
+      <li><a href="./trust.html">Trust Center</a></li>
+      <li><a href="./security.html">Data & Security</a></li>
+      <li><a href="./privacy.html">Privacy Policy</a></li>
+      <li><a href="./terms.html">Terms of Service</a></li>
+      <li><a href="./about.html">About & Vision</a></li>
+      <li><a href="./contact.html">Contact Support</a></li>
+    </ul>
+    <div class="mobile-drawer-cta">
+      <a href="./experience.html" class="btn btn-primary">Launch Experience</a>
+      <a href="./tutorials.html" class="btn btn-secondary">Watch Tutorials</a>
+    </div>
+  </div>
+
+  <main>
+    <!-- ================= EDITORIAL HEADER ================= -->
+    <section class="doc-header">
+      <div class="container container-narrow">
+        <span class="badge badge-label">PLATFORM SPECIFICATIONS</span>
+        <h1 class="editorial-heading" style="margin-top: 0.75rem;">Verified Feature Directory</h1>
+        <p class="lead" style="margin-top: 1rem;">
+          A transparent, unembellished inventory of capabilities across the 12 domains of UTTAKALA OS. Click any screenshot or "Inspect UI" trigger to examine full-resolution application interfaces.
+        </p>
+
+        <!-- Status Legend -->
+        <div style="display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 1.5rem; padding: 1rem; background-color: var(--color-bg-subtle); border-radius: var(--radius-md); border: 1px solid var(--color-border);">
+          <div style="display: flex; align-items: center; gap: 0.4rem; font-size: 0.85rem;">
+            <span class="badge badge-available"><span class="badge-dot"></span> Available</span>
+            <span style="color: var(--color-text-secondary);">&mdash; Operational in current build</span>
+          </div>
+          <div style="display: flex; align-items: center; gap: 0.4rem; font-size: 0.85rem;">
+            <span class="badge badge-dev"><span class="badge-dot"></span> In Development</span>
+            <span style="color: var(--color-text-secondary);">&mdash; Under active engineering</span>
+          </div>
+          <div style="display: flex; align-items: center; gap: 0.4rem; font-size: 0.85rem;">
+            <span class="badge badge-planned"><span class="badge-dot"></span> Planned</span>
+            <span style="color: var(--color-text-secondary);">&mdash; Future exploration</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= FEATURES DISCOVERY EXPERIENCE ================= -->
+    <section class="section">
+      <div class="container">
+
+        <!-- Category Filter Matrix Buttons -->
+        <div class="filter-bar" role="tablist" aria-label="Filter features by category">
+          <button class="filter-btn active" data-filter="all">All Domains (20)</button>
+          <button class="filter-btn" data-filter="dashboard">Personal Dashboard</button>
+          <button class="filter-btn" data-filter="tasks">Productivity & Tasks</button>
+          <button class="filter-btn" data-filter="focus">Focus & Deep Work</button>
+          <button class="filter-btn" data-filter="habits">Habits & Wellness</button>
+          <button class="filter-btn" data-filter="academic">Academic Management</button>
+          <button class="filter-btn" data-filter="coding">Coding & DSA</button>
+          <button class="filter-btn" data-filter="security">SALTICOR Security</button>
+          <button class="filter-btn" data-filter="finance">Finance Management</button>
+          <button class="filter-btn" data-filter="growth">AI & Personal Growth</button>
+          <button class="filter-btn" data-filter="journaling">Journaling & Privacy</button>
+          <button class="filter-btn" data-filter="data">Reports & Cloud Data</button>
+          <button class="filter-btn" data-filter="android">Android Experience</button>
+        </div>
+
+        <!-- Features Cards Grid -->
+        <div class="features-grid">
+
+          <!-- 01. Mission Command HUD (Dashboard) -->
+          <div class="feature-card reveal" data-category="dashboard" id="dashboard">
+            <div class="feature-thumb-wrap">
+              <img class="feature-thumb-img" src="./assets/images/screenshots/01-mission-command.png" alt="Mission Command Tactical HUD" />
+              <div class="feature-thumb-overlay">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+                <span>Click to Inspect UI</span>
+              </div>
+            </div>
+            <div class="feature-card-header">
+              <span class="feature-category-tag">Personal Dashboard</span>
+              <span class="badge badge-available"><span class="badge-dot"></span> Available</span>
+            </div>
+            <h3 class="feature-title">Mission Command Tactical HUD</h3>
+            <p class="feature-desc">
+              High-signal morning command canvas showing active habit telemetry, primary focus milestone, routine checklist, and launchpad bookmarks.
+            </p>
+            <div class="feature-footer">
+              <span>Category: Overview Hub</span>
+              <button class="feature-btn-inspect">Inspect UI &rarr;</button>
+            </div>
+          </div>
+
+          <!-- 02. Mastery Matrix (Dashboard) -->
+          <div class="feature-card reveal delay-1" data-category="dashboard">
+            <div class="feature-thumb-wrap">
+              <img class="feature-thumb-img" src="./assets/images/screenshots/02-mastery-matrix.png" alt="60-Day Mastery Matrix & Distribution" />
+              <div class="feature-thumb-overlay">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+                <span>Click to Inspect UI</span>
+              </div>
+            </div>
+            <div class="feature-card-header">
+              <span class="feature-category-tag">Personal Dashboard</span>
+              <span class="badge badge-available"><span class="badge-dot"></span> Available</span>
+            </div>
+            <h3 class="feature-title">60-Day Mastery Matrix</h3>
+            <p class="feature-desc">
+              Visual completion heatmaps evaluating consistency over two full calendar months without punitive streak-breaking penalties.
+            </p>
+            <div class="feature-footer">
+              <span>Category: Habit Metrics</span>
+              <button class="feature-btn-inspect">Inspect UI &rarr;</button>
+            </div>
+          </div>
+
+          <!-- 03. Launchpad Mascot (Dashboard) -->
+          <div class="feature-card reveal delay-2" data-category="dashboard">
+            <div class="feature-thumb-wrap">
+              <img class="feature-thumb-img" src="./assets/images/screenshots/03-launchpad-mascot.png" alt="System Launchpad Dock & Cyber Mascot" />
+              <div class="feature-thumb-overlay">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+                <span>Click to Inspect UI</span>
+              </div>
+            </div>
+            <div class="feature-card-header">
+              <span class="feature-category-tag">Personal Dashboard</span>
+              <span class="badge badge-available"><span class="badge-dot"></span> Available</span>
+            </div>
+            <h3 class="feature-title">Launchpad Dock & Mascot</h3>
+            <p class="feature-desc">
+              Persistent quick-action dock providing keyboard-friendly shortcuts to every sub-vault alongside interactive system assistance.
+            </p>
+            <div class="feature-footer">
+              <span>Category: Navigation</span>
+              <button class="feature-btn-inspect">Inspect UI &rarr;</button>
+            </div>
+          </div>
+
+          <!-- 04. Daily Mission Tasks (Tasks) -->
+          <div class="feature-card reveal" data-category="tasks" id="tasks">
+            <div class="feature-thumb-wrap">
+              <img class="feature-thumb-img" src="./assets/images/screenshots/05-daily-tasks.png" alt="Daily Mission Tasks Manager" />
+              <div class="feature-thumb-overlay">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+                <span>Click to Inspect UI</span>
+              </div>
+            </div>
+            <div class="feature-card-header">
+              <span class="feature-category-tag">Productivity & Tasks</span>
+              <span class="badge badge-available"><span class="badge-dot"></span> Available</span>
+            </div>
+            <h3 class="feature-title">Daily Mission Tasks Manager</h3>
+            <p class="feature-desc">
+              Clean, low-friction priority allocation interface for capturing immediate action items, tagging domains, and executing deliverables.
+            </p>
+            <div class="feature-footer">
+              <span>Category: Task Triage</span>
+              <button class="feature-btn-inspect">Inspect UI &rarr;</button>
+            </div>
+          </div>
+
+          <!-- 05. High-Performance Focus Timer (Focus) -->
+          <div class="feature-card reveal delay-1" data-category="focus" id="focus">
+            <div class="feature-thumb-wrap">
+              <img class="feature-thumb-img" src="./assets/images/screenshots/04-focus-timer.png" alt="High-Performance Focus Timer" />
+              <div class="feature-thumb-overlay">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+                <span>Click to Inspect UI</span>
+              </div>
+            </div>
+            <div class="feature-card-header">
+              <span class="feature-category-tag">Focus & Deep Work</span>
+              <span class="badge badge-available"><span class="badge-dot"></span> Available</span>
+            </div>
+            <h3 class="feature-title">High-Performance Focus Timer</h3>
+            <p class="feature-desc">
+              Distraction-free countdown engine featuring Pomodoro and continuous Flow state modes with minimal visual overhead.
+            </p>
+            <div class="feature-footer">
+              <span>Category: Concentration</span>
+              <button class="feature-btn-inspect">Inspect UI &rarr;</button>
+            </div>
+          </div>
+
+          <!-- 06. Dopamine Urge Breaker (Focus/Habits) -->
+          <div class="feature-card reveal delay-2" data-category="focus">
+            <div class="feature-thumb-wrap">
+              <img class="feature-thumb-img" src="./assets/images/screenshots/12-dopamine-breaker.png" alt="10-Second Dopamine Urge Breaker" />
+              <div class="feature-thumb-overlay">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+                <span>Click to Inspect UI</span>
+              </div>
+            </div>
+            <div class="feature-card-header">
+              <span class="feature-category-tag">Focus & Deep Work</span>
+              <span class="badge badge-available"><span class="badge-dot"></span> Available</span>
+            </div>
+            <h3 class="feature-title">10-Second Urge Breaker</h3>
+            <p class="feature-desc">
+              Tactical breathing pause tool engineered to disrupt impulsive habit loops and prevent compulsive digital distraction.
+            </p>
+            <div class="feature-footer">
+              <span>Category: Behavioral Shield</span>
+              <button class="feature-btn-inspect">Inspect UI &rarr;</button>
+            </div>
+          </div>
+
+          <!-- 07. Habits & Physical Health (Habits) -->
+          <div class="feature-card reveal" data-category="habits" id="habits">
+            <div class="feature-thumb-wrap">
+              <img class="feature-thumb-img" src="./assets/images/screenshots/11-habits-health.png" alt="Habits & Physical Health Telemetry" />
+              <div class="feature-thumb-overlay">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+                <span>Click to Inspect UI</span>
+              </div>
+            </div>
+            <div class="feature-card-header">
+              <span class="feature-category-tag">Habits & Wellness</span>
+              <span class="badge badge-available"><span class="badge-dot"></span> Available</span>
+            </div>
+            <h3 class="feature-title">Habits & Health Telemetry</h3>
+            <p class="feature-desc">
+              Daily habit adherence checklists paired with physical wellbeing trackers for hydration, rest, and workout metrics.
+            </p>
+            <div class="feature-footer">
+              <span>Category: Cadence & Body</span>
+              <button class="feature-btn-inspect">Inspect UI &rarr;</button>
+            </div>
+          </div>
+
+          <!-- 08. Academic Vault (Academic) -->
+          <div class="feature-card reveal delay-1" data-category="academic" id="academic">
+            <div class="feature-thumb-wrap">
+              <img class="feature-thumb-img" src="./assets/images/screenshots/07-academic-vault.png" alt="College & Backlog Clearance Vault" />
+              <div class="feature-thumb-overlay">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+                <span>Click to Inspect UI</span>
+              </div>
+            </div>
+            <div class="feature-card-header">
+              <span class="feature-category-tag">Academic Management</span>
+              <span class="badge badge-available"><span class="badge-dot"></span> Available</span>
+            </div>
+            <h3 class="feature-title">Academic Backlog Vault</h3>
+            <p class="feature-desc">
+              University course registrar with syllabus completion bars, backlog clearance dates, and attendance percentage calculators.
+            </p>
+            <div class="feature-footer">
+              <span>Category: Academics</span>
+              <button class="feature-btn-inspect">Inspect UI &rarr;</button>
+            </div>
+          </div>
+
+          <!-- 09. LeetCode Coding Vault (Coding) -->
+          <div class="feature-card reveal delay-2" data-category="coding" id="coding">
+            <div class="feature-thumb-wrap">
+              <img class="feature-thumb-img" src="./assets/images/screenshots/08-coding-vault.png" alt="LeetCode Coding & Mistake Vault" />
+              <div class="feature-thumb-overlay">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+                <span>Click to Inspect UI</span>
+              </div>
+            </div>
+            <div class="feature-card-header">
+              <span class="feature-category-tag">Coding & DSA</span>
+              <span class="badge badge-available"><span class="badge-dot"></span> Available</span>
+            </div>
+            <h3 class="feature-title">LeetCode & Mistake Vault</h3>
+            <p class="feature-desc">
+              Dedicated tracker for software engineers logging algorithmic challenges, mistake explanations, and optimal time-space bounds.
+            </p>
+            <div class="feature-footer">
+              <span>Category: Algorithms</span>
+              <button class="feature-btn-inspect">Inspect UI &rarr;</button>
+            </div>
+          </div>
+
+          <!-- 10. Swipe Flashcards (Coding/Academic) -->
+          <div class="feature-card reveal" data-category="coding">
+            <div class="feature-thumb-wrap">
+              <img class="feature-thumb-img" src="./assets/images/screenshots/13-flashcards.png" alt="Swipe Flashcards Deck" />
+              <div class="feature-thumb-overlay">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+                <span>Click to Inspect UI</span>
+              </div>
+            </div>
+            <div class="feature-card-header">
+              <span class="feature-category-tag">Coding & DSA</span>
+              <span class="badge badge-available"><span class="badge-dot"></span> Available</span>
+            </div>
+            <h3 class="feature-title">Spaced Flashcards Deck</h3>
+            <p class="feature-desc">
+              Fluid gesture-based spaced repetition cards designed to solidify algorithmic patterns and core technical formulas.
+            </p>
+            <div class="feature-footer">
+              <span>Category: Active Recall</span>
+              <button class="feature-btn-inspect">Inspect UI &rarr;</button>
+            </div>
+          </div>
+
+          <!-- 11. SALTICOR Security (Security) -->
+          <div class="feature-card reveal delay-1" data-category="security" id="security">
+            <div class="feature-thumb-wrap">
+              <img class="feature-thumb-img" src="./assets/images/screenshots/09-salticor-security.png" alt="SALTICOR Cybersecurity Vault" />
+              <div class="feature-thumb-overlay">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+                <span>Click to Inspect UI</span>
+              </div>
+            </div>
+            <div class="feature-card-header">
+              <span class="feature-category-tag">SALTICOR Security</span>
+              <span class="badge badge-available"><span class="badge-dot"></span> Available</span>
+            </div>
+            <h3 class="feature-title">SALTICOR Security Gateway</h3>
+            <p class="feature-desc">
+              Device telemetry audit panel displaying session parameters, active sandbox allocations, and cryptographic verification states.
+            </p>
+            <div class="feature-footer">
+              <span>Category: System Security</span>
+              <button class="feature-btn-inspect">Inspect UI &rarr;</button>
+            </div>
+          </div>
+
+          <!-- 12. Personal Finance Vault (Finance) -->
+          <div class="feature-card reveal delay-2" data-category="finance" id="finance">
+            <div class="feature-thumb-wrap">
+              <img class="feature-thumb-img" src="./assets/images/screenshots/10-finance-vault.png" alt="Personal Finance & Budget Vault" />
+              <div class="feature-thumb-overlay">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+                <span>Click to Inspect UI</span>
+              </div>
+            </div>
+            <div class="feature-card-header">
+              <span class="feature-category-tag">Finance Management</span>
+              <span class="badge badge-available"><span class="badge-dot"></span> Available</span>
+            </div>
+            <h3 class="feature-title">Personal Finance Vault</h3>
+            <p class="feature-desc">
+              Private expense ledger to record day-to-day spending and manage budget thresholds without connecting invasive banking APIs.
+            </p>
+            <div class="feature-footer">
+              <span>Category: Privacy Ledger</span>
+              <button class="feature-btn-inspect">Inspect UI &rarr;</button>
+            </div>
+          </div>
+
+          <!-- 13. AI Task Slicer (AI & Growth) -->
+          <div class="feature-card reveal" data-category="growth" id="growth">
+            <div class="feature-thumb-wrap">
+              <img class="feature-thumb-img" src="./assets/images/screenshots/06-ai-task-slicer.png" alt="AI Task Slicer Modal" />
+              <div class="feature-thumb-overlay">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+                <span>Click to Inspect UI</span>
+              </div>
+            </div>
+            <div class="feature-card-header">
+              <span class="feature-category-tag">AI & Personal Growth</span>
+              <span class="badge badge-available"><span class="badge-dot"></span> Available</span>
+            </div>
+            <h3 class="feature-title">AI Task Slicer Modal</h3>
+            <p class="feature-desc">
+              Instant breakdown assistant that ingests large, ambiguous goals and generates sequentially ordered 15-minute action steps.
+            </p>
+            <div class="feature-footer">
+              <span>Category: Intelligent Deconstruction</span>
+              <button class="feature-btn-inspect">Inspect UI &rarr;</button>
+            </div>
+          </div>
+
+          <!-- 14. Voice Coach Engine (AI & Growth) -->
+          <div class="feature-card reveal delay-1" data-category="growth">
+            <div class="feature-thumb-wrap">
+              <img class="feature-thumb-img" src="./assets/images/screenshots/14-voice-coach.png" alt="Voice Coach Audio Persona Engine" />
+              <div class="feature-thumb-overlay">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+                <span>Click to Inspect UI</span>
+              </div>
+            </div>
+            <div class="feature-card-header">
+              <span class="feature-category-tag">AI & Personal Growth</span>
+              <span class="badge badge-available"><span class="badge-dot"></span> Available</span>
+            </div>
+            <h3 class="feature-title">Voice Coach Persona Engine</h3>
+            <p class="feature-desc">
+              Adaptive auditory companion providing customized focus cues and performance check-ins based on active user energy levels.
+            </p>
+            <div class="feature-footer">
+              <span>Category: Audio Feedback</span>
+              <button class="feature-btn-inspect">Inspect UI &rarr;</button>
+            </div>
+          </div>
+
+          <!-- 15. Aura Flex Story Card (AI & Growth) -->
+          <div class="feature-card reveal delay-2" data-category="growth">
+            <div class="feature-thumb-wrap">
+              <img class="feature-thumb-img" src="./assets/images/screenshots/18-aura-flex.png" alt="Aura Flex Story Card Generator" />
+              <div class="feature-thumb-overlay">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+                <span>Click to Inspect UI</span>
+              </div>
+            </div>
+            <div class="feature-card-header">
+              <span class="feature-category-tag">AI & Personal Growth</span>
+              <span class="badge badge-available"><span class="badge-dot"></span> Available</span>
+            </div>
+            <h3 class="feature-title">Aura Flex Story Generator</h3>
+            <p class="feature-desc">
+              Synthesize discipline milestones, attendance streaks, and solved LeetCode challenges into aesthetic story cards.
+            </p>
+            <div class="feature-footer">
+              <span>Category: Visual Storytelling</span>
+              <button class="feature-btn-inspect">Inspect UI &rarr;</button>
+            </div>
+          </div>
+
+          <!-- 16. Secret Diary Locked (Journaling & Privacy) -->
+          <div class="feature-card reveal" data-category="journaling" id="journaling">
+            <div class="feature-thumb-wrap">
+              <img class="feature-thumb-img" src="./assets/images/screenshots/15-secret-diary-locked.png" alt="Secret Diary PIN Lockscreen" />
+              <div class="feature-thumb-overlay">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+                <span>Click to Inspect UI</span>
+              </div>
+            </div>
+            <div class="feature-card-header">
+              <span class="feature-category-tag">Journaling & Privacy</span>
+              <span class="badge badge-available"><span class="badge-dot"></span> Local Only</span>
+            </div>
+            <h3 class="feature-title">Secret Diary PIN Lockscreen</h3>
+            <p class="feature-desc">
+              Dedicated client-side PIN entry barrier guarding your private reflections from unauthorized casual onlookers on shared devices.
+            </p>
+            <div class="feature-footer">
+              <span>Category: Hardware PIN Shield</span>
+              <button class="feature-btn-inspect">Inspect UI &rarr;</button>
+            </div>
+          </div>
+
+          <!-- 17. Secret Diary Unlocked (Journaling & Privacy) -->
+          <div class="feature-card reveal delay-1" data-category="journaling">
+            <div class="feature-thumb-wrap">
+              <img class="feature-thumb-img" src="./assets/images/screenshots/16-secret-diary-unlocked.png" alt="Secret Diary Unlocked Reading Enclave" />
+              <div class="feature-thumb-overlay">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+                <span>Click to Inspect UI</span>
+              </div>
+            </div>
+            <div class="feature-card-header">
+              <span class="feature-category-tag">Journaling & Privacy</span>
+              <span class="badge badge-available"><span class="badge-dot"></span> Local Only</span>
+            </div>
+            <h3 class="feature-title">Local-Only Writing Enclave</h3>
+            <p class="feature-desc">
+              Isolated writing sandbox that persists strictly in local client storage. Excluded from Supabase database sync and Drive backups.
+            </p>
+            <div class="feature-footer">
+              <span>Category: Zero Cloud Transmission</span>
+              <button class="feature-btn-inspect">Inspect UI &rarr;</button>
+            </div>
+          </div>
+
+          <!-- 18. Google Drive AppData Backup (Data) -->
+          <div class="feature-card reveal delay-2" data-category="data" id="data">
+            <div class="feature-thumb-wrap">
+              <img class="feature-thumb-img" src="./assets/images/screenshots/17-google-drive-backup.png" alt="Google Drive AppData Enclave Backup" />
+              <div class="feature-thumb-overlay">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+                <span>Click to Inspect UI</span>
+              </div>
+            </div>
+            <div class="feature-card-header">
+              <span class="feature-category-tag">Reports & Cloud Data</span>
+              <span class="badge badge-available"><span class="badge-dot"></span> Available</span>
+            </div>
+            <h3 class="feature-title">Google Drive AppData Backup</h3>
+            <p class="feature-desc">
+              User-authorized export mechanism that saves application state JSON files directly to your hidden Google Drive AppData folder.
+            </p>
+            <div class="feature-footer">
+              <span>Category: Unencrypted JSON Export</span>
+              <button class="feature-btn-inspect">Inspect UI &rarr;</button>
+            </div>
+          </div>
+
+          <!-- 19. Profile Customization (Dashboard/Data) -->
+          <div class="feature-card reveal" data-category="dashboard">
+            <div class="feature-thumb-wrap">
+              <img class="feature-thumb-img" src="./assets/images/screenshots/19-profile-customization.png" alt="Operator Profile Customization & Theme Matrix" />
+              <div class="feature-thumb-overlay">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+                <span>Click to Inspect UI</span>
+              </div>
+            </div>
+            <div class="feature-card-header">
+              <span class="feature-category-tag">Personal Dashboard</span>
+              <span class="badge badge-available"><span class="badge-dot"></span> Available</span>
+            </div>
+            <h3 class="feature-title">Operator Profile Matrix</h3>
+            <p class="feature-desc">
+              Personalize your callsign, dark HUD accent themes, tactical sound effects, and user authentication tokens.
+            </p>
+            <div class="feature-footer">
+              <span>Category: Customization</span>
+              <button class="feature-btn-inspect">Inspect UI &rarr;</button>
+            </div>
+          </div>
+
+          <!-- 20. Mobile Dashboard & Dock (Android Experience) -->
+          <div class="feature-card reveal delay-1" data-category="android" id="android">
+            <div class="feature-thumb-wrap">
+              <img class="feature-thumb-img" src="./assets/images/screenshots/20-mobile-dashboard.png" alt="Mobile Responsive Dashboard & Dock" />
+              <div class="feature-thumb-overlay">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+                <span>Click to Inspect UI</span>
+              </div>
+            </div>
+            <div class="feature-card-header">
+              <span class="feature-category-tag">Android Experience</span>
+              <span class="badge badge-available"><span class="badge-dot"></span> Native Ready</span>
+            </div>
+            <h3 class="feature-title">Mobile Responsive Dock</h3>
+            <p class="feature-desc">
+              Compact mobile view engineered for one-handed operation with tactile thumb navigation and offline database persistence.
+            </p>
+            <div class="feature-footer">
+              <span>Category: Mobile UI</span>
+              <button class="feature-btn-inspect">Inspect UI &rarr;</button>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Architectural Segregation Notice -->
+        <div class="notice-box reveal" style="margin-top: 3.5rem;">
+          <div class="notice-box-title">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+            Special Architectural Highlight: Secret Diary Storage
+          </div>
+          <p>
+            The <strong>Secret Diary</strong> is segregated from the rest of the application. It persists exclusively in your device's browser sandbox and is deliberately excluded from Supabase synchronization tables and Google Drive JSON backups. No cloud system has visibility into your diary.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================= BOTTOM NAVIGATION CTA ================= -->
+    <section class="section section-alt">
+      <div class="container container-narrow" style="text-align: center;">
+        <h3 class="editorial-heading" style="color: var(--color-primary); margin-bottom: 0.75rem;">Want to see these tools in operation?</h3>
+        <p>
+          Visit our visual walkthrough center to see animated demonstrations and step-by-step operator guides.
+        </p>
+        <div style="margin-top: 1.5rem; display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
+          <a href="./tutorials.html" class="btn btn-primary">Watch Interactive Tutorials</a>
+          <a href="./privacy.html" class="btn btn-secondary">Review Data Privacy</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= SITE FOOTER ================= -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+                <div class="footer-brand">
+          <a href="./index.html" class="footer-brand-link" aria-label="UTTAKALA OS Home">
+            <img 
+              src="./assets/images/uttakala-os-logo.png" 
+              alt="UTTAKALA OS official logo" 
+              class="footer-brand-logo" 
+              width="48" 
+              height="48" 
+              loading="lazy" 
+            />
+            <div class="brand-title">
+              <span class="brand-title-main">UTTAKALA</span>
+              <span class="brand-title-sub">OS</span>
+            </div>
+          </a>
+          <div class="footer-tagline">Your Personal Life OS</div>
+          <p>
+            Autonomous cyberpunk personal productivity and life-management operating system. Precision engineering for focus, habits, academics, and personal sovereignty.
+          </p>
+          <div style="margin-top: 1rem; display: flex; gap: 0.75rem; align-items: center;">
+            <span class="badge badge-available"><span class="badge-dot"></span> System Online v2.4</span>
+            <span style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-muted);">LATENCY: 0.4MS</span>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Platform Hub</h4>
+          <ul class="footer-links">
+            <li><a href="./index.html">Command Center</a></li>
+            <li><a href="./features.html">Feature Matrix</a></li>
+            <li><a href="./experience.html">OS Live Simulator</a></li>
+            <li><a href="./tutorials.html">Operator Tutorials</a></li>
+            <li><a href="./about.html">System Architecture</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Trust & Security</h4>
+          <ul class="footer-links">
+            <li><a href="./trust.html">Trust Center Hub</a></li>
+            <li><a href="./security.html">Data & Security Whitepaper</a></li>
+            <li><a href="./privacy.html">Privacy Policy</a></li>
+            <li><a href="./terms.html">Terms of Service</a></li>
+            <li><a href="./trust.html#compliance">Local vs Cloud Isolation</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Communication</h4>
+          <ul class="footer-links">
+            <li><a href="./contact.html">Dispatch Console</a></li>
+            <li><a href="mailto:uttakaladeba.codes@gmail.com">Direct Developer Line</a></li>
+            <li><a href="./contact.html#security-report">Report Vulnerability</a></li>
+            <li><a href="./about.html#roadmap">Release Roadmap</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          &copy; <span data-year>2026</span> UTTAKALA OS. Precision engineering. Built for individual autonomy.
+        </div>
+        <div class="footer-bottom-links">
+          <a href="./trust.html">Trust Center</a>
+          <a href="./security.html">Security</a>
+          <a href="./privacy.html">Privacy</a>
+          <a href="./terms.html">Terms</a>
+          <a href="./experience.html">Experience</a>
+          <a href="./contact.html">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Main JavaScript -->
+  <script src="./assets/js/main.js"></script>
+</body>
+</html>

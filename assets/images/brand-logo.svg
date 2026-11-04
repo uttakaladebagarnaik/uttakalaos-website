@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 44" width="200" height="44" fill="none">
+  <!-- Brand Symbol -->
+  <rect x="2" y="2" width="40" height="40" rx="10" fill="#183D32"/>
+  <circle cx="22" cy="22" r="14" stroke="#A8B9A5" stroke-width="1.75" fill="none" opacity="0.45"/>
+  <path d="M15 24C15 17.9249 19.9249 13 26 13H29V16C29 22.0751 24.0751 27 18 27H15V24Z" fill="#F7F7F2"/>
+  <circle cx="19" cy="22" r="2.5" fill="#183D32"/>
+  <circle cx="27" cy="27" r="2.5" fill="#A8B9A5"/>
+  
+  <!-- Brand Typography -->
+  <text x="54" y="25" font-family="Plus Jakarta Sans, Inter, -apple-system, BlinkMacSystemFont, sans-serif" font-size="16" font-weight="700" letter-spacing="0.08em" fill="#183D32">UTTAKALA</text>
+  <text x="156" y="25" font-family="Plus Jakarta Sans, Inter, -apple-system, BlinkMacSystemFont, sans-serif" font-size="16" font-weight="300" letter-spacing="0.12em" fill="#607161">OS</text>
+  <text x="54" y="36" font-family="Plus Jakarta Sans, Inter, -apple-system, BlinkMacSystemFont, sans-serif" font-size="8.5" font-weight="500" letter-spacing="0.18em" fill="#758273">PERSONAL WORKSPACE</text>
+</svg>
