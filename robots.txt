@@ -2,6 +2,5 @@
 User-agent: *
 Allow: /
 
-# Sitemap placeholder
-# Replace YOUR-GITHUB-USERNAME with your actual GitHub username upon deployment
-Sitemap: https://YOUR-GITHUB-USERNAME.github.io/uttakala-os-website/sitemap.xml
+# Sitemap Index
+Sitemap: https://uttakaladebagarnaik.github.io/uttakalaos-website/sitemap.xml
